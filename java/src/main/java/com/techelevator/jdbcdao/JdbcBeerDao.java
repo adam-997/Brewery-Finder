@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class jdbcBeerDao implements beerDao {
+public class JdbcBeerDao implements beerDao {
 	
 	// Initialize the JDBC template
 	private JdbcTemplate jdbcTemplate;
@@ -23,7 +23,7 @@ public class jdbcBeerDao implements beerDao {
 	 ***/
 	
 	@Autowired
-	public jdbcBeerDao(DataSource dataSource) {
+	public JdbcBeerDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	

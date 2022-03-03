@@ -16,12 +16,12 @@ import com.techelevator.model.Brewery;
 
 @RestController
 @CrossOrigin
-public class breweryController {
+public class BreweryController {
 
 	@Autowired
 	private breweryDao breweryDao;
 
-	public breweryController(breweryDao breweryDao) {
+	public BreweryController(breweryDao breweryDao) {
 		this.breweryDao = breweryDao;
 	}
 

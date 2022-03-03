@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class jdbcReviewDao implements reviewDao{
+public class JdbcReviewDao implements reviewDao{
 	
 	private JdbcTemplate jdbcTemplate;
 	
-	public jdbcReviewDao(DataSource dataSource) {
+	public JdbcReviewDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
