@@ -68,18 +68,18 @@ public class JdbcBreweryDao implements BreweryDao {
 				aBrewery.getHours(), aBrewery.getLat(), aBrewery.getLng(), aBrewery.getBreweryId());
 	}
 	
-	  @Override
-	  public void deleteBrewery(Long breweryId) {
+	@Override
+	public void deleteBrewery(Long breweryId) {
 		  String sqlDeleteBrewery = "DELETE FROM breweries WHERE brewery_id = ?";
 		  jdbcTemplate.update(sqlDeleteBrewery, breweryId);
 	  }
-	 
-	  @Override
-	  public List<Brewery> getBreweryByUserID(Long userId) {
+
+	@Override
+	public List<Brewery> getBreweryByUserID(Long userId) {
 		  List<Brewery> allBreweriesByUserId = new ArrayList<>();
 			String sqlGetAllBreweriesByUserId = "SELECT * FROM breweries WHERE user_id = ?";
 			SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllBreweriesByUserId, userId);
-			
+
 			while(results.next()) {
 				Brewery aBrewery = mapRowToBrewery(results);
 				allBreweriesByUserId.add(aBrewery);

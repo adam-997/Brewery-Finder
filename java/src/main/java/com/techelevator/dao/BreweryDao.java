@@ -7,9 +7,9 @@ import com.techelevator.model.Brewery;
 public interface BreweryDao {
    List<Brewery> getAllBreweries();
 
-	void addNewBrewery(Brewery aBrewery);
-
 	Brewery getBreweryById(Long breweryId);
+
+	void addNewBrewery(Brewery aBrewery);
 
 	void updateBrewery(Brewery aBrewery);
 
