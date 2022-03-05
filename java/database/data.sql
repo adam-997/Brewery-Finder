@@ -298,15 +298,7 @@ VALUES ('Platform Beer Co.',
         41.4795909,
         -81.7138139);
 
-/*INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
-VALUES ('Goldhorn Brewery', '1361 E 55th St.', 'Cleveland', 44103,'(216) 465-1352',
-'Cool taproom offering seasonal, housemade beer in a vast space with a long bar & tables outside.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511722787/goldhorn_brown_logo_er48xf.png',
-'https://www.yelp.com/biz/goldhorn-brewery-cleveland',
-'Tuesday - Friday: 11:00 AM - 09:00 PM  Saturday: 12:00 PM - 10:00 PM Sunday: 12:00 PM - 06:00 PM Closed on Mondays', 41.521425, -81.651681);
 */ --------- BEER INSERTS --------------------------
--- beer insert DO NOT RUN UNTIL ALL OTHER SQL FILES HAVE RUN
--- Also: correct brewery_id's still need to be added
  --- bookhouse brewery
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)

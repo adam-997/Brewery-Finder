@@ -5,7 +5,6 @@ import com.techelevator.model.Beer;
 import java.util.List;
 
 public interface beerDao {
-
 	List<Beer> getAllBeer();
 
 	void saveBeer(Beer newBeer);
@@ -17,5 +16,4 @@ public interface beerDao {
 	List <Beer> getBeerByBreweryID(Long breweryId);
 
 	void updateBeer(Beer aBeer);
-	
 }

@@ -23,21 +23,10 @@ public class BeerController {
 	
 	@Autowired
 	private reviewDao reviewDAO;
-	
-	
-	/****************************************
-	 * Controller
-	 *
-	 ***/
-	
+
 	public BeerController(beerDao beerDAO) {
 		this.beerDAO = beerDAO;
 	}
-	
-	/****************************************
-	 * Request Mapping, shows beers
-	 *
-	 ***/
 	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers", method=RequestMethod.GET)
@@ -50,42 +39,23 @@ public class BeerController {
 		return beerList;
 	}
 	
-	/****************************************
-	 * Request Mapping, show a beer by beerId
-	 *
-	 ***/
-	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
 	public Beer getBeerByID(@PathVariable Long beerId) throws NotFoundException {
 		return beerDAO.getBeerbyID(beerId);
 	}
-	
-	/****************************************
-	 * Request Mapping, add Beer
-	 *
-	 ***/
-	
+
 	//@PreAuthorize("hasRole('ROLE_BREWER')")
 	@RequestMapping(path="/addBeer", method=RequestMethod.GET)
 	public String showAddBeer() throws NotAllowedException {
 		return "addBeer";
 	}
 	
-	/****************************************
-	 * Request Mapping, delete Beer
-	 *
-	 ***/
 	//@PreAuthorize("hasRole('ROLE_BREWER')")
 	@RequestMapping(path = "/beers/{beerId}", method = RequestMethod.DELETE)
 	public void deleteABeer(@PathVariable Long beerId) throws NotAllowedException {
 		beerDAO.deleteBeer(beerId);
 	}
-	
-	/****************************************
-	 * For Beads, getBeerByBreweryId 
-	 *
-	 ***/
 	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/breweries/{breweryId}/beers", method = RequestMethod.GET)
@@ -93,11 +63,6 @@ public class BeerController {
 		return beerDAO.getBeerByBreweryID(breweryId);
 	}
 	
-	/****************************************
-	 * Update a beer
-	 * - preauth "Brewer"
-	 *
-	 ***/
 	//@PreAuthorize("hasRole('ROLE_BREWER')")
 	@RequestMapping(path= "/beers", method = RequestMethod.PUT)
 	public void updateBeer(@RequestBody Beer aBeer) throws NotAllowedException {

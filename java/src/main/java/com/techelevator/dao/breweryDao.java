@@ -5,7 +5,6 @@ import java.util.List;
 import com.techelevator.model.Brewery;
 
 public interface breweryDao {
-   
    List<Brewery> getAllBreweries();
 
 	void addNewBrewery(Brewery aBrewery);
@@ -17,5 +16,4 @@ public interface breweryDao {
 	void deleteBrewery(Long breweryId);
 
 	List<Brewery> getBreweryByUserID(Long userId);
-
 }

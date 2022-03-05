@@ -17,31 +17,19 @@ import java.util.List;
 public class ReviewController {
 
 	@Autowired
-	// Should not be private 
 	reviewDao reviewDAO;
 	
 	@Autowired
-	// Should not be private 
 	beerDao beerDAO;
 	
 	public ReviewController(reviewDao reviewDAO) {
 		this.reviewDAO = reviewDAO;
 	}
 	
-	/****************************************
-	 * Request Mapping to show reviews for a beer by id
-	 *
-	 ***/
-	
 	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.GET)
 	public List<Review> getReviews(@PathVariable Long beerId) throws NotFoundException {
 		return reviewDAO.getReviews(beerId);
 	}
-	
-	/****************************************
-	 * Request Mapping to add a review for a beer by id
-	 *
-	 ***/
 	
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
 	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {

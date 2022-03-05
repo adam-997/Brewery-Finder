@@ -17,21 +17,11 @@ public class JdbcBeerDao implements beerDao {
 	// Initialize the JDBC template
 	private JdbcTemplate jdbcTemplate;
 	
-	/****************************************
-	 * Constructor
-	 *
-	 ***/
-	
 	@Autowired
 	public JdbcBeerDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-	
-	/****************************************
-	 * get all the beers
-	 *
-	 ***/
 	
 	@Override
 	public List<Beer> getAllBeer() {
@@ -46,11 +36,6 @@ public class JdbcBeerDao implements beerDao {
 		return allBeers;
 	}
 	
-	/****************************************
-	 * get beer by id
-	 *
-	 ***/
-	
 	@Override
 	public Beer getBeerbyID(Long beerId) {
 		Beer aBeer = new Beer();
@@ -64,31 +49,17 @@ public class JdbcBeerDao implements beerDao {
 		return aBeer;
 	}
 	
-	/****************************************
-	 * Delete a beer
-	 *
-	 ***/
 	@Override
 	public void deleteBeer(Long beerId) {
 		String sqlDeleteABeer = "DELETE FROM beers WHERE beer_id = ?";
 		jdbcTemplate.update(sqlDeleteABeer, beerId);
 	}
 	
-	/****************************************
-	 * Save a newBeer object
-	 *
-	 ***/
-	
 	@Override
 	public void saveBeer(Beer newBeer) {
 		jdbcTemplate.update("INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
 				newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
 	}
-	
-	/****************************************
-	 * Update a beer
-	 *	- need preAuth for Brewer
-	 ***/
 	
 	@Override
 	public void updateBeer(Beer aBeer) {
@@ -97,11 +68,6 @@ public class JdbcBeerDao implements beerDao {
 		jdbcTemplate.update(sqlUpdateBeer, aBeer.getName(), aBeer.getAbv(), aBeer.getIbu(), aBeer.getInfo(), aBeer.getImgUrl(),
 				aBeer.getBreweryId(), aBeer.isActive(), aBeer.getId());
 	}
-	
-	/****************************************
-	 * SQL row set for Beer Pojo
-	 *
-	 ***/
 	
 	private Beer mapRowToBeer(SqlRowSet row) {
 		Beer newBeer = new Beer();
@@ -119,11 +85,6 @@ public class JdbcBeerDao implements beerDao {
 		return newBeer;
 	}
 	
-	/****************************************
-	 * For Beads, getBeerByBreweryID
-	 *
-	 ***/
-
 	@Override
 	public List<Beer> getBeerByBreweryID(Long breweryId) {
 		List<Beer> allBeersByBreweryID = new ArrayList<>();

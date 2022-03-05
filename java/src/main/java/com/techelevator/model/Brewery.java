@@ -89,7 +89,6 @@ public class Brewery {
    }
    public void setWebsiteUrl(String websiteUrl) {
       this.websiteUrl = websiteUrl;
-
    }
    public String getWebsiteUrl() {
       return websiteUrl;

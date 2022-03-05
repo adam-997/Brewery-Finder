@@ -8,15 +8,15 @@
 
 CREATE TABLE breweries (
     brewery_id serial,
+    user_id bigint,
     name varchar(255) NOT NULL,
+    website_url varchar(255),
     address varchar(255) NOT NULL,
     city varchar(50) NOT NULL,
     zipcode varchar(15) NOT NULL,
     phone_number varchar(15),
     description text NOT NULL,
     brewery_logo_url varchar(255),
-    website_url varchar(255),
-    user_id bigint,
     hours  varchar(255),
     lat varchar(20),
     lng varchar(20),
@@ -26,14 +26,14 @@ CREATE TABLE breweries (
 
 CREATE TABLE beers (
     beer_id serial,
+    is_active boolean,
+    brewery_id integer,
     name varchar(500) NOT NULL,
     abv decimal,
     ibu integer,
     type varchar(255) NOT NULL,
-    info text NOT NULL,
     img_url varchar,
-    is_active boolean,
-    brewery_id integer,
+    info text NOT NULL,
     CONSTRAINT pk_beers_beer_id PRIMARY KEY (beer_id),
     CONSTRAINT fk_breweries_brewery_id FOREIGN KEY (brewery_id) REFERENCES breweries(brewery_id)
 );
@@ -46,12 +46,12 @@ CREATE TABLE brewery_beer (
 
 CREATE TABLE reviews (
     reviews_id serial,
-    name varchar(255) NOT NULL,
-    description text NOT NULL,
     user_id integer,
     beer_id integer,
     rating int NOT NULL,
     create_date timestamp DEFAULT NOW(),
+    name varchar(255) NOT NULL,
+    description text NOT NULL,
     CONSTRAINT pk_reviews_review_id PRIMARY KEY (reviews_id),
     CONSTRAINT fk_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id), 
     CONSTRAINT fk_beers_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id)

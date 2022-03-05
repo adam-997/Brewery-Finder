@@ -19,10 +19,6 @@ public class JdbcBreweryDao implements breweryDao{
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-// CRUD METHODS BELOW
-	
-// GET ALL BREWERIES
-	
 	@Override
 	public List<Brewery> getAllBreweries(){
 		List<Brewery> allBreweries = new ArrayList<>();
@@ -36,7 +32,6 @@ public class JdbcBreweryDao implements breweryDao{
 		return allBreweries;
 	}
 	
-// GET BREWERY BY ID
 	@Override
 	public Brewery getBreweryById(Long breweryId) {
 		Brewery aBrewery = new Brewery();
@@ -46,11 +41,9 @@ public class JdbcBreweryDao implements breweryDao{
 		while(results.next()) {
 			aBrewery = mapRowToBrewery(results);
 		}
-		
 		return aBrewery;
 	}
 	
-// CREATE A BREWERY
 	@Override
 	public void addNewBrewery(Brewery aBrewery) {
 		String sqlAddBrewery = "INSERT INTO breweries (name, address, city,"
@@ -62,8 +55,6 @@ public class JdbcBreweryDao implements breweryDao{
 				aBrewery.getDescription(), aBrewery.getBreweryLogoUrl(), aBrewery.getWebsiteUrl(),
 				aBrewery.getUserId(), aBrewery.getHours(), aBrewery.getLat(), aBrewery.getLng());
 	}
-	
-// UPDATE A BREWERY
 	
 	@Override
 	public void updateBrewery(Brewery aBrewery) {
@@ -77,17 +68,12 @@ public class JdbcBreweryDao implements breweryDao{
 				aBrewery.getHours(), aBrewery.getLat(), aBrewery.getLng(), aBrewery.getBreweryId());
 	}
 	
-// DELETE A BREWERY
-	
-	
-	  @Override 
+	  @Override
 	  public void deleteBrewery(Long breweryId) {
 		  String sqlDeleteBrewery = "DELETE FROM breweries WHERE brewery_id = ?";
 		  jdbcTemplate.update(sqlDeleteBrewery, breweryId);
 	  }
 	 
-	  
-// GET BREWERY BY USERID
 	  @Override
 	  public List<Brewery> getBreweryByUserID(Long userId) {
 		  List<Brewery> allBreweriesByUserId = new ArrayList<>();
@@ -101,9 +87,6 @@ public class JdbcBreweryDao implements breweryDao{
 			return allBreweriesByUserId;
 	  }
 	 
-	
-	// MAP ROW TO BREWERY
-	
 	private Brewery mapRowToBrewery(SqlRowSet row) {
 	Brewery newBrewery = new Brewery();
 	newBrewery.setBreweryId(row.getInt("brewery_id"));

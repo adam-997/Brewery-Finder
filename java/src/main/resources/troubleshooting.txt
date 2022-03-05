@@ -1,0 +1,16 @@
+Issue: Cannot resolve symbol
+Status: Fixed
+Resolution: https://stackoverflow.com/questions/4618794/intellij-idea-cannot-resolve-symbol-and-cannot-resolve-method
+Permalink: https://stackoverflow.com/a/32815128
+
+1. checked JDK configuration:
+    Go to File -> Project Structure -> SDKs
+    your JDK home path should be something like this: /Library/Java/JavaVirtualMachine/jdk.1.7.0_79.jdk/Contents/Home
+    Hit Apply and then OK
+
+2. checked source path in Library's section
+    Go to File -> Project Structure -> Libraries
+    Hit the + button
+    Add the path to your src folder
+    Hit Apply and then OK
+    This should fix the problem
