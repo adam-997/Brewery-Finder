@@ -1,6 +1,6 @@
 package com.techelevator.jdbcdao;
 
-import com.techelevator.dao.beerDao;
+import com.techelevator.dao.BeerDao;
 import com.techelevator.model.Beer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JdbcBeerDao implements beerDao {
+public class JdbcBeerDao implements BeerDao {
 	
 	// Initialize the JDBC template
 	private JdbcTemplate jdbcTemplate;

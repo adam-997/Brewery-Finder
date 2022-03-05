@@ -4,7 +4,7 @@ import com.techelevator.model.Beer;
 
 import java.util.List;
 
-public interface beerDao {
+public interface BeerDao {
 	List<Beer> getAllBeer();
 
 	void saveBeer(Beer newBeer);

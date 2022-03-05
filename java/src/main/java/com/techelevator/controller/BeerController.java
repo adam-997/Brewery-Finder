@@ -1,8 +1,8 @@
 package com.techelevator.controller;
 
-import com.techelevator.dao.beerDao;
-import com.techelevator.dao.breweryDao;
-import com.techelevator.dao.reviewDao;
+import com.techelevator.dao.BeerDao;
+import com.techelevator.dao.BreweryDao;
+import com.techelevator.dao.ReviewDao;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +16,15 @@ import java.util.List;
 @CrossOrigin 
 public class BeerController {
 	@Autowired
-	private beerDao beerDAO;
+	private BeerDao beerDAO;
 	
 	@Autowired
-	private breweryDao breweryDAO;
+	private BreweryDao breweryDAO;
 	
 	@Autowired
-	private reviewDao reviewDAO;
+	private ReviewDao reviewDAO;
 
-	public BeerController(beerDao beerDAO) {
+	public BeerController(BeerDao beerDAO) {
 		this.beerDAO = beerDAO;
 	}
 	

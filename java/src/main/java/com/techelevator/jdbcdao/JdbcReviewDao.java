@@ -1,6 +1,6 @@
 package com.techelevator.jdbcdao;
 
-import com.techelevator.dao.reviewDao;
+import com.techelevator.dao.ReviewDao;
 import com.techelevator.model.Review;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JdbcReviewDao implements reviewDao{
+public class JdbcReviewDao implements ReviewDao {
 	
 	private JdbcTemplate jdbcTemplate;
 	

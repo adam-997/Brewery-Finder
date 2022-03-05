@@ -1,6 +1,6 @@
 package com.techelevator.jdbcdao;
 
-import com.techelevator.dao.breweryDao;
+import com.techelevator.dao.BreweryDao;
 import com.techelevator.model.Brewery;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JdbcBreweryDao implements breweryDao{
+public class JdbcBreweryDao implements BreweryDao {
 	
 	private JdbcTemplate jdbcTemplate;
 	

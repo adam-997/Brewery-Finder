@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.techelevator.dao.breweryDao;
+import com.techelevator.dao.BreweryDao;
 import com.techelevator.model.Brewery;
 
 @RestController
@@ -19,9 +19,9 @@ import com.techelevator.model.Brewery;
 public class BreweryController {
 
 	@Autowired
-	private breweryDao breweryDao;
+	private BreweryDao breweryDao;
 
-	public BreweryController(breweryDao breweryDao) {
+	public BreweryController(BreweryDao breweryDao) {
 		this.breweryDao = breweryDao;
 	}
 

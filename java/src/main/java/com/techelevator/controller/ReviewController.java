@@ -1,7 +1,7 @@
 package com.techelevator.controller;
 
-import com.techelevator.dao.beerDao;
-import com.techelevator.dao.reviewDao;
+import com.techelevator.dao.ReviewDao;
+import com.techelevator.dao.BeerDao;
 import com.techelevator.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -17,12 +17,12 @@ import java.util.List;
 public class ReviewController {
 
 	@Autowired
-	reviewDao reviewDAO;
+	ReviewDao reviewDAO;
 	
 	@Autowired
-	beerDao beerDAO;
+	BeerDao beerDAO;
 	
-	public ReviewController(reviewDao reviewDAO) {
+	public ReviewController(ReviewDao reviewDAO) {
 		this.reviewDAO = reviewDAO;
 	}
 	

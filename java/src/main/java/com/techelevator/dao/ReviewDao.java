@@ -5,7 +5,7 @@ import com.techelevator.model.Review;
 import javax.validation.Valid;
 import java.util.List;
 
-public interface reviewDao {
+public interface ReviewDao {
 	List<Review> getReviews(Long beer_id);
 	
 	void addReview(Review aReview);

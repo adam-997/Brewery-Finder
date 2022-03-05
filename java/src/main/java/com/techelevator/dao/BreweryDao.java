@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.techelevator.model.Brewery;
 
-public interface breweryDao {
+public interface BreweryDao {
    List<Brewery> getAllBreweries();
 
 	void addNewBrewery(Brewery aBrewery);
