@@ -4,6 +4,7 @@
       <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
       <root url="file://$PROJECT_DIR$/java" />
       <root url="file://$PROJECT_DIR$" />
+      <root url="file://$PROJECT_DIR$/java/database" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
