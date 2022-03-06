@@ -24,22 +24,6 @@ public class JdbcUserDao implements UserDao {
     }
 
     @Override
-    public int findIdByUsername(String username) {
-        return jdbcTemplate.queryForObject("select user_id from users where username = ?", int.class, username);
-    }
-
-	@Override
-	public User getUserById(Long userId) {
-		String sql = "SELECT * FROM users WHERE user_id = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, userId);
-		if(results.next()) {
-			return mapRowToUser(results);
-		} else {
-			throw new RuntimeException("userId "+userId+" was not found.");
-		}
-	}
-
-    @Override
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
         String sql = "select * from users";
@@ -54,6 +38,17 @@ public class JdbcUserDao implements UserDao {
     }
 
     @Override
+	public User getUserById(Long userId) {
+		String sql = "SELECT * FROM users WHERE user_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, userId);
+		if(results.next()) {
+			return mapRowToUser(results);
+		} else {
+			throw new RuntimeException("userId "+userId+" was not found.");
+		}
+	}
+
+    @Override
     public User findByUsername(String username) throws UsernameNotFoundException {
         for (User user : this.findAll()) {
             if( user.getUsername().toLowerCase().equals(username.toLowerCase())) {
@@ -61,6 +56,11 @@ public class JdbcUserDao implements UserDao {
             }
         }
         throw new UsernameNotFoundException("User " + username + " was not found.");
+    }
+
+    @Override
+    public int findIdByUsername(String username) {
+        return jdbcTemplate.queryForObject("select user_id from users where username = ?", int.class, username);
     }
 
     @Override
