@@ -122,7 +122,7 @@ than your skinny jeans and hotter than a wool hat in the summer',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Bitter Chief IPA',
         6.9,
-        null,
+        40,
         'IPA',
         'For our bitter Tribe fans, we almost got that series win. In the meantime, 
 drink some local craft beer and enjoy. Light cooper color. Nice bitterness with 
@@ -135,7 +135,7 @@ refreshing citrus and grassy flavors and aromas. Malty finish balancing out the 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Big Chief Imperial IPA',
         8.7,
-        null,
+        35,
         'Imperial IPA',
         'Big hoppy Imperial IPA. Malt backbone with a robust hop aroma and flavor 
 from kettle and fermenter dry-hopping.',
@@ -147,7 +147,7 @@ from kettle and fermenter dry-hopping.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Rally Possum',
         7.4,
-        null,
+        50,
         'Imperial Brown Ale',
         'Hoppy imperial brown ale with nice citrus, chocolate hazelnut roast
  aromas and flavors. Just in time for a fantastic Browns season.',
@@ -159,7 +159,7 @@ VALUES ('Rally Possum',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Pinot Saison',
         6.3,
-        null,
+        35,
         'Farmhouse Saison',
         'Classic farmhouse saison ale, phenolic pepper and tropical fruit
  form the Saison yeast strain. Pinot Noir wine must co fermented to give aromas and
@@ -321,7 +321,7 @@ VALUES ('S.I.P.A.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Nano OG',
         4.3,
-        null,
+        68,
         'Lager',
         'This pale lager is a throwback to how beer was brewed in America more than 100 years ago. 
 Another Great American Beer Festival award winner, it is crisp, brilliant, and refreshing with a 
@@ -334,7 +334,7 @@ delicate malt body and a snappy hop finish; Nano keeps you dominating all day.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Progress Pilsner',
         5.5,
-        null,
+        60,
         'Pilsner',
         'Inspired by the pilsners of the Rhine region of Germany, this Great American Beer Festival
  award-winning lager is a tribute to the crisp and clean character of the noble hop and has just the
@@ -348,7 +348,7 @@ VALUES ('Progress Pilsner',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Hyper Haze',
         6.5,
-        null,
+        60,
         'Hazy IPA',
         'A firework of tropical hop aroma from late additions of Mosaic and Azacca hops. Its 
 low bitterness and soft malt profile comes together for this citrus-centric, juicy IPA',
@@ -360,7 +360,7 @@ low bitterness and soft malt profile comes together for this citrus-centric, jui
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Frosty Lime Wit',
         5.5,
-        null,
+        50,
         'Hazy IPA',
         'Frosty leads off with an exhilarating aroma of lime and tangerine. Spicy Belgian yeast 
 character plays with the limes tartness leading to a dry, quenching finish that pushes further into 
@@ -374,7 +374,7 @@ new flavor territory thanks to the judicious use of diverse ingredients sure to 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Falling Fruit',
         5.8,
-        null,
+        45,
         'Fruit Beer',
         'We set out to create a beer that showcases two of our favorite fruits: tart apples
  and sweet peaches. We fermented it on the fruit with one of our favorite yeasts to give it a juicy 
@@ -388,7 +388,7 @@ VALUES ('Falling Fruit',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Robot Santa Christmas Ale',
         5.8,
-        null,
+        35,
         'Winter Ale',
         'After the robot uprising you will be leaving Robot Santa a Christmas 
 Ale brewed with cinnamon, ginger, nutmeg, coriander, honey and orange peel.',
@@ -400,7 +400,7 @@ Ale brewed with cinnamon, ginger, nutmeg, coriander, honey and orange peel.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Saturday Transfer',
         7.5,
-        null,
+        79,
         'New England IPA',
         'This NEIPA was brewed and double dry hopped with a bunch of 
 Mosaic. Expect a soft mouthfeel and bitterness paired with huge tropical hop flavors 
@@ -413,7 +413,7 @@ and aroma.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Big Hairy American Winning Machines',
         9.2,
-        null,
+        66,
         'New England Triple IPA',
         'We were off looking in the cooler and there they were. 
 Citra, El Dorado, and Australian Galaxy; they just happen to be some of the best 
@@ -428,7 +428,7 @@ took them and brewed this beer.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Lager Life',
         4.5,
-        null,
+        45,
         'Lager',
         'Bright, crisp, light, and just downright delicious! 
 Brewed with a touch of rice for a dry but thirst-quenching beverage. Let LIFE give 
@@ -441,7 +441,7 @@ you a beer. Trust us, you will be better off with one in your hand. Get a LIFE!'
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Hola Cerveza Mexican',
         5.0,
-        null,
+        58,
         'Mexican Lager',
         'Crisp, clean and refreshing with sweet aromatics of lemon, lime and 
 caramelized maize corn. This 5% quencher starts the fiesta',
@@ -527,7 +527,7 @@ VALUES ('Habituale ',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Muellerfest',
         5.4,
-        null,
+        68,
         'Oktoberfest Lager',
         'In honor of Ernst Mueller, who emigrated with his family to Cleveland and 
 started the Cleveland Home Brewing Company, We give you our Oktoberfest at 5.4%. Full bodied lager 
@@ -540,7 +540,7 @@ using German Noble hops making this beer just plain delicious. PROST!',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Browns Town',
         5.4,
-        null,
+        45,
         'Brown Ale',
         'Sessionable Brown Ale with notes of chocolate and coffee. Finish is a little complex but 
 balanced. Not too strong and to keeps you having more than just one.  ',
@@ -552,7 +552,7 @@ balanced. Not too strong and to keeps you having more than just one.  ',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('AWFUGIT',
         11.0,
-        null,
+        35,
         'Triple IPA',
         'This super balanced, but boozy Triple IPA joins our menu when we all 
 need to get tuned up fast: family holidays, big games, and bad weather. ',
@@ -638,7 +638,7 @@ VALUES ('Wing Walker Wheat',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Barrel of Monks',
         11.0,
-        null,
+        45,
         'Belgian Dark Strong Ale',
         'Our award winning Monk in Public that has been aged 9 
 months in bourbon barrels.  This Belgian Dark Strong Ale is smooth and silky, 
@@ -830,9 +830,10 @@ VALUES ('Eliot Ness',
 
 ------ Masthead ------
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Original Lager',
         5.2,
+        68,
         'German Lager',
         'A traditional full flavored German Lager with a crisp finish. The bier Hofbrauhaus has been famous for since 1589.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511649200/hofbrau_lager_puc_h8or43.jpg',
@@ -840,9 +841,10 @@ VALUES ('Original Lager',
         19);
 
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Hefeweizen',
         5.4,
+        55,
         'Hefeweizen',
         'A specialty born in Munich – loved by the world. A fairly sweet old-style Wheat bier brewed to create a wonderful combination banana and clove flavor and aroma.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg',
@@ -850,9 +852,10 @@ VALUES ('Hefeweizen',
         19);
 
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Dunkel',
         5.5,
+        75,
         'Dunkel',
         'For centuries Munich’s favorite bier. Dunkel translates to “Dark�? lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg',
@@ -861,9 +864,10 @@ VALUES ('Dunkel',
 
 --- Platform ---
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('CITRAMAX IPA',
         6.7,
+        80,
         'IPA',
         'A West Coast style IPA dry-hopped with organic Citra hops to impart intense tropical and citrus fruit aromas. This brew has an aggressive, boldly-bright American hop character that will leave you craving another.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511650026/market_citramax_beer_pic_mh7psh.png',
@@ -871,9 +875,10 @@ VALUES ('CITRAMAX IPA',
         20);
 
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('PROSPERITY WHEAT',
         6.0,
+        68,
         'Wheat',
         'Formerly known as ***** Street Wheat! If you’ve ever spent time in a German Beer Garden, you know how much they love their wheat beer.  Our Bavarian style Hefeweizen is a satisfying blend of sweet wheat and pale malts, clove and banana aromatics, and the zesty tang of wheat beer yeast.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png',

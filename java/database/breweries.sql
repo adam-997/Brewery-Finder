@@ -10,7 +10,7 @@ VALUES('Bookhouse Brewing, LLC.',
        'Bookhouse Brewing is a brewery in the Ohio City neighborhood with a comfortable, intimate taproom in a historic brewery building.',
        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heinens.com%2Fwp-content%2Fuploads%2F2020%2F08%2FBookhouse-Brewing.png&f=1&nofb=1',
        'http://www.bookhouse.beer',
-       2,
+       1,
        'M-F 5PM-7PM Delivery only (due to Covid-19)',
        0,
        0);
@@ -25,7 +25,7 @@ VALUES('Boss Dog Brewing',
        'a crisp new bar, brewery and pub',
        'https://bossdogbrewing.com/wp-content/uploads/2017/12/logo.png',
        'http://www.bossdogbrewing.com',
-       2,
+       1,
        'M-F 4PM-10PM Sa 12PM - 10PM Su 10AM-10PM',
        -81.56529555,
        41.50030645);
@@ -40,7 +40,7 @@ VALUES('Brick and Barrel',
        'Our nano-brewery was built with traditional carpentry and masonry, top quality brewing equipment, and a passion for fine flavors. Its industrial feel fits like a glove in the local neighborhood of Columbus Road Peninsula in the Cleveland Flats.',
        'https://static.wixstatic.com/media/0c6a07_d0218aee93f14f89b67d74b3a24b7163~mv2.jpg/v1/fill/w_510,h_218,al_c,lg_1,q_80/0c6a07_d0218aee93f14f89b67d74b3a24b7163~mv2.webp',
        'http://www.brickandbarrelbrewing.com',
-       2,
+       3,
        'M-T 4PM-10PM F 2PM-12AM Sa 12PM-12AM Su 12PM-8PM',
        -81.7008861,
        41.4895629);
@@ -85,7 +85,7 @@ VALUES('Hansa Brewery',
        'We welcome you with open arms and cold beer to Clevelands newest, authentic Eastern European restaurant and brewery. PROST!',
        'https://www.hansabrewery.com/wp-content/uploads/2017/04/hansalogofooter.png',
        'http://www.hansabrewery.com',
-       2,
+       4,
        'W-Th 12PM-8PM F-Sa 12PM-9PM Su 12PM-3PM',
        -81.70479139,
        41.48344207);
@@ -100,7 +100,7 @@ VALUES('Market Garden Brewery',
        'The original Market Garden Brewery, a brewpub and restaurant, is located next door to the 100+ year old West Side Market and brews a deep lineup of award-winning beers like our Progress Pilsner, organically hopped Citramax IPA, and our most popular beer, the GABF gold-medal winning Prosperity Wheat.',
        'https://www.marketgardenbrewery.com/wp-content/uploads/mgb-big-logo.png',
        'http://www.marketgardenbrewery.com',
-       2,
+       3,
        'T- Sa 11AM-6PM.',
        -81.7036495,
        41.4848964);
@@ -115,7 +115,7 @@ VALUES('Nano Brew Cleveland',
        'Nano Brew Cleveland is a friendly neighborhood brewpub with 24 beers on draft both at the inside bar and at the lively outdoor Beer Garden Bar.',
        'http://nanobrewcleveland.com/wp-content/themes/nano_theme/images/logo-type.png',
        'http://www.nanobrewcleveland.com',
-       2,
+       4,
        'Tu-Sa 11PM-6PM(PICKUP ONLY DUE TO COVID-19)',
        -81.7045531,
        41.4860486);
@@ -256,7 +256,7 @@ VALUES('Baithouse Brewery',
        0);
 
 
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES ('Great Lakes Brewery',
         '2516 Market Ave.',
         'Cleveland',
@@ -265,12 +265,13 @@ VALUES ('Great Lakes Brewery',
         'Iconic microbrewery with house suds, an updated American menu, free tours & a patio.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511722746/gret_lakes_brewery_logo_black_uw5ech.jpg',
         'https://www.greatlakesbrewing.com',
+        3,
         'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays',
         41.484312,
         -81.704461);
 
 
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES ('Masthead Brewing Co.',
         '1261 Superior Ave.',
         'Cleveland',
@@ -279,12 +280,13 @@ VALUES ('Masthead Brewing Co.',
         'Located in a historic building with 300 seats, a 100’ long bar, and an additional 50 seat dog friendly patio with a view of downtown Cleveland. Masthead includes a full bar and kitchen focusing on American and Belgian style beers, Neapolitan wood-fired pizza, and a barrel aged beer program',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511363501/brewery_images/oorzznvts0irqao76zqb.jpg',
         'http://mastheadbrewingco.com/',
+        3,
         'Tuesday - Friday: 11:00 AM - 10:00 PM  Saturday: 11:00 PM - 01:00 AM Sunday: 11:00 PM - 05:00 PM Closed on Mondays',
         41.504100,
         -81.685403);
 
 
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES ('Platform Beer Co.',
         '4125 Lorain Ave.',
         'Cleveland',
@@ -293,6 +295,7 @@ VALUES ('Platform Beer Co.',
         'Opened in 2014, 100+ seat tasting room and patio offers 20+ house beers and food options. 10BBL brewhouse creates constantly changing selection of styles. Head R&D brewer Danny Monnot leads the way at our flagship location.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511302719/brewery_images/pnozkgiqhblcydhtllru.jpg',
         'https://platformbeer.co/',
+        3,
         'Monday - Thursday: 03:00 PM - 12:00 AM Friday: 03:00 AM - 02:00 AM Saturday: 10:00 PM - 02:00 AM Sunday: 10:00 PM - 10:00 PM',
         41.4795909,
         -81.7138139);
