@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Select, Typography, Row, Col, Avatar, Card } from "antd";
+import { baseUrl } from "../../Shared/baseUrl";
 
-const baseUrl = "http://localhost:8080/breweries";
 const { Text, Title } = Typography;
 
 function RenderBreweryCard({
@@ -42,7 +42,7 @@ class BreweryCard extends Component {
     };
   }
   componentDidMount() {
-    fetch(baseUrl)
+    fetch(baseUrl + "/breweries")
       .then((res) => res.json())
       .then((res) => this.setState({ breweries: res }));
   }
