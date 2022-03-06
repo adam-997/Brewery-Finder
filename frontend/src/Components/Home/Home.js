@@ -1,11 +1,12 @@
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import BreweryCard from "../Breweries/Breweries";
 
 const Home = (props) => {
-    return(
-        <div>
-            You must be authorized to see this page.
-        </div>
-    )
-}
+  return (
+    <div>
+      <BreweryCard />
+    </div>
+  );
+};
 
 export default Home;
