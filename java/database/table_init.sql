@@ -39,8 +39,8 @@ CREATE TABLE beers (
 );
 
 CREATE TABLE brewery_beer (
-    beer_id integer,
     brewery_id integer,
+    beer_id integer,
     CONSTRAINT pk_brewery_beer_brewery_id_beer_id PRIMARY KEY (beer_id, brewery_id)
 );
 

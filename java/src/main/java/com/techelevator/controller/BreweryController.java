@@ -19,7 +19,7 @@ import com.techelevator.model.Brewery;
 public class BreweryController {
 
 	@Autowired
-	private BreweryDao breweryDao;
+	private final BreweryDao breweryDao;
 
 	public BreweryController(BreweryDao breweryDao) {
 		this.breweryDao = breweryDao;

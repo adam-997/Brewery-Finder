@@ -75,7 +75,7 @@ public class JdbcBreweryDao implements BreweryDao {
 	  }
 
 	@Override
-	public List<Brewery> getBreweryByUserID(Long userId) {
+	  public List<Brewery> getBreweryByUserID(Long userId) {
 		  List<Brewery> allBreweriesByUserId = new ArrayList<>();
 			String sqlGetAllBreweriesByUserId = "SELECT * FROM breweries WHERE user_id = ?";
 			SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllBreweriesByUserId, userId);
@@ -88,17 +88,17 @@ public class JdbcBreweryDao implements BreweryDao {
 	  }
 	 
 	private Brewery mapRowToBrewery(SqlRowSet row) {
-	Brewery newBrewery = new Brewery();
-	newBrewery.setBreweryId(row.getInt("brewery_id"));
-	newBrewery.setName(row.getString("name"));
-	newBrewery.setAddress(row.getString("address"));
-	newBrewery.setCity(row.getString("city"));
-	newBrewery.setZipcode(row.getString("zipcode"));
-	newBrewery.setPhoneNumber(row.getString("phone_number"));
-	newBrewery.setDescription(row.getString("description"));
-	newBrewery.setBreweryLogoUrl(row.getString("brewery_logo_url"));
-	newBrewery.setWebsiteUrl(row.getString("website_url"));
-	newBrewery.setUserId(row.getInt("user_id"));
-	return newBrewery;
+		Brewery oneBrewery = new Brewery();
+		oneBrewery.setBreweryId(row.getInt("brewery_id"));
+		oneBrewery.setName(row.getString("name"));
+		oneBrewery.setAddress(row.getString("address"));
+		oneBrewery.setCity(row.getString("city"));
+		oneBrewery.setZipcode(row.getString("zipcode"));
+		oneBrewery.setPhoneNumber(row.getString("phone_number"));
+		oneBrewery.setDescription(row.getString("description"));
+		oneBrewery.setBreweryLogoUrl(row.getString("brewery_logo_url"));
+		oneBrewery.setWebsiteUrl(row.getString("website_url"));
+		oneBrewery.setUserId(row.getInt("user_id"));
+		return oneBrewery;
 	}
 }
