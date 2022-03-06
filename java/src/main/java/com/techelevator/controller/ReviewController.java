@@ -2,19 +2,35 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.ReviewDao;
 import com.techelevator.dao.BeerDao;
+import com.techelevator.model.Beer;
+import com.techelevator.model.Brewery;
 import com.techelevator.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.security.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 @CrossOrigin
 @RestController
 public class ReviewController {
+
+	// Timestamp Source: https://alvinalexander.com/java/java-timestamp-example-current-time-now/
+	// 1) create a java calendar instance
+	Calendar calendar = Calendar.getInstance();
+
+	// 2) get a java.util.Date from the calendar instance.
+	//    this date will represent the current instant, or "now".
+	java.util.Date now = calendar.getTime();
+
+	// 3) a java current time (now) instance
+	java.sql.Timestamp currentTimestamp = new java.sql.Timestamp(now.getTime());
 
 	@Autowired
 	ReviewDao reviewDAO;
@@ -25,7 +41,15 @@ public class ReviewController {
 	public ReviewController(ReviewDao reviewDAO) {
 		this.reviewDAO = reviewDAO;
 	}
-	
+
+	@RequestMapping(path="/reviews", method=RequestMethod.GET)
+	public List<Review> showAllReviews(ModelMap modelHolder) {
+		List<Review> reviews = reviewDAO.getAllReviews();
+
+		modelHolder.put("allReviews", reviews);
+		return reviews;
+	}
+
 	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.GET)
 	public List<Review> getReviews(@PathVariable Long beerId) throws NotFoundException {
 		return reviewDAO.getReviews(beerId);
@@ -48,7 +72,7 @@ public class ReviewController {
 			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "newReview", result);
 			return "redirect://beerDetails/{id}/review";
 		}
-		review.setCreateTime(LocalDateTime.now());
+		review.setCreateDate(currentTimestamp);
 		
 		reviewDAO.saveReview(review);
 		

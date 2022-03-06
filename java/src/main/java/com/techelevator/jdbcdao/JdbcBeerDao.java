@@ -14,8 +14,7 @@ import java.util.List;
 @Component
 public class JdbcBeerDao implements BeerDao {
 	
-	// Initialize the JDBC template
-	private JdbcTemplate jdbcTemplate;
+	private final JdbcTemplate jdbcTemplate;
 	
 	@Autowired
 	public JdbcBeerDao(DataSource dataSource) {

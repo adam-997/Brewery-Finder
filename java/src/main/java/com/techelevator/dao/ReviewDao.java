@@ -6,7 +6,9 @@ import javax.validation.Valid;
 import java.util.List;
 
 public interface ReviewDao {
-	List<Review> getReviews(Long beer_id);
+    List<Review> getAllReviews();
+
+    List<Review> getReviews(Long beer_id);
 	
 	void addReview(Review aReview);
 

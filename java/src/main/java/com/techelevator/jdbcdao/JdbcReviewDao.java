@@ -11,15 +11,30 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Component
 public class JdbcReviewDao implements ReviewDao {
-	
-	private JdbcTemplate jdbcTemplate;
+
+	private final JdbcTemplate jdbcTemplate;
 	
 	public JdbcReviewDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	
+
+	@Override
+	public List<Review> getAllReviews() {
+		List<Review> allReviews = new ArrayList<>();
+		String sqlGetAllReviews = "SELECT * FROM reviews";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllReviews);
+//		LocalDateTime createDate = results.getTimestamp(5).toLocalDateTime();
+
+		while(results.next()) {
+			Review aReviews = mapRowToReview(results);
+			allReviews.add(aReviews);
+		}
+		return allReviews;
+	}
+
 	@Override
 	public List<Review> getReviews(Long beerId){
 		 List<Review> reviews = new ArrayList<>();
@@ -35,15 +50,15 @@ public class JdbcReviewDao implements ReviewDao {
 	
 	@Override
 	public void addReview(Review aReview) {
-		String sqladdReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name) VALUES (?,?,?,?,?)";
-		jdbcTemplate.update(sqladdReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
+		String sqlAddReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name) VALUES (?,?,?,?,?)";
+		jdbcTemplate.update(sqlAddReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
 	}
 	
 	@Override
 	public void saveReview(@Valid Review review) {
 		String sqlSaveReview = "INSERT INTO reviews(description, rating, create_date, beer_id) VALUES(?,?,?,?)";
 		jdbcTemplate.update(sqlSaveReview, review.getDescription(), review.getRating(), 
-				review.getCreateTime(), review.getBeerId());
+				review.getCreateDate(), review.getBeerId());
 	}
 
 	@Override
@@ -60,13 +75,13 @@ public class JdbcReviewDao implements ReviewDao {
 	
 	private Review mapRowToReview(SqlRowSet row) {
 		Review review = new Review();
-		
-		review.setId(row.getLong("reviews_id"));
+		review.setReviewsId(row.getLong("reviews_id"));
+		review.setUserId(row.getLong("user_id"));
+		review.setBeerId(row.getLong("beer_id"));
+		review.setRating(row.getInt("rating"));
+		review.setCreateDate(row.getTimestamp("create_date"));
 		review.setName(row.getString("name"));
 		review.setDescription(row.getString("description"));
-		review.setRating(row.getInt("rating"));
-		review.setBeerId(row.getLong("beer_id"));
-		review.setUserId(row.getLong("user_id"));
 		return review;
 	}
 }

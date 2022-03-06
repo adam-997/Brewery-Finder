@@ -1,30 +1,38 @@
 package com.techelevator.model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 public class Review {
-	private Long id;
-	private String description;
-	private int rating;
-	private LocalDateTime createTime;
-	private Long beerId;
+	private Long reviewsId;
 	private Long userId;
+	private Long beerId;
+	private int rating;
+	private Timestamp createDate;
 	private String name;
-	
-	public Long getId() {
-		return id;
+	private String description;
+
+	public Long getReviewsId() {
+		return reviewsId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setReviewsId(Long reviewsId) {
+		this.reviewsId = reviewsId;
 	}
-	
-	public String getDescription() {
-		return description;
+
+	public Long getUserId() {
+		return userId;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
-	
+
+	public Long getBeerId() {
+		return beerId;
+	}
+	public void setBeerId(Long beerId) {
+		this.beerId = beerId;
+	}
+
 	public int getRating() {
 		return rating;
 	}
@@ -32,25 +40,11 @@ public class Review {
 		this.rating = rating;
 	}
 
-	public LocalDateTime getCreateTime() {
-		return createTime;
+	public Timestamp getCreateDate() {
+		return createDate;
 	}
-	public void setCreateTime(LocalDateTime createTime) {
-		this.createTime = createTime;
-	}
-
-	public long getBeerId() {
-		return beerId;
-	}
-	public void setBeerId(Long beerId) {
-		this.beerId = beerId;
-	}
-	
-	public long getUserId() {
-		return this.userId;
-	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setCreateDate(Timestamp createDate) {
+		this.createDate = createDate;
 	}
 
 	public String getName() {
@@ -58,5 +52,12 @@ public class Review {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
