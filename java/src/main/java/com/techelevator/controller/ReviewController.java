@@ -2,8 +2,6 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.ReviewDao;
 import com.techelevator.dao.BeerDao;
-import com.techelevator.model.Beer;
-import com.techelevator.model.Brewery;
 import com.techelevator.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -12,8 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
-import java.security.Timestamp;
-import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.List;
 
