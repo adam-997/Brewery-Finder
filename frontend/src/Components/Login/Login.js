@@ -5,18 +5,7 @@ import { withRouter } from "react-router-dom";
 import { addToken, addUser } from "../../Redux/actionCreators";
 import { baseUrl } from "../../Shared/baseUrl";
 import axios from "axios";
-import {
-  Form,
-  Input,
-  Button,
-  Checkbox,
-  Typography,
-  Row,
-  Col,
-  Statistic,
-} from "antd";
-const { Title } = Typography;
-
+import { Form, Input, Button, Typography } from "antd";
 const mapDispatchToProps = (dispatch) => ({
   addToken: () => dispatch(addToken()),
   addUser: () => dispatch(addUser()),
