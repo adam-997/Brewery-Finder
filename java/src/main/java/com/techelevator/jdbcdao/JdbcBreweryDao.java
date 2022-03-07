@@ -90,16 +90,16 @@ public class JdbcBreweryDao implements BreweryDao {
 	private Brewery mapRowToBrewery(SqlRowSet row) {
 		Brewery oneBrewery = new Brewery();
 		oneBrewery.setBreweryId(row.getInt("brewery_id"));
-		oneBrewery.setUserId(row.getInt("user_id"));
 		oneBrewery.setName(row.getString("name"));
-		oneBrewery.setWebsiteUrl(row.getString("website_url"));
 		oneBrewery.setAddress(row.getString("address"));
 		oneBrewery.setCity(row.getString("city"));
 		oneBrewery.setZipcode(row.getString("zipcode"));
 		oneBrewery.setPhoneNumber(row.getString("phone_number"));
 		oneBrewery.setDescription(row.getString("description"));
 		oneBrewery.setBreweryLogoUrl(row.getString("brewery_logo_url"));
-		oneBrewery.setBreweryLogoUrl(row.getString("hours"));
+		oneBrewery.setWebsiteUrl(row.getString("website_url"));
+		oneBrewery.setUserId(row.getInt("user_id"));
+//		oneBrewery.setBreweryLogoUrl(row.getString("hours"));
 		return oneBrewery;
 	}
 }

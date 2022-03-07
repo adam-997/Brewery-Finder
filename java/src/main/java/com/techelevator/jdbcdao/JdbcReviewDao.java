@@ -76,12 +76,12 @@ public class JdbcReviewDao implements ReviewDao {
 	private Review mapRowToReview(SqlRowSet row) {
 		Review review = new Review();
 		review.setReviewsId(row.getLong("reviews_id"));
-		review.setUserId(row.getLong("user_id"));
-		review.setBeerId(row.getLong("beer_id"));
-		review.setRating(row.getInt("rating"));
-		review.setCreateDate(row.getTimestamp("create_date"));
 		review.setName(row.getString("name"));
 		review.setDescription(row.getString("description"));
+		review.setRating(row.getInt("rating"));
+		review.setCreateDate(row.getTimestamp("create_date"));
+		review.setUserId(row.getLong("user_id"));
+		review.setBeerId(row.getLong("beer_id"));
 		return review;
 	}
 }
