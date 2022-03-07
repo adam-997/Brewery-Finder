@@ -2,29 +2,29 @@ BEGIN;
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Bookhouse Brewing, LLC.',
-       '1526 W 25th St',
-       'Cleveland',
-       '44113',
-       '4144264555',
-       'Bookhouse Brewing is a brewery in the Ohio City neighborhood with a comfortable, intimate taproom in a historic brewery building.',
-       'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heinens.com%2Fwp-content%2Fuploads%2F2020%2F08%2FBookhouse-Brewing.png&f=1&nofb=1',
-       'http://www.bookhouse.beer',
-       1,
-       'M-F 5PM-7PM Delivery only (due to Covid-19)',
+VALUES('Guinness Open Gate Brewery and Barrel House',
+       '5001 Washington Blvd',
+       'Halethorpe, Maryland',
+       '21227-5000',
+       '9022663839',
+       'Our brewery in Baltimore shares the spirit of exploration and discovery of its sister brewery in Dublin, hence the name. In 2015 we opened the longstanding pilot brewery at St James`s Gate to the public.',
+       'https://mma.prnewswire.com/media/1327179/Guinness_Open_Gate_Logo.jpg?p=publish',
+       'https://www.guinnessbrewerybaltimore.com',
+       2,
+       'COMING SOON',
        0,
        0);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Boss Dog Brewing',
-       '2179 Lee Rd',
-       'Cleveland',
-       '44118',
-       '2163212337',
-       'a crisp new bar, brewery and pub',
-       'https://bossdogbrewing.com/wp-content/uploads/2017/12/logo.png',
-       'http://www.bossdogbrewing.com',
+VALUES('Jersey Girl Brewing Company',
+       '426 Sand Shore Rd Unit 1',
+       'Hackettstown, New Jersey',
+       '07840-5535',
+       '9085914186',
+       'Jersey Girl Brewing Company brews beer on a 30-barrel brewing system. One barrel is equivalent to approximately 31 gallons of beer, meaning the system will be able to produce several hundred gallons of beer in each batch. 930 gallons to be exact.',
+       'https://www.mantitlement.com/wp-content/uploads/2016/06/4195754866.jpg',
+       'https://jerseygirlbrewing.com',
        1,
        'M-F 4PM-10PM Sa 12PM - 10PM Su 10AM-10PM',
        -81.56529555,
@@ -32,59 +32,29 @@ VALUES('Boss Dog Brewing',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Brick and Barrel',
-       '1844 Columbus Rd',
-       'Cleveland',
-       '44113',
-       '5039270629',
-       'Our nano-brewery was built with traditional carpentry and masonry, top quality brewing equipment, and a passion for fine flavors. Its industrial feel fits like a glove in the local neighborhood of Columbus Road Peninsula in the Cleveland Flats.',
-       'https://static.wixstatic.com/media/0c6a07_d0218aee93f14f89b67d74b3a24b7163~mv2.jpg/v1/fill/w_510,h_218,al_c,lg_1,q_80/0c6a07_d0218aee93f14f89b67d74b3a24b7163~mv2.webp',
-       'http://www.brickandbarrelbrewing.com',
-       3,
-       'M-T 4PM-10PM F 2PM-12AM Sa 12PM-12AM Su 12PM-8PM',
-       -81.7008861,
-       41.4895629);
+VALUES('Asbury Park Brewery',
+       '810 Sewall Ave',
+       'Asbury Park, New Jersey',
+       '07712-6527',
+       '7324555571',
+       'Nano Brew Cleveland is a friendly neighborhood brewpub with 24 beers on draft both at the inside bar and at the lively outdoor Beer Garden Bar.',
+       'https://i.pinimg.com/originals/c0/40/8b/c0408b9526af9b828d4dc40e1d5526cd.png',
+       'http://www.asburyparkbrewery.com',
+       4,
+       'Tu-Sa 11PM-6PM(PICKUP ONLY DUE TO COVID-19)',
+       -81.7045531,
+       41.4860486);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id,hours, lat, lng)
-VALUES('Collision Bend Brewing Co',
-       '1250 Old River Rd',
-       'Cleveland',
-       '44113',
-       '2162737879',
-       'Collision Bend Brewing Company is an artisanal brewery and full-service restaurant, featuring crisp, bright beers brewed on site, served alongside freshly prepared Southern California street food.',
-       'https://www.collisionbendbrewery.com/wp-content/uploads/2017/04/collision-bend-logo-b-1030x317.png',
-       'http://www.collisionbendbrewery.com',
-       2,
-       'Will Reopen March 2021(due to Covid-19)',
-       -81.7039719,
-       41.49884829);
-
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Forest City Brewery',
-       '2135 Columbus Rd Ste A',
-       'Cleveland',
-       '44113',
-       '',
-       'Step inside our 40-seat tasting room and brewhouse � thoughtfully designed and constructed from reclaimed materials.',
-       'http://static1.squarespace.com/static/538c6a0fe4b006c49d7f990e/t/58e460be414fb56455f1b252/1599240198115/?format=1500w',
-       'http://www.forestcitybrewery.com',
-       2,
-       'T-F 4PM-10PM Sa 12PM-10PM Su 12PM-6PM',
-       0,
-       0);
-
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id,hours, lat, lng)
-VALUES('Hansa Brewery',
-       '2717 Lorain Ave',
-       'Cleveland',
-       '44113',
-       '2166316585',
-       'We welcome you with open arms and cold beer to Clevelands newest, authentic Eastern European restaurant and brewery. PROST!',
-       'https://www.hansabrewery.com/wp-content/uploads/2017/04/hansalogofooter.png',
-       'http://www.hansabrewery.com',
+VALUES('7 Mile Brewery',
+       '3156 Route 9 South Ste 1-2',
+       'Rio Grande, New Jersey',
+       '08242',
+       '6093657777',
+       'We welcome you with open arms and cold beer. 7 Mile Brewery is pleased to distribute our fine craft beers to stores throughout the region so you can enjoy it right in your home, right rom the shelf of your local store! PROST!',
+       'https://i.pinimg.com/originals/ce/84/3e/ce843ef5cb5b1ff7da682abe04d2d053.png',
+       'https://7milebrew.com',
        4,
        'W-Th 12PM-8PM F-Sa 12PM-9PM Su 12PM-3PM',
        -81.70479139,
@@ -92,44 +62,44 @@ VALUES('Hansa Brewery',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Market Garden Brewery',
-       '1947 W 25th St',
-       'Cleveland',
-       '44113',
-       '2166214000',
-       'The original Market Garden Brewery, a brewpub and restaurant, is located next door to the 100+ year old West Side Market and brews a deep lineup of award-winning beers like our Progress Pilsner, organically hopped Citramax IPA, and our most popular beer, the GABF gold-medal winning Prosperity Wheat.',
-       'https://www.marketgardenbrewery.com/wp-content/uploads/mgb-big-logo.png',
-       'http://www.marketgardenbrewery.com',
+VALUES('Cape May Brewery',
+       '409 Breakwater Rd',
+       'Cape May, New Jersey',
+       '08204-4537',
+       '6098499933',
+       'Three guys and a beer — that’s how Cape May Brewing Company came to be. Back in 2011, Ryan, Hank, and Mop Man brewed their first batch of Cape May IPA, kegged it up, and sold it to a bar up the street…and began South Jersey’s craft revolution.',
+       'https://www.capemaybrewery.com/wp-content/uploads/2020/06/cmbc-logo-dot.png',
+       'http://www.capemaybrewery.com	',
+       2,
+       'M-F 3PM-10PM Sa-Su 11AM-10PM',
+       39.00066318,
+       -74.91285755);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('Artisans Brewery',
+       '1171 Hooper Ave',
+       'Toms River, New Jersey',
+       '08753-8305',
+       '7322447566',
+       'All of our beers are handcrafted in our on-premises brewery and are made from our Brewmasters own unique and creative recipes.',
+       'https://toasttab.s3.amazonaws.com/restaurants/restaurant-55222000000000000/card_1601584442_180.png',
+       'http://www.artisanstomsriver.com',
        3,
        'T- Sa 11AM-6PM.',
-       -81.7036495,
-       41.4848964);
+       39.9625642,
+       -74.1880387);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Nano Brew Cleveland',
-       '1859 W 25th St',
-       'Cleveland',
-       '44113',
-       '2168626631',
-       'Nano Brew Cleveland is a friendly neighborhood brewpub with 24 beers on draft both at the inside bar and at the lively outdoor Beer Garden Bar.',
-       'http://nanobrewcleveland.com/wp-content/themes/nano_theme/images/logo-type.png',
-       'http://www.nanobrewcleveland.com',
-       4,
-       'Tu-Sa 11PM-6PM(PICKUP ONLY DUE TO COVID-19)',
-       -81.7045531,
-       41.4860486);
-
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Noble Beast Brewing Co.',
-       '1470 Lakeside Ave E',
-       'Cleveland',
-       '44114',
-       '7175859216',
-       'Were a small and family-owned business run by regular people.',
-       'https://www.noblebeastbeer.com/uploads/b/cdfff000-7e7f-11ea-b54a-37de610bbeef/Noble-Beast-Logo-Screen-Horizontal.png?width=576',
-       'http://noblebeastbeer.com',
+VALUES('Brix City Brewing',
+       '4 Alsan Way',
+       'Little Ferry, New Jersey',
+       '07643',
+       '2014400865',
+       'Brix City Brewing is built on friendship and a passion for full flavored beers. While being known for our unique New England style IPA`s, we produce a wide variety of styles: from experimental Sours, to traditional Pilsners, to Barrel-Aged Stouts and everything in between.',
+       'https://res.cloudinary.com/ratebeer/image/upload/w_400,c_limit/brew_23351.jpg',
+       'https://www.brixcitybrewing.com',
        2,
        'Tu-Su 11:30PM-10PM',
        -81.68692334,
@@ -137,54 +107,69 @@ VALUES('Noble Beast Brewing Co.',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Platform Beer Co',
-       '4125 Lorain Ave',
-       'Cleveland',
-       '44113',
-       '2162021386',
-       'Platform was founded in 2014 on the premise that collaboration should be at the cornerstone of everything that we do. Whether it be with pro brewers, the home brewing world or a variety of other industries, beer is special and should be shared. ',
-       'https://static1.squarespace.com/static/58e90d0e20099ea6eba14db3/t/58e90e15db29d654dcee40a9/1607451011494/?format=1500w',
-       'http://platformbeer.co',
-       2,
-       'M-F 3PM-10PM Sa-Su 11AM-10PM',
-       -81.7140045,
-       41.4799605);
+VALUES('Carlow Brewing Company',
+       'Royal Oak Rd',
+       'Bagenalstown, Ireland',
+       '07093',
+       '4144264555',
+       'Carlow Brewing Company is a brewery in the charming city of Bagenalstown. A comfortable atmosphere with an intimate taproom in a historic brewery building.',
+       'https://www.corporacionhijosderivera.com/img/servicios/distribucion/logo_ohara.png',
+       'http://www.carlowbrewing.com/',
+       1,
+       'M-F 5PM-7PM Delivery only (due to Covid-19)',
+       0,
+       0);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Saucy Brew Works',
-       '2885 Detroit Ave',
-       'Cleveland',
-       '44113',
-       '2166662568',
-       'The story starts with our Brew Master Eric Anderson and Entrepreneur Brent Zimmerman. Beer fanatics. Always up for adventure. They decided to transform the Steelman Building into the kind of place that delivers nothing less than crazy good beer and legendary good times.',
-       'https://www.saucybrewworks.com/media/images/homepage-saucy-logo.original.png',
-       'http://www.saucybrewworks.com',
+VALUES('9 White Deer Brewery',
+       'Ballymakeera Macroom',
+       'Cork, Ireland',
+       'P12 E277',
+       '5039270629',
+       '9 White Deer Brewery is nestled in the heart of West Cork, Ireland making the highest quality Irish beers.',
+       'https://untappd.akamaized.net/site/brewery_logos_hd/brewery-123981_79e77_hd.jpeg',
+       'https://www.9whitedeer.ie',
+       3,
+       'M-T 4PM-10PM F 2PM-12AM Sa 12PM-12AM Su 12PM-8PM',
+       -81.7008861,
+       41.4895629);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id,hours, lat, lng)
+VALUES('Beamish and Crawford (Heineken)',
+       'Leitrim Street',
+       'Cork, Ireland',
+       'T23 VF78',
+       '2162737879',
+       'Beamish has a rich roasted flavour with coffee and dark chocolate undertones, making it a genuine Irish stout.',
+       'https://www.beer-coasters.eu/coasters/beamish-24-oboje.jpg',
+       'http://beamish.ie/',
        2,
-       'Su-W 11AM-10PM T-Sa 11AM-12AM',
-       -81.7105691,
-       41.4894793);
+       'Will Reopen March 2021(due to Covid-19)',
+       -81.7039719,
+       41.49884829);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('The Cleveland Brewery',
-       '777 E 185th St',
-       'Cleveland',
-       '44119',
-       '2165346992',
-       'John (the brewer) and Mary went on a trip that ended in Munich.  The hefeweizen was as tasty there, as what John could make. When a space opened up in our neighborhood, and the name was approved, the stars aligned for The Cleveland Brewery to start in October 2014.',
-       'https://img1.wsimg.com/isteam/ip/b9eeb3d9-5de3-4bf0-90df-72a50cf3be96/eb9dfa11a9_logo.png/:/rs=h:180/qt=q:95',
-       'https://theclevelandbrewery.com/',
+VALUES('Fyne Ales Brewery',
+       'Achadunan',
+       'Cairndow Argyll, Scotland',
+       'PA26 8BJ',
+       '1345697845',
+       'We are a family-owned Scottish farm brewery, drawing water from the hills and brewing in converted farm buildings.',
+       'http://scottishbrewing.com/breweries/glasgowandwest/img/fyne-ales-logo.png',
+       'https://www.fyneales.com/',
        2,
-       'F-Sa 6PM-10PM',
-       -81.549766,
-       41.586428);
+       'T-F 4PM-10PM Sa 12PM-10PM Su 12PM-6PM',
+       -4.9139856,
+       56.2761719);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES('The Jolly Scholar',
        '11111 Euclid Ave',
-       'Cleveland',
+       'Cleveland, Ohio',
        '44106',
        '2163680090',
        'Located on the campus of Case Western Reserve University, The Jolly Scholar is a unique Cleveland Brewery serving quality food and artisanal craft beer.',
@@ -194,6 +179,21 @@ VALUES('The Jolly Scholar',
        'M-W 11AM-12PM Th-Sa 11AM-2AM Su 12PM-12AM',
        -81.60836498,
        41.5074076);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('Happy Hippie Brewing Company',
+       '607 S Cottonwood Dr',
+       'Richardson, Texas',
+       '75080-5713',
+       '2146167681',
+       'Our name says it all. The story begins with happy friends, some crazy good beer and legendary good times. Find your tribe.',
+       'https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill%2Cf_auto%2Ch_630%2Cw_1200/v1518047930/tui12ykcjzz3y04d5blr.jpg',
+       'https://happyhippiebeer.com',
+       2,
+       'Su-W 11AM-10PM T-Sa 11AM-12AM',
+       -81.7105691,
+       41.4894793);
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
@@ -242,25 +242,10 @@ VALUES('Fat Heads Brewery',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Baithouse Brewery',
-       '223 MEIGS STREET',
-       'Sandusky',
-       '44870',
-       '4193665372',
-       'One of our �co-conspirators� thought we needed a big-ole-perch on our sign to help passersby find the brewery. So we turned this big perch idea over to Bob the Fish carver and he thought it would look good all by itself on the building.',
-       'https://baithousebrewery.com/wp-content/uploads/2019/04/baithouse-logo-300x279.png',
-       'http://www.baithousebrewery.com',
-       2,
-       'COMING SOON',
-       0,
-       0);
-
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES ('Great Lakes Brewery',
         '2516 Market Ave.',
         'Cleveland',
-        44113,
+        '44113',
         '(216) 771-4404',
         'Iconic microbrewery with house suds, an updated American menu, free tours & a patio.',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511722746/gret_lakes_brewery_logo_black_uw5ech.jpg',
@@ -275,7 +260,7 @@ INSERT INTO breweries (name, address, city, zipcode, phone_number, description, 
 VALUES ('Masthead Brewing Co.',
         '1261 Superior Ave.',
         'Cleveland',
-        44144,
+        '44144',
         '(216) 206-6176',
         'Located in a historic building with 300 seats, a 100’ long bar, and an additional 50 seat dog friendly patio with a view of downtown Cleveland. Masthead includes a full bar and kitchen focusing on American and Belgian style beers, Neapolitan wood-fired pizza, and a barrel aged beer program',
         'http://res.cloudinary.com/teclebrew/image/upload/v1511363501/brewery_images/oorzznvts0irqao76zqb.jpg',
@@ -287,18 +272,33 @@ VALUES ('Masthead Brewing Co.',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES ('Platform Beer Co.',
-        '4125 Lorain Ave.',
-        'Cleveland',
-        44113,
-        '(216) 202-1386',
-        'Opened in 2014, 100+ seat tasting room and patio offers 20+ house beers and food options. 10BBL brewhouse creates constantly changing selection of styles. Head R&D brewer Danny Monnot leads the way at our flagship location.',
-        'http://res.cloudinary.com/teclebrew/image/upload/v1511302719/brewery_images/pnozkgiqhblcydhtllru.jpg',
-        'https://platformbeer.co/',
+VALUES ('Frisky Brewing Company',
+        '7050 Tres Hermanas Boulevard',
+        'Odessa Texas',
+        '79765',
+        '4322480778',
+        'Love, is how Frisky Brewing Company started. Love for the taste of Frisky craft beers & Frisky yum food. You stay Frisky now! Ya hear?',
+        'https://img1.wsimg.com/isteam/ip/8b339371-90e1-4c50-b536-9f4e37d95b15/logo/9587256e-abb5-471f-9469-7de09ef7eee2.jpg/:/rs=h:250/qt=q:95',
+        'https://friskybrewing.com',
         3,
-        'Monday - Thursday: 03:00 PM - 12:00 AM Friday: 03:00 AM - 02:00 AM Saturday: 10:00 PM - 02:00 AM Sunday: 10:00 PM - 10:00 PM',
+        'Monday - Thursday: 04:00 PM - 12:00 AM',
         41.4795909,
         -81.7138139);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('Goose Island Beer Co.',
+       '1800 West Fulton Street',
+       'Chicago, Illinois',
+       '60612',
+       '3122624717',
+       'We are guided by our respect for the history and culture of beer as well as our passion for, and innovation in, brewing. We wish to enrich the cultural landscape of Chicago and support the inspirational organizations within our communities.',
+       'https://www.happy-harrys.com/wp-content/uploads/2015/08/Goose-Island.jpg',
+       'https://www.gooseisland.com',
+       2,
+       'F-Sa 6PM-10PM',
+       -81.549766,
+       41.586428);
 
 
 COMMIT;
