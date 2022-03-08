@@ -1,121 +1,197 @@
 BEGIN;
+-- Note: for apostrophes, use this character '’' or 'Brewer\'s yeast.'
 
+-- 1. Guinness (Dublin, Ireland)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Draught',
+        4.2,
+        20,
+        'Stout',
+        'Rich and creamy. Distinctively black. Velvety in its finish. This iconic beer is defined by harmony. Sip after sip, sweet counters bitter as the malt arrives on cue to complement a base of roasted barley.',
+        'https://www.guinness.com/en/our-beers/guinness-draught/',
+        true,
+        1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Get Yer Oats',
+VALUES ('Guinness Original',
+        5,
+        20,
+        'Stout',
+        'Distinctively black full bodied liquid with a rich creamy head. A direct descendant of our archival recipes, Guinness Original is based on a beer first brewed in 1821, when Arthur Guinness II set down precise instructions for brewing his Superior Porter.',
+        'https://www.guinness.com/en/our-beers/guinness-original/',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Dublin Porter',
+        3.8,
+        10,
+        'Porter',
+        'Sip Dublin Porter and you’re sampling Guinness history. Light but well rounded. Sweet and smooth. Just bitter enough. This is a beer inspired by an archival recipe from our brewers’ diaries, dating back to 1796.',
+        'https://www.guinness.com/en/our-beers/guinness-dublin-porter/',
+        true,
+        1);
+
+
+-- 2. Guinness Open Gate Brewery (Baltimore, MD)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Baltimore Blonde',
+        5,
+        30,
+        'Blonde Ale',
+        'Clean cracker malt, effervescent taste. Guinness Blonde is this brewery’s flagship beer. Introduced in 2013, this beer is now brewed in the big brewhouse on-site here at the Guinness Open Gate Brewery.',
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guinness-open-gate-brewery-barrel-house-the-first-guinness-news-photo-1009721008-1533931566.jpg?crop=1.00xw:0.752xh;0,0.142xh&resize=1200:*',
+        true,
+        2);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness IPA',
         6.5,
-        30,
-        'Oatmeal Stout',
-        'Get yer oats! Our rich, soft oatmeal stout comes across as almost too much,
-too sweet and satisfying, so we dialed it back with a hit of Ceylon cinnamon and piles of toasted
- nuts: black walnuts, pecans, and hazelnuts. Paired together, the whole thing is balanced and soft
- , with gentle wisps of nutty oatmeal, browned toast, and squishy caramel. Settle in for a spell
- and plunge these roasty black depths.',
-        'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p357_i1_w1218.jpeg',
+        45,
+        'American India Pale Ale',
+        'A mixture of West and East Coast styles featuring a blend of Centennial, Mosaic, Simcoe, and El Dorado hops.',
+        'https://storage.googleapis.com/cdn.thelondoneconomic.com/wp-content/uploads/2018/04/Guinness-Open-Gate-Brewery-Citra-IPA-Glass-Shot_preview.jpeg',
         true,
-        1);
-
+        2);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Black is Beautiful',
+VALUES ('El Dorado Amber Ale',
+        4.8,
+        20,
+        'American Amber Ale',
+        'Crisp, dry finish. Low bitterness. Balanced malt sweetness. Our modern update on the classic American Amber Ale feature a blend of El Dorado and Loral hops, adding a light citrus aroma to the sweet malt.',
+        'https://beeralien.com/wp-content/uploads/2021/08/guinness_el_dorado_amber_ale_h-768x512.jpg',
+        true,
+        2);
+
+
+-- 3. Jersey Girl Brewing Company (Hackettstown, NJ)
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Shark Attack',
+        4.5,
+        30,
+        'Irish Red Ale',
+        'This Irish red ale pours rich ruby red in color with a thick creamy head. Soft toffee and a moderate level of caramel flavor, with a toast character. A sweet nose & hints of malt. On the palate it is smooth, creamy, and balanced.',
+        'https://jerseygirlbrewing.square.site/product/shark-attack-to-go/367?cs=true&cst=custom',
+        true,
+        3);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Pocket Full of Porter',
+        4.2,
+        30,
+        'Porter',
+        'Pocket full of porter is a beer that is exceptionally dark with a rich and creamy deep flavor profile layered with hints of hazelnut, milk chocolate, caramel, and lightly toasted marshmallow. Its aroma and smooth taste embody all that a dark beer should be. Cheers!',
+        'https://jerseygirlbrewing.square.site/product/pocket-full-of-porter-to-go/363?cs=true&cst=custom',
+        true,
+        3);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Bjorn To Be Wild',
+        5.1,
+        30,
+        'India Pale Ale',
+        'Bjorn to be Wild is the third iteration of our Bjorn Series of hazy IPAs fermented with Norwegian Farmhouse Yeast. We used big hop additions of Sabro, Equanot, and Ariana hops for a burst of tropical citrus and bold tangerine with undertones of peaches, lime, and herbal vanilla.',
+        'https://jerseygirlbrewing.square.site/product/bjorn-to-be-wild-to-go/352?cs=true&cst=custom',
+        true,
+        3);
+
+
+-- 4. Asbury Park Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Roasted Stout',
+        4.9,
+        29.8,
+        'Irish Stout',
+        'A dry Irish style stout with mild sweetness and notes of coffee and chocolate imparted by roasted malts and flaked oats. ABV 4.9% IBU 29.8 ',
+        'https://robbedford.files.wordpress.com/2018/11/apb_roastedstout.jpg?w=924',
+        false,
+        4);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Sea Dragon',
+        7,
+        65,
+        'India Pale Ale',
+        'An unfiltered, East Coast IPA loaded with hops for a huge nose of citrus and pine and a classic bitter finish. ABV 7% IBU 65',
+        'https://www.passionvines.com/images/sites/passionvines/labels/asbury-park-brewery-sea-dragon_1.jpg',
+        false,
+        4);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Blonde',
+        4.9,
+        24,
+        'Lager',
+        'A light bodied, European style lager featuring Czech and German hops and the highest quality, imported malts. ABV 4.9% IBU 24',
+        'https://images.squarespace-cdn.com/content/58648ec4d2b8574e99b3ce34/1483575644018-TJQ23TR27BW4XE50PGEG/?content-type=image%2Fjpeg',
+        false,
+        4);
+
+
+-- 5. 7 Mile Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Whose Berliner Is It Anyway',
+        4.0,
         9,
-        60,
-        'Oatmeal Stout',
-        'Our version of Black is Beautiful hews closely to the source material, figuring that 
-the time at hand is that of listening. BIPOC-owned breweries are less than 1% of the overall US brewery 
-scene, so who are we to dominate the stage when so many others have so much to say? Brewed with 7 types
- of malt for a massive, sticky, high-alcohol imperial stout, deep black in color. Flavor/aroma of burnt
- sugar, dark roast coffee, figs, and a touch of warming alcohol. Proceeds go to Cleveland NAACP to help
- in their efforts towards building a better world.',
-        'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p294_i1_w1650.jpeg',
+        'Berliner Weisser',
+        'A little sweet and a little sour best describes this classic style made in a non-traditional method. Most sours of this style are lactose fermented instead we used a new wild yeast strain developed by the USciences Philly which generates lactic acid before generating alcohol...we then racked it over 80# of fresh tangerine puree...giving it a tart and sweet orangey flavor...4% ABV extremely crushable.',
+        'https://untappd.com/b/7-mile-brewery-whose-berliner-is-it-anyway/4149230',
         true,
-        1);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Whoops! Down Under',
-        9.0,
-        30,
-        'NE IPA',
-        'Cruise down the flavor highway with these bright and bold hops from the Southern Hemisphere.
- Bright orange juice with passionfruit and guava hints in the aroma are followed by rich malt and a soft,
- juicy hop finish. Triple NEIPA-style beer made with Australian Galaxy, New Zealand Nelson Sauvin, and El
- Dorado hops',
-        'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p367_i1_w1080.jpeg',
-        false,
-        1);
-
+        5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Fortitude',
-        6.8,
-        20,
-        'Imperial Witbier',
-        'Our winter seasonal beer, this double/Imperial witbier is designed with the cold months in mind.
- We started with a strong interpretation of the classic Belgian country beer, then smoothed off the edges with a 
- silky-soft body, with just enough residual sweetness to keep the magic hidden. Intense orange peel aromatics, 
- pillowy puffs of wheat and oats, and a refreshing subtle herbal spice in the finish. Build up your Fortitude and
-  watch the days fly by.',
-        'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p365_i1_w1080.jpeg',
-        false,
-        1);
-
--- Boss Dog Brewing
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Dog Pound Brown',
-        5.8,
-        32,
-        'Brown Ale',
-        'Nutty biscuit and mild chocolate',
-        'no img',
+VALUES ('Tsar Bomber',
+        9.5,
+        28,
+        'Russian Imperial Stout',
+        'Rich, Dark, Roasted...with a milk chocolate flair. Big on flavor...A bomb of a beer...',
+        'https://untappd.com/b/7-mile-brewery-tsarbomba/3483595/photos',
         true,
-        2);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Jobu',
-        6.0,
-        30,
-        'Spiced Hazy Juicy IPA',
-        'Tropical IPA infused with spicy Cerrano peppers',
-        'no img',
-        true,
-        2);
-
+        5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Holy Toledo Pilsner',
-        5.4,
-        33,
-        'German Pilsner',
-        'German style, noble hopped Pilsener. Clean & refreshing',
-        'no img',
+VALUES ('Cashmere Hoodie',
+        5.0,
+        18,
+        'Golden Ale',
+        'Much Like the former Cashmere Sweater Light Lager, This variant is fermented quickly using an ale strain, a little more estery typical of the style this golden ale will finish a littler sweeter. Now available in cans! ',
+        'https://untappd.com/b/7-mile-brewery-cashmere-hoodie/4176426',
         true,
-        2);
+        5);
 
+
+-- 6. Cape May Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Cap May IPA',
+        6.3,
+        63,
+        'India Pale Ale',
+        'The American IPA named for America’s Oldest Seaside Resort, Cape May IPA is loaded with floral and citrus notes, well-balanced with a zesty finish. A West Coast-style IPA brewed in the heart of the East Coast, it’s the beer that’s Crafted on the Cape.',
+        'https://www.capemaybrewery.com/beers/cape-may-ipa/',
+        true,
+        6);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Put-N-Berry',
-        5.5,
-        20,
-        'Fruit Beer',
-        'Crisp Honey Ale. Touch of cracker with fresh Raspberry tartness',
-        'no img',
+VALUES ('Cape May White',
+        5.2,
+        11,
+        'Wheat Ale',
+        'Cape May White is brewed with orange and lemon peels, coriander, grains of paradise, and our favorite Belgian Witbier yeast. Fruity esters up-front with an easy-drinking finish yields a traditional Belgian-Style Wheat Ale brewed in the heart of the East Coast.',
+        'https://www.capemaybrewery.com/beers/cape-may-white/',
         true,
-        2);
-
+        6);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Millennial Hipster',
-        6.0,
-        35,
-        'Hazy Juicy IPA',
-        'Big juicy sweetness and tropical citrus. This Hazy IPA is tighter
-than your skinny jeans and hotter than a wool hat in the summer',
-        'no img',
+VALUES ('Devil`s Reach',
+        8.6,
+        25,
+        'Belgian Ale',
+        'A Belgian beast, fruity and light, the complexity and character of Devil’s Reach come from a robust Belgian yeast. Deceptively simple, caution is demanded because, before you know it, Devil’s Reach has swallowed you whole.',
+        'https://www.capemaybrewery.com/beers/devils-reach/',
         true,
-        2);
+        6);
+
 
 -- Brick and Barrel Brewing
 
@@ -129,44 +205,8 @@ drink some local craft beer and enjoy. Light cooper color. Nice bitterness with
 refreshing citrus and grassy flavors and aromas. Malty finish balancing out the bitterness',
         'no img',
         true,
-        3);
+        11);
 
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Big Chief Imperial IPA',
-        8.7,
-        35,
-        'Imperial IPA',
-        'Big hoppy Imperial IPA. Malt backbone with a robust hop aroma and flavor 
-from kettle and fermenter dry-hopping.',
-        'no img',
-        true,
-        3);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Rally Possum',
-        7.4,
-        50,
-        'Imperial Brown Ale',
-        'Hoppy imperial brown ale with nice citrus, chocolate hazelnut roast
- aromas and flavors. Just in time for a fantastic Browns season.',
-        'no img',
-        true,
-        3);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Pinot Saison',
-        6.3,
-        35,
-        'Farmhouse Saison',
-        'Classic farmhouse saison ale, phenolic pepper and tropical fruit
- form the Saison yeast strain. Pinot Noir wine must co fermented to give aromas and
- flavors of raspberry, strawberry and red grapes giving a red wine aroma.',
-        'no img',
-        true,
-        3);
 
 -- Collision Bend Brewery
 
@@ -178,7 +218,7 @@ VALUES ('C-Town',
         'No description',
         'no img',
         true,
-        4);
+        14);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -189,7 +229,7 @@ VALUES ('Hope Flows',
         'No description',
         'no img',
         true,
-        4);
+        14);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -200,7 +240,7 @@ VALUES ('Home Before 10',
         'No description',
         'no img',
         true,
-        4);
+        14);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -211,7 +251,7 @@ VALUES ('Bollard Pull',
         'No description',
         'https://untappd.akamaized.net/site/beer_logos/beer-2222654_132f6_sm.jpeg',
         true,
-        4);
+        14);
 
 -- Forest City Brewery
 
@@ -220,12 +260,12 @@ VALUES ('Black Betsy Black IPA',
         5.6,
         68,
         'Black IPA',
-        'This beer is named after Shoeless Joe Jackson�s primary bat. Betsy 
+        'This beer is named after Shoeless Joe Jacksons primary bat. Betsy
 is brewed with classic hops (Columbus, Chinook, Cascade) paired with a stout-like 
 malt bill making this beer a balanced and flavorful home run!',
         'no img',
         true,
-        5);
+        15);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -237,7 +277,7 @@ VALUES ('Berg-A-Horn Bock',
 our giant Sycamore tree in the original beer garden. Berg-A-Horn means Sycamore in German',
         'no img',
         true,
-        5);
+        15);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -251,7 +291,7 @@ containing subtly delicious hints of caramel and fruit. This Forest City staple 
  stomach and into your cooler!',
         'no img',
         true,
-        5);
+        15);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -263,7 +303,7 @@ VALUES ('I Rish I Had Another Red Ale',
  Club. Their multi-award winning recipe is our first pro-am offering and one fine red ale.',
         'no img',
         true,
-        5);
+        15);
 
 -- Hansa Brewery
 
@@ -277,7 +317,7 @@ VALUES ('Mr. Meeseeks',
  with a fantastic blueberry taste!',
         'no img',
         true,
-        6);
+        16);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -289,7 +329,7 @@ VALUES ('Bye Felicia!',
  malt profile with chocolate malt, honey malt, and crystal rye. Very sessionable and a touch on the sweet side.',
         'no img',
         true,
-        6);
+        16);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -301,7 +341,7 @@ VALUES ('Black Flag',
  Clean and smooth in taste with some floral German hop taste',
         'no img',
         true,
-        6);
+        7);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -314,7 +354,7 @@ VALUES ('S.I.P.A.',
   and refreshingly floral.',
         'no img',
         true,
-        6);
+        7);
 
 -- Market Garden Brewery
 
@@ -328,7 +368,7 @@ Another Great American Beer Festival award winner, it is crisp, brilliant, and r
 delicate malt body and a snappy hop finish; Nano keeps you dominating all day.',
         'no img',
         true,
-        7);
+        8);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -342,7 +382,7 @@ VALUES ('Progress Pilsner',
    is sunlight in a glass!',
         'no img',
         true,
-        7);
+        8);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -354,7 +394,7 @@ VALUES ('Hyper Haze',
 low bitterness and soft malt profile comes together for this citrus-centric, juicy IPA',
         'no img',
         true,
-        7);
+        9);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -367,7 +407,7 @@ character plays with the limes tartness leading to a dry, quenching finish that 
 new flavor territory thanks to the judicious use of diverse ingredients sure to keep you feeling Frosty.',
         'no img',
         true,
-        7);
+        9);
 
 -- Masthead Brewery
 
@@ -382,7 +422,7 @@ VALUES ('Falling Fruit',
  or apple.',
         'https://beer.untappd.com/labels/2477127',
         true,
-        7);
+        10);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -394,7 +434,7 @@ VALUES ('Robot Santa Christmas Ale',
 Ale brewed with cinnamon, ginger, nutmeg, coriander, honey and orange peel.',
         'https://beer.untappd.com/labels/3543126',
         true,
-        7);
+        10);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -407,7 +447,7 @@ Mosaic. Expect a soft mouthfeel and bitterness paired with huge tropical hop fla
 and aroma.',
         'https://beer.untappd.com/labels/2886738',
         true,
-        7);
+        13);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -421,7 +461,7 @@ hops there are. Our staff grabbed them and they just smelled like excellence so 
 took them and brewed this beer.',
         'https://beer.untappd.com/labels/4029532',
         true,
-        7);
+        13);
 
 -- Nano Brew Cleveland
 
@@ -435,7 +475,7 @@ Brewed with a touch of rice for a dry but thirst-quenching beverage. Let LIFE gi
 you a beer. Trust us, you will be better off with one in your hand. Get a LIFE!',
         'no img',
         true,
-        8);
+        14);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -447,7 +487,7 @@ VALUES ('Hola Cerveza Mexican',
 caramelized maize corn. This 5% quencher starts the fiesta',
         'no img',
         true,
-        8);
+        14);
 
 -- Noble Beast Brewing
 
@@ -461,7 +501,7 @@ Czech Saaz hops for a delightfully floral and spicy aroma. Lagered horizontally 
 flavor. Light but with rich malt and hop character.',
         'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p191_i2_w1184.jpeg?width=640',
         true,
-        9);
+        15);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -473,7 +513,7 @@ VALUES ('Evil Motives',
 big aroma, and a clean finish.',
         'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p455_i2_w1184.jpeg?width=640',
         true,
-        9);
+        15);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -486,7 +526,7 @@ decoction mash brings out rich malt flavors without sweetness and makes Kapit�
 of the Brewmaster!',
         'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p392_i1_w1184.jpeg?width=640',
         true,
-        9);
+        16);
 
 -- Saucy Brew Works
 
@@ -498,7 +538,7 @@ VALUES ('Love You, Bye',
         'Super juicy and permanently hazy.',
         'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png',
         true,
-        11);
+        16);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -509,7 +549,7 @@ VALUES ('Juicy ASAP',
         'Tropical, citrusy, and most certainly juicy.',
         'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png',
         true,
-        11);
+        17);
 
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
@@ -520,7 +560,7 @@ VALUES ('Habituale ',
         'Light, clean, crisp with a slight citrusy, spicy character',
         'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png',
         true,
-        11);
+        17);
 
 -- The Cleveland Brewery
 
@@ -558,7 +598,7 @@ VALUES ('AWFUGIT',
 need to get tuned up fast: family holidays, big games, and bad weather. ',
         'no img',
         true,
-        12);
+        18);
 
 -- The Jolly Scholar
 

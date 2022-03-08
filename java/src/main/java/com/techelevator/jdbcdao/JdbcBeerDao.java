@@ -34,7 +34,7 @@ public class JdbcBeerDao implements BeerDao {
 		}
 		return allBeers;
 	}
-	
+
 	@Override
 	public Beer getBeerbyID(Long beerId) {
 		Beer aBeer = new Beer();
@@ -55,7 +55,7 @@ public class JdbcBeerDao implements BeerDao {
 	}
 	
 	@Override
-	public void saveBeer(Beer newBeer) {
+	public void addNewBeer(Beer newBeer) {
 		jdbcTemplate.update("INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
 				newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
 	}
