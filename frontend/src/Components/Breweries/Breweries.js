@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 
@@ -10,13 +11,12 @@ function RenderBreweryCard({
   address,
   description,
   breweryLogoUrl,
-  websiteUrl,
 }) {
   return (
     <Row gutter={[24, 24]}>
       <Col xs={24} sm={12} lg={8} key={breweryId}>
         <Card hoverable className="news-card">
-          <a href={websiteUrl} target="_blank" rel="noreferrer">
+          <Link to={`/breweries/${breweryId}`}>
             <div className="news-image-container">
               <Title className="news-title" level={4}>
                 {name}
@@ -35,7 +35,7 @@ function RenderBreweryCard({
               </div>
               <Text>{address}</Text>
             </div>
-          </a>
+          </Link>
         </Card>
       </Col>
     </Row>
@@ -61,12 +61,11 @@ class BreweryCard extends Component {
       return (
         <RenderBreweryCard
           key={brewer.breweryId}
-          id={brewer.breweryId}
+          breweryId={brewer.breweryId}
           breweryLogoUrl={brewer.breweryLogoUrl}
           name={brewer.name}
           address={brewer.address}
           description={brewer.description}
-          websiteUrl={brewer.websiteUrl}
         />
       );
     });

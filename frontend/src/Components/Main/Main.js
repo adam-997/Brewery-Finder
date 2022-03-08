@@ -9,6 +9,7 @@ import { withRouter } from "react-router-dom";
 import { Layout, Menu, Breadcrumb } from "antd";
 import icon from "../../image/Logo3.png";
 import BreweryCard from "../Breweries/Breweries";
+import Brewer from "../Breweries/Brewer";
 
 const { Header, Content, Footer } = Layout;
 
@@ -58,8 +59,8 @@ class Main extends Component {
                 <Menu.Item key="3">
                   <NavLink to="/breweries">Breweries </NavLink>
                 </Menu.Item>
-                <Redirect to="/home" />
               </Menu>
+              <Redirect to="/home" />
             </Header>
             <Content
               className="site-layout"
@@ -99,6 +100,8 @@ class Main extends Component {
                 : null
             }
           />
+          <Route path="/users/:id" component={Brewer} />
+
           <Route
             path="/home"
             component={
