@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Select, Typography, Row, Col, Avatar, Card } from "antd";
+import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 
 const { Text, Title } = Typography;
@@ -13,30 +13,32 @@ function RenderBreweryCard({
   websiteUrl,
 }) {
   return (
-    <Col xs={24} sm={12} lg={8} key={breweryId}>
-      <Card hoverable className="news-card">
-        <a href={websiteUrl} target="_blank" rel="noreferrer">
-          <div className="news-image-container">
-            <Title className="news-title" level={4}>
-              {name}
-            </Title>
-            <img
-              width={200}
-              src={breweryLogoUrl}
-              alt={"brewerId: " + breweryId}
-            />
-          </div>
-          <p>{description}</p>
-          <div className="provider-container">
-            <div>
-              <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
-              <Text className="provider-name">{name}</Text>
+    <Row gutter={[24, 24]}>
+      <Col xs={24} sm={12} lg={8} key={breweryId}>
+        <Card hoverable className="news-card">
+          <a href={websiteUrl} target="_blank" rel="noreferrer">
+            <div className="news-image-container">
+              <Title className="news-title" level={4}>
+                {name}
+              </Title>
+              <img
+                width={200}
+                src={breweryLogoUrl}
+                alt={"brewerId: " + breweryId}
+              />
             </div>
-            <Text>{address}</Text>
-          </div>
-        </a>
-      </Card>
-    </Col>
+            <p>{description}</p>
+            <div className="provider-container">
+              <div>
+                <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
+                <Text className="provider-name">{name}</Text>
+              </div>
+              <Text>{address}</Text>
+            </div>
+          </a>
+        </Card>
+      </Col>
+    </Row>
   );
 }
 

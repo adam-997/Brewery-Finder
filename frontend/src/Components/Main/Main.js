@@ -8,6 +8,8 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Layout, Menu, Breadcrumb } from "antd";
 import icon from "../../image/Logo3.png";
+import BreweryCard from "../Breweries/Breweries";
+
 const { Header, Content, Footer } = Layout;
 
 const mapStateToProps = (state) => {
@@ -45,9 +47,7 @@ class Main extends Component {
               <div className="logo" src={icon}></div>
               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
                 <Menu.Item key="2">
-                  <NavLink to="/home" activeClassName="active">
-                    Home{" "}
-                  </NavLink>
+                  <NavLink to="/home">Home </NavLink>
                 </Menu.Item>
                 <Menu.Item key="1">
                   {" "}
@@ -55,7 +55,9 @@ class Main extends Component {
                     logout
                   </NavLink>
                 </Menu.Item>
-                <Menu.Item key="3">nav 3</Menu.Item>
+                <Menu.Item key="3">
+                  <NavLink to="/breweries">Breweries </NavLink>
+                </Menu.Item>
                 <Redirect to="/home" />
               </Menu>
             </Header>
@@ -90,12 +92,19 @@ class Main extends Component {
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
           <Route
+            path="/breweries"
+            component={
+              this.props.token.token !== undefined
+                ? () => <BreweryCard />
+                : null
+            }
+          />
+          <Route
             path="/home"
             component={
               this.props.token.token !== undefined ? () => <Home /> : null
             }
           />
-
           <Redirect to="/login" />
         </Switch>
       </div>
