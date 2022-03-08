@@ -85,6 +85,7 @@ class Main extends Component {
             ></Content>
           </Layout>
         )}
+        <Content style={{ marginTop: 20 }}></Content>
         <Switch>
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
@@ -94,6 +95,7 @@ class Main extends Component {
               this.props.token.token !== undefined ? () => <Home /> : null
             }
           />
+
           <Redirect to="/login" />
         </Switch>
       </div>
