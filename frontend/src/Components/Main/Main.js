@@ -90,6 +90,7 @@ class Main extends Component {
         )}
         <Content style={{ marginTop: 20 }}></Content>
         <Switch>
+          <Route exact path="/breweries/:id" component={Brewer} />
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
           <Route
@@ -100,7 +101,6 @@ class Main extends Component {
                 : null
             }
           />
-          <Route path="/users/:id" component={Brewer} />
 
           <Route
             path="/home"
