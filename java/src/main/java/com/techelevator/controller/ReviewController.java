@@ -60,7 +60,7 @@ public class ReviewController {
 	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review, BindingResult result, RedirectAttributes flash) throws NotFoundException {
 		flash.addFlashAttribute("newReview", review);
 		
-		if (beerDAO.getBeerbyID(beerId) == null) {
+		if (beerDAO.getBeerByID(beerId) == null) {
 			throw new NotFoundException();
 		}
 		

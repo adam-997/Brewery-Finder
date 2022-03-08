@@ -42,7 +42,7 @@ public class BeerController {
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
 	public Beer getBeerByID(@PathVariable Long beerId) throws NotFoundException {
-		return beerDAO.getBeerbyID(beerId);
+		return beerDAO.getBeerByID(beerId);
 	}
 
 	//@PreAuthorize("hasRole('ROLE_BREWER')")

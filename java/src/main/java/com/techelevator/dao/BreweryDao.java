@@ -5,7 +5,7 @@ import java.util.List;
 import com.techelevator.model.Brewery;
 
 public interface BreweryDao {
-   List<Brewery> getAllBreweries();
+    List<Brewery> getAllBreweries();
 
 	Brewery getBreweryById(Long breweryId);
 

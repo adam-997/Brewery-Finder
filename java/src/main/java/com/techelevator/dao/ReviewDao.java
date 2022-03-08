@@ -8,11 +8,12 @@ import java.util.List;
 public interface ReviewDao {
     List<Review> getAllReviews();
 
+	List<Review> searchReviewsByBeerId(long beerId);
+
     List<Review> getReviews(Long beer_id);
-	
-	void addReview(Review aReview);
 
 	void saveReview(@Valid Review review);
 
-	List<Review> searchReviewsByBeerId(long beerId);
+	void addReview(Review aReview);
+
 }
