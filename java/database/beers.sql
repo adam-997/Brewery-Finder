@@ -97,7 +97,7 @@ VALUES ('Bjorn To Be Wild',
         3);
 
 
--- 4. Asbury Park Brewery
+-- 4. Asbury Park Brewery (Asbury Park, NJ)
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Roasted Stout',
         4.9,
@@ -193,133 +193,135 @@ VALUES ('Devil`s Reach',
         6);
 
 
--- Brick and Barrel Brewing
-
+-- 7. Artisan's Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Bitter Chief IPA',
-        6.9,
+VALUES ('Irish Red Ale',
+        5.7,
         40,
-        'IPA',
-        'For our bitter Tribe fans, we almost got that series win. In the meantime, 
-drink some local craft beer and enjoy. Light cooper color. Nice bitterness with 
-refreshing citrus and grassy flavors and aromas. Malty finish balancing out the bitterness',
-        'no img',
-        true,
-        11);
-
-
--- Collision Bend Brewery
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('C-Town',
-        6.7,
-        68,
-        'American IPA',
-        'No description',
-        'no img',
-        true,
-        14);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Hope Flows',
-        5.2,
-        19,
-        'Kolsch',
-        'No description',
-        'no img',
-        true,
-        14);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Home Before 10',
-        7.3,
-        23,
-        'Farmhouse Saison',
-        'No description',
-        'no img',
-        true,
-        14);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Bollard Pull',
-        5.8,
-        30,
-        'American Porter',
-        'No description',
-        'https://untappd.akamaized.net/site/beer_logos/beer-2222654_132f6_sm.jpeg',
-        true,
-        14);
-
--- Forest City Brewery
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Black Betsy Black IPA',
-        5.6,
-        68,
-        'Black IPA',
-        'This beer is named after Shoeless Joe Jacksons primary bat. Betsy
-is brewed with classic hops (Columbus, Chinook, Cascade) paired with a stout-like 
-malt bill making this beer a balanced and flavorful home run!',
-        'no img',
-        true,
-        15);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Berg-A-Horn Bock',
-        6.5,
-        22,
-        'Bock',
-        'Our traditional Bock is a strong, dark, lightly hopped brew of German origin. Named after 
-our giant Sycamore tree in the original beer garden. Berg-A-Horn means Sycamore in German',
-        'no img',
-        true,
-        15);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Duck Island Amber Ale',
-        5.5,
-        40,
-        'Amber Ale',
-        'Crafted from American ingredients, this deep copper ale is anchored by a strong malt backbone 
-containing subtly delicious hints of caramel and fruit. This Forest City staple has a medium intensity
- hop flavor with citrus hop notes. A frothy headed classic that is sure to find its� way into your 
- stomach and into your cooler!',
-        'no img',
-        true,
-        15);
-
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('I Rish I Had Another Red Ale',
-        4.2,
-        22,
         'Irish Red Ale',
-        'This brew is a collaboration with our homebrewing friends Jay and Eli of SNOBS Homebrew
- Club. Their multi-award winning recipe is our first pro-am offering and one fine red ale.',
-        'no img',
+        'The most noticed flavor will be a moderate caramel maltiness, sometimes running into a buttered toast or toffee character, especially if diacetyl is present. The swallow will highlight light roasted grain qualities helping to dry out the finish.',
+        'https://images.app.goo.gl/G94XpZkryXS9cPAT6',
         true,
-        15);
+        7);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Jersey Shore IPA',
+        6.2,
+        32,
+        'American Style India Pale Ale',
+        'American style; amber in color, medium bodied, beautiful hop aromas from German Hercules and Nugget hop the boil, Galena and Warrior to finish. Malt bill is 2 row, dark Munich, light crystal and some toasted barley to balance with a gentle caramel, biscuit malt flavor.',
+        'https://untappd.akamaized.net/photos/2020_10_26/6a8e5aa2e8612ca4ff7d4e9682e9d4ab_640x640.jpg',
+        true,
+        7);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('American Blonde Ale',
+        4.9,
+        23,
+        'Light Ale',
+        'Light in color, hopped with Cascade and Centennial; lightly dry hopped with Centennial',
+        'https://images.app.goo.gl/DkkGS8XEzYsMCAPu7',
+        true,
+        7);
+
+
+-- 8. Brix City Brewing
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Brix City Porter Authority',
+        7.0,
+        50,
+        'American Porter',
+        'Our year-round Porter brewed with a choice selection of dark malts and named for a frequented NY landmark. Loaded with notes of roasted coffee beans, dark chocolate & cacao nibs.',
+        'https://untappd.akamaized.net/photos/2021_06_20/41d583c8a1d11e0253852229dd5a2901_640x640.jpg',
+        true,
+        8);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Brix City Triple Whirlpool',
+        8.0,
+        60,
+        'Double IPA',
+        'NE style DIPA Double Dry Hopped with Simcoe+Citra+Sultana for a blast of juicy hop flavor. No lactose in this one! Notes of Dole pineapple juicy, ripe papaya, and freshly juiced citrus balanced by a hint of earthy spice.',
+        'https://i.pinimg.com/originals/fe/d5/1c/fed51ce04caf88e1b0aae3652cd411b1.jpg',
+        true,
+       8);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Brix City Tasty Jams',
+        6.5,
+        23,
+        'NE IPA',
+        'Our favorite NE style IPA Double Dry Hopped with loads of Citra+Mosaic. Juicy notes of mixed berries, zesty citrus, and assorted tropical fruits.',
+        'https://untappd.akamaized.net/photos/2021_05_12/e486c22133fe1267ce5e83cafc05f378_640x640.jpg',
+        true,
+        8);
+
+
+-- 9. Carlow Brewing Company
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('O’Hara’s Irish Stout',
+        4.3,
+        36,
+        'Irish Stout',
+        'The flagship of the O’Hara’s brand, this uniquely Irish stout brings one back to how Irish stouts used to taste. First brewed in 1999, it has since been awarded prestigious honours for its quality and authenticity. O’Hara’s Irish Stout has a robust roast flavour complemented by a full-bodied and smooth mouth feel.',
+        'https://www.carlowbrewing.com/wp-content/uploads/2013/09/Stout-glsss-bottle-for-Stout-Page.png',
+        true,
+        9);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('O’Hara’s Irish Red',
+        4.3,
+        34,
+        'Red Ale',
+        'This Red stands out in this beer style category. The malt body is as impressive as a bock, albeit in a uniquely Irish way. With an incredibly smooth malt body complimented by caramel tones and perfectly balanced in bitterness, this Irish Red is much more complex than it’s mainstream rivals.',
+        'https://www.carlowbrewing.com/wp-content/uploads/2013/10/Red-glsss-bottle-for-Red-Page1.png',
+        true,
+        9);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('O’Hara’s Irish Pale Ale',
+        5.2,
+        45,
+        'Irish Pale Ale',
+        'A Contemporary style IPA with an Irish twist. Combining the balance of European IPAs with the generous dry hopping of American pale ales (APAs), this beer is everything an IPA should be and more.',
+        'https://www.carlowbrewing.com/wp-content/uploads/2013/10/IPA-glsss-bottle-for-IPA-Page.png',
+        true,
+        9);
+
+
+-- 10. 9 White Deer Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Stag Bán',
+        4.5,
+        40,
+        'India Pale Ale',
+        'Stag Bán is  an easy going beer brewed at lower temperatures to create a cleaner profile, the malt profile is an uncomplicated design to give somebody to the beer without being heavy or cloying.',
+        'https://www.9whitedeer.ie/product/stag-ban-case-12-x-500ml/#iLightbox[product-gallery]/0',
+        true,
+        10);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Stag Rua',
+        4.2,
+        35,
+        'Irish Red Ale',
+        'Stag Rua is a beer with big malt flavours and it’s our impression of a perfect Irish Red Ale.  The body is moderate meaning it’s not a heavy beer with an ABV of 4.2%. The flavour profile of Stag Rua is full of irresistible chocolate, caramel and toffee characteristics.',
+        'https://www.9whitedeer.ie/product/stag-rua-case-12-x-500ml/#iLightbox[product-gallery]/0',
+        true,
+        10);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Stag Stout',
+        4.2,
+        35,
+        'Irish Stout',
+        'This is a double chocolate and Madagascan vanilla stout,  Stag stout is Ireland’s first gluten free stout, based on the same recipe as our draft stout but with heaps of cacao nibs and vanilla but this version is bursting with chocolate. This is a rich and luxurious beer with incredible smoothness.',
+        'https://www.9whitedeer.ie/product/stag-stout-case-12-x-500ml-copy/#iLightbox[product-gallery]/0',
+        true,
+        10);
+
 
 -- Hansa Brewery
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Mr. Meeseeks',
-        4.6,
-        9,
-        'Blueberry Gose',
-        'This bier is meant to serve the one purpose of quenching your thirst. Fulfilling
- fruity taste with a lemony tartness. Hints of coriander and a touch of salt that follows through 
- with a fantastic blueberry taste!',
-        'no img',
-        true,
-        16);
-
-
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Bye Felicia!',
         5.2,

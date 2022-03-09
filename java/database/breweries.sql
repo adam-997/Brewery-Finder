@@ -8,7 +8,6 @@ VALUES('Guinness®',
        'D08 VF8H',
        '35314084800',
        'It takes adventurous spirit and irrepressible ingenuity to do things the Guinness® way. From our humble beginnings in 1759 to the present day, we’ve gone to extraordinary lengths to bring you exceptional beer. But, while many milestones mark the way on our long and illustrious path, we’re not ones to rest on our laurels. As we like to put it: our greatest work is yet to come.',
-       --'https://www.underconsideration.com/brandnew/archives/guinness_harp_detail.jpg',
        'https://pbs.twimg.com/profile_images/746302063353733120/nahJqe4-_400x400.jpg',
        'https://www.guinness.com/en/',
        1,
@@ -93,7 +92,7 @@ VALUES('Cape May Brewery',
 
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Artisans Brewery',
+VALUES('Artisan`s Brewery',
        '1171 Hooper Ave',
        'Toms River, New Jersey',
        '08753-8305',
