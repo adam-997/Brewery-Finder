@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect, Link, NavLink } from "react-router-dom";
+import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Home from "../Home/Home";
 import { addToken, deleteUser } from "../../Redux/actionCreators";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout, Menu } from "antd";
 import icon from "../../image/Logo3.png";
 import BreweryCard from "../Breweries/Breweries";
 import Brewer from "../Breweries/Brewer";
@@ -65,11 +65,7 @@ class Main extends Component {
             <Content
               className="site-layout"
               style={{ padding: "0 50px", marginTop: 64 }}
-            >
-              <Breadcrumb style={{ margin: "16px 0" }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-              </Breadcrumb>
-            </Content>
+            ></Content>
           </Layout>
         ) : (
           <Layout>
@@ -88,7 +84,6 @@ class Main extends Component {
             ></Content>
           </Layout>
         )}
-        <Content style={{ marginTop: 20 }}></Content>
         <Switch>
           <Route exact path="/breweries/:id" component={Brewer} />
           <Route path="/login" component={() => <Login />} />

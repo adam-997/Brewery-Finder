@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
+import { Breadcrumb } from "antd";
 
 const { Text, Title } = Typography;
+const { Content } = Layout;
 
 function RenderBreweryCard({
   breweryId,
@@ -13,32 +15,28 @@ function RenderBreweryCard({
   breweryLogoUrl,
 }) {
   return (
-    <Row gutter={[24, 24]}>
-      <Col xs={24} sm={12} lg={8} key={breweryId}>
-        <Card hoverable className="news-card">
-          <Link to={`/breweries/${breweryId}`}>
-            <div className="news-image-container">
-              <Title className="news-title" level={4}>
-                {name}
-              </Title>
-              <img
-                width={200}
-                src={breweryLogoUrl}
-                alt={"brewerId: " + breweryId}
-              />
-            </div>
-            <p>{description}</p>
-            <div className="provider-container">
-              <div>
-                <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
-                <Text className="provider-name">{name}</Text>
-              </div>
-              <Text>{address}</Text>
-            </div>
-          </Link>
-        </Card>
-      </Col>
-    </Row>
+    <Card hoverable className="news-card">
+      <Link to={`/breweries/${breweryId}`}>
+        <div className="news-image-container">
+          <Title className="news-title" level={4}>
+            {name}
+          </Title>
+          <img
+            width={200}
+            src={breweryLogoUrl}
+            alt={"brewerId: " + breweryId}
+          />
+        </div>
+        <p>{description}</p>
+        <div className="provider-container">
+          <div>
+            <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
+            <Text className="provider-name">{name}</Text>
+          </div>
+          <Text>{address}</Text>
+        </div>
+      </Link>
+    </Card>
   );
 }
 
@@ -59,17 +57,58 @@ class BreweryCard extends Component {
   render() {
     const brewerMap = this.state.breweries.map((brewer) => {
       return (
-        <RenderBreweryCard
+        <Col
+          xs={24}
+          sm={12}
+          lg={8}
+          className="crypto-card"
           key={brewer.breweryId}
-          breweryId={brewer.breweryId}
-          breweryLogoUrl={brewer.breweryLogoUrl}
-          name={brewer.name}
-          address={brewer.address}
-          description={brewer.description}
-        />
+        >
+          <RenderBreweryCard
+            key={brewer.breweryId}
+            breweryId={brewer.breweryId}
+            breweryLogoUrl={brewer.breweryLogoUrl}
+            name={brewer.name}
+            address={brewer.address}
+            description={brewer.description}
+          />
+        </Col>
       );
     });
-    return <div> {brewerMap} </div>;
+    return (
+      <>
+        <Layout>
+          <Content
+            className="site-layout"
+            style={{ padding: "0 50px", marginTop: 30 }}
+          >
+            <Breadcrumb style={{ margin: "16px 0" }}>
+              <Breadcrumb.Item>
+                <NavLink to="/home">Home</NavLink>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>Breweries</Breadcrumb.Item>
+            </Breadcrumb>
+          </Content>{" "}
+        </Layout>
+        <Title
+          level={2}
+          className="heading"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          All Breweries
+        </Title>{" "}
+        <div className="crypto-card">
+          <Row gutter={[32, 32]} className="crypto-card-container">
+            {" "}
+            {brewerMap}{" "}
+          </Row>
+        </div>
+      </>
+    );
   }
 }
 export default BreweryCard;

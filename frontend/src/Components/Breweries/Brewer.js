@@ -5,9 +5,46 @@ class Brewer extends Component {
     const { id } = this.props.match.params;
 
     return (
-      <div>
-        <h1>Brewer id is {id}</h1>
-      </div>
+      <>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h1>Brewery Details</h1>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          Brewery Id is: {id}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h1>Selection of Beers</h1>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          Beers go here
+        </div>
+      </>
     );
   }
 }
