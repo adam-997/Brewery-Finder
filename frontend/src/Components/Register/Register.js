@@ -2,22 +2,38 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
-import { Form, Input, Button, Typography } from "antd";
+import { Form, Input, Button, Checkbox } from "antd";
 
 const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [isBrewer, setIsBrewer] = useState(false);
 
   const handleSubmit = () => {
-    const data = {
-      username: username,
-      password: password,
-      confirmPassword: confirmPassword,
-      role: "ROLE_USER",
-    };
-    if (password === confirmPassword) {
-      axios.post(baseUrl + "/register", data);
+    if (isBrewer === false) {
+      const data = {
+        username: username,
+        password: password,
+        confirmPassword: confirmPassword,
+        role: "ROLE_USER",
+      };
+
+      if (password === confirmPassword) {
+        axios.post(baseUrl + "/register", data);
+      }
+    }
+    if (isBrewer === true) {
+      const data = {
+        username: username,
+        password: password,
+        confirmPassword: confirmPassword,
+        role: "ROLE_BREWER",
+      };
+
+      if (password === confirmPassword) {
+        axios.post(baseUrl + "/register", data);
+      }
     }
   };
 
@@ -136,6 +152,16 @@ const Register = (props) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           ></Input>
+        </Form.Item>
+        <Form.Item
+          name="isBrewer"
+          valuePropName="checked"
+          wrapperCol={{
+            offset: 8,
+            span: 16,
+          }}
+        >
+          <Checkbox onChange={(e) => setIsBrewer(true)}>I am a Brewer</Checkbox>
         </Form.Item>
         <Form.Item
           wrapperCol={{
