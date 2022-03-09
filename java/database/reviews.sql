@@ -1159,7 +1159,7 @@ VALUES ('Buy This!',
         4,
         now(),
         3,
-        65);
+        25);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1168,7 +1168,7 @@ VALUES ('Average',
         4,
         now(),
         4,
-        65);
+        25);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1177,7 +1177,7 @@ VALUES ('More my speed',
         5,
         now(),
         4,
-        66);
+        35);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1186,7 +1186,7 @@ VALUES ('HOLY GOODNESS',
         5,
         now(),
         4,
-        66);
+        16);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1195,7 +1195,7 @@ VALUES ('Next',
         1,
         now(),
         5,
-        67);
+        17);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1204,7 +1204,7 @@ VALUES ('Very interesting',
         4,
         now(),
         5,
-        67);
+        17);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1213,7 +1213,7 @@ VALUES ('Buy This!',
         4,
         now(),
         5,
-        68);
+        28);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1222,7 +1222,7 @@ VALUES ('It was not the worst, but definatly not the best.',
         4,
         now(),
         6,
-        68);
+        29);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1231,7 +1231,7 @@ VALUES ('Best Beer Ever',
         5,
         now(),
         6,
-        69);
+        30);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1240,7 +1240,7 @@ VALUES ('WOW',
         5,
         now(),
         6,
-        69);
+        11);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1249,7 +1249,7 @@ VALUES ('Disgusting',
         1,
         now(),
         7,
-        70);
+        26);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1258,7 +1258,7 @@ VALUES ('Very interesting',
         4,
         now(),
         7,
-        70);
+        48);
 
 
 COMMIT;
