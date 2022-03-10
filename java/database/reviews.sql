@@ -56,18 +56,18 @@ VALUES ('Not enough down under',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Fills me with Determi-wait, no, Fortitude',
-        'Seeing an outdated Undertale reference fills me with Fortitude',
-        4,
+VALUES ('I love Guinness! Fills me with Fortitude and Boldness!',
+        'Seeing 10 ratings for some of these outdated and overrated beers fills me with Fortitude because anything by Guinness far outshines them. As for Boldness, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        10,
         now(),
         4,
         4);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough Fortitude',
-        'I didnt get my fortitude for this. 4/10 would not reccomend',
-        4,
+VALUES ('Yeah! Give me da love, Guinness!',
+        'Love! Love! Love! But knock a few heads together! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo ab sequitur.',
+        10,
         now(),
         3,
         4);
