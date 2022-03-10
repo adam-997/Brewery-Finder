@@ -62,7 +62,7 @@ class Beer extends Component {
             alignItems: "center",
           }}
         >
-          <Title level={2}>Brewery Details </Title>
+          <Title level={2}>Beer Details </Title>
         </div>
         <div
           style={{
