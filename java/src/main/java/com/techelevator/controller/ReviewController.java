@@ -13,8 +13,8 @@ import javax.validation.Valid;
 import java.util.Calendar;
 import java.util.List;
 
-@CrossOrigin
 @RestController
+@CrossOrigin
 public class ReviewController {
 
 	// Timestamp Source: https://alvinalexander.com/java/java-timestamp-example-current-time-now/
@@ -38,6 +38,7 @@ public class ReviewController {
 		this.reviewDAO = reviewDAO;
 	}
 
+	// **************************** GET ****************************
 	@RequestMapping(path="/reviews", method=RequestMethod.GET)
 	public List<Review> showAllReviews(ModelMap modelHolder) {
 		List<Review> reviews = reviewDAO.getAllReviews();
@@ -50,7 +51,8 @@ public class ReviewController {
 	public List<Review> getReviews(@PathVariable Long beerId) throws NotFoundException {
 		return reviewDAO.getReviews(beerId);
 	}
-	
+
+	// **************************** POST ****************************
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
 	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {
 		reviewDAO.addReview(aReview);
@@ -68,6 +70,7 @@ public class ReviewController {
 			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "newReview", result);
 			return "redirect://beerDetails/{id}/review";
 		}
+
 		review.setCreateDate(currentTimestamp);
 		
 		reviewDAO.saveReview(review);
