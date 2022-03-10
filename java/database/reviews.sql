@@ -295,7 +295,7 @@ VALUES ('This stusff id amzzing!',
         4,
         now(),
         1,
-        17);
+        3);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
@@ -1195,7 +1195,7 @@ VALUES ('Next',
         1,
         now(),
         5,
-        17);
+        3);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
