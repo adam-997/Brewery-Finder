@@ -290,36 +290,36 @@ VALUES ('Not enough 10',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('This stusff id amzzing!',
-        'Iv hwd 3 ifthes an i so drnk nw!',
-        4,
+VALUES ('Guinness loves philosophers...',
+        'Or is it the other way around? Or is it that anything by Guinness turns the drinker into a philosopher of sorts? In any case, this robust Extra Stout is nothing to take for granted. Despite living in a bottle for some undefined period of time, this stout endures in quality and preserves its taste. My caveat to those who believe that a good stout should be warm, I can`t avoid laughing at your foolishness. Stouts were made to be drunk at an ambient temperature at a low of 45 degrees and not to exceed 72 degrees. So all you self-proclaimed purists out there not full of quality but you are full of pure...something. Drink responsibly!',
+        10,
         now(),
         1,
         3);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough bollard',
-        'I didnt get my vollard for this. 4/10 would not reccomend',
-        4,
+VALUES ('Not bad! Taste is everything in a good quality beer.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        8,
         now(),
         2,
         17);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Greatest Beer Ever',
-        'This is the best beer in the world!',
-        5,
+VALUES ('Greatest Beer Ever!',
+        'This is the best beer in the world! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        10,
         now(),
         2,
         18);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough betsy',
-        'I didnt get my betsy for this. 4/10 would not reccomend',
-        4,
+VALUES ('Not enough Rani!',
+        'I didnt get my Rani from this beer, but at a 7/10 I will still reccommend the suds. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        7,
         now(),
         2,
         18);
