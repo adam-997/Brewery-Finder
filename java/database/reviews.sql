@@ -2,8 +2,8 @@ BEGIN;
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Greatest Beer Ever',
-        'This is the best beer in the world!',
+VALUES ('Guinness Is The Greatest Beer Ever!',
+        'This is the best beer in the world! Poured from tap at a local bar. You can always tell if the pour is right because of the cascading head effect that goes on, very beautiful. Mouth feel is perfect. Head was long lasting and always there, as you would expect. Very dark in colour, as you would expect from a Guinness. Tastes of roasted barley, with a hint of chocolate and coffee. Again, it`s a Guinness, you should expect a good beer.',
         5,
         now(),
         3,
@@ -11,12 +11,12 @@ VALUES ('Greatest Beer Ever',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough Oats',
-        'I didnt get my oats for this. 4/10 would not reccomend',
+VALUES ('Guinness does it AGAIN!',
+        'This review is for the Guinness West Indies Porter. A real gem! A deep, smooth and full bodied Porter. Taste notes of chocolate, hops and toffee with a slightly sweet finish. Mouth feel is velvety and robust without being heavy. ABV is on the higher end without tasting overly strong. This is by far a better quality drink than draught Guinness and really should be made available on tap in your local. A magnificent stout that will hopefully be a permanent feature in the Guinness range. This is how a beer like this SHOULD taste!',
         2,
         now(),
-        3,
-        1);
+        4,
+        6);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
