@@ -29,8 +29,8 @@ VALUES ('Great-tasting beer!',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough Black',
-        'I didnt get my Black for this, but it is still a good beer. 7/10 would reccomend',
+VALUES ('Not enough stout! Give me more!',
+        'I didnt get my stout for this, but it is still a good beer. 7/10 would reccomend',
         7,
         now(),
         2,
@@ -1190,9 +1190,9 @@ VALUES ('HOLY GOODNESS',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Next',
-        'Great can, but clowns are terrible, not as terrible as this beer though',
-        1,
+VALUES ('Wonderful!',
+        'Overall: Excellent. Guinness never disappoints. This is what a stout should aspire to be. Hits on all the right notes. My new favorite stout, unless I want an oatmeal stout the Founders. Pair with steak, roasted and grilled meats and veg, cheddar and chocolate.',
+        10,
         now(),
         5,
         3);
@@ -1201,7 +1201,7 @@ VALUES ('Next',
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Very interesting',
         'This is one of the most unique beers I have had, it tastes great too',
-        4,
+        8,
         now(),
         5,
         17);
@@ -1210,7 +1210,7 @@ VALUES ('Very interesting',
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Buy This!',
         'Excellent Brew',
-        4,
+        10,
         now(),
         5,
         28);
@@ -1255,7 +1255,7 @@ VALUES ('Disgusting',
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Very interesting',
         'This is one of the most unique beers I have had, it tastes great too',
-        4,
+        9,
         now(),
         7,
         48);
