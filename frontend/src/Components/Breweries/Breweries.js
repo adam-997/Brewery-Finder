@@ -14,6 +14,7 @@ function RenderBreweryCard({
   address,
   description,
   breweryLogoUrl,
+  website,
 }) {
   return (
     <Card hoverable className="news-card">
@@ -36,6 +37,8 @@ function RenderBreweryCard({
           />
         </div>
         <p>{description}</p>
+      </Link>
+      <a href={website} target="_blank" rel="noreferrer">
         <div className="provider-container">
           <div>
             <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
@@ -43,7 +46,7 @@ function RenderBreweryCard({
           </div>
           <Text>{address}</Text>
         </div>
-      </Link>
+      </a>
     </Card>
   );
 }
@@ -80,6 +83,7 @@ class BreweryCard extends Component {
             name={brewer.name}
             address={brewer.address}
             description={brewer.description}
+            website={brewer.websiteUrl}
           />
         </Col>
       );

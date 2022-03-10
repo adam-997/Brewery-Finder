@@ -112,13 +112,13 @@ class Brewer extends Component {
           }}
         >
           {" "}
-          Brewery Id is: {this.state.brewery.brewery.breweryId}
+          Brewery Id is: {brewery.breweryId}
           <br />
-          Brewery name is: {this.state.brewery.brewery.name}
+          Brewery name is: {brewery.name}
           <br />
-          Brewery city is: {this.state.brewery.brewery.city}
+          Brewery city is: {brewery.city}
           <br />
-          Brewery address is: {this.state.brewery.brewery.address}
+          Brewery address is: {brewery.address}
         </div>
         <div
           style={{
@@ -136,8 +136,10 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          {" "}
-          {beerMap}
+          <Row gutter={[32, 32]} className="crypto-card-container">
+            {" "}
+            {beerMap}
+          </Row>
         </div>
       </>
     );
