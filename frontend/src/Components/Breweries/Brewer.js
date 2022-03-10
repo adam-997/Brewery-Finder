@@ -1,9 +1,20 @@
 import React, { Component } from "react";
+import { baseUrl } from "../../Shared/baseUrl";
 
 class Brewer extends Component {
-  render() {
-    const { id } = this.props.match.params;
+  state = {
+    brewery: this.props.location.state,
+  };
+  // componentDidMount() {
+  // const { id } = this.props.match.params;
 
+  //   fetch(baseUrl + "/breweries/1").then((brewery) => {
+  //     this.setState(() => ({ brewery }));
+  //     console.log(this.state.brewery);
+  //   });
+  // }
+  render() {
+    console.log(this.state.brewery);
     return (
       <>
         <div
@@ -23,7 +34,13 @@ class Brewer extends Component {
           }}
         >
           {" "}
-          Brewery Id is: {id}
+          Brewery Id is: {this.state.brewery.brewery.breweryId}
+          <br />
+          Brewery name is: {this.state.brewery.brewery.name}
+          <br />
+          Brewery city is: {this.state.brewery.brewery.city}
+          <br />
+          Brewery address is: {this.state.brewery.brewery.address}
         </div>
         <div
           style={{

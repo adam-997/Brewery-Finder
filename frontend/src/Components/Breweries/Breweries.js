@@ -8,6 +8,7 @@ const { Text, Title } = Typography;
 const { Content } = Layout;
 
 function RenderBreweryCard({
+  brewery,
   breweryId,
   name,
   address,
@@ -16,7 +17,14 @@ function RenderBreweryCard({
 }) {
   return (
     <Card hoverable className="news-card">
-      <Link to={`/breweries/${breweryId}`}>
+      <Link
+        to={{
+          pathname: `/breweries/${breweryId}`,
+          state: {
+            brewery: brewery,
+          },
+        }}
+      >
         <div className="news-image-container">
           <Title className="news-title" level={4}>
             {name}
@@ -65,6 +73,7 @@ class BreweryCard extends Component {
           key={brewer.breweryId}
         >
           <RenderBreweryCard
+            brewery={brewer}
             key={brewer.breweryId}
             breweryId={brewer.breweryId}
             breweryLogoUrl={brewer.breweryLogoUrl}
