@@ -10,6 +10,7 @@ import { Layout, Menu } from "antd";
 import icon from "../../image/Logo3.png";
 import BreweryCard from "../Breweries/Breweries";
 import Brewer from "../Breweries/Brewer";
+import Beer from "../Breweries/Beer";
 
 const { Header, Content, Footer } = Layout;
 
@@ -86,6 +87,7 @@ class Main extends Component {
         )}
         <Switch>
           <Route exact path="/breweries/:id" component={Brewer} />
+          <Route path="/beers/:id" component={Beer} />
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
           <Route

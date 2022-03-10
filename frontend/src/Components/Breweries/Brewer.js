@@ -21,7 +21,7 @@ function RenderBeerCard({
     <Card hoverable className="news-card">
       <Link
         to={{
-          pathname: `/beer/${beerId}`,
+          pathname: `/beers/${beerId}`,
           state: {
             beer: beer,
           },
@@ -58,6 +58,7 @@ class Brewer extends Component {
       .then((res) => this.setState({ beers: res }));
   }
   render() {
+    console.log(this.state.beers);
     const { brewery } = this.state.brewery;
     const beerMap = this.state.beers.map((beer) => {
       return (
@@ -65,7 +66,7 @@ class Brewer extends Component {
           <RenderBeerCard
             beer={beer}
             breweryName={brewery.name}
-            beerId={beer.id}
+            beerId={beer.beerId}
             imgUrl={beer.imgUrl}
             name={beer.name}
             description={beer.info}
@@ -78,6 +79,22 @@ class Brewer extends Component {
 
     return (
       <>
+        <Layout>
+          <Content
+            className="site-layout"
+            style={{ padding: "0 50px", marginTop: 30 }}
+          >
+            <Breadcrumb style={{ margin: "16px 0" }}>
+              <Breadcrumb.Item>
+                <NavLink to="/home">Home</NavLink>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <NavLink to="/breweries">Breweries</NavLink>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>{brewery.name}</Breadcrumb.Item>
+            </Breadcrumb>
+          </Content>{" "}
+        </Layout>
         <div
           style={{
             display: "flex",
@@ -85,7 +102,7 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <h1>Brewery Details</h1>
+          <Title level={2}>Brewery Details </Title>
         </div>
         <div
           style={{
@@ -110,7 +127,7 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <h1>Selection of Beers</h1>
+          <Title level={2}>Selection of Beers </Title>
         </div>
         <div
           style={{
