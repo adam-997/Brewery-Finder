@@ -2,7 +2,7 @@ package com.techelevator.model;
 import java.math.BigDecimal;
 
 public class Beer {
-	private Long id;
+	private Long beerId;
 	private String name;
 	private float abv;
 	private int ibu;
@@ -13,11 +13,11 @@ public class Beer {
 	private BigDecimal rating;
 	private boolean isActive = true;
 
-	public Long getId() {
-		return id;
+	public Long getBeerId() {
+		return beerId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setBeerId(Long beerId) {
+		this.beerId = beerId;
 	}
 	
 	public String getName() {

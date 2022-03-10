@@ -65,13 +65,13 @@ public class JdbcBeerDao implements BeerDao {
 		String sqlUpdateBeer = "UPDATE beers SET name = ?, abv = ?, ibu = ?, info = ?, img_url = ?, brewery_id = ?, is_active = ?"
 				+ "WHERE beer_id = ?";
 		jdbcTemplate.update(sqlUpdateBeer, aBeer.getName(), aBeer.getAbv(), aBeer.getIbu(), aBeer.getInfo(), aBeer.getImgUrl(),
-				aBeer.getBreweryId(), aBeer.isActive(), aBeer.getId());
+				aBeer.getBreweryId(), aBeer.isActive(), aBeer.getBeerId());
 	}
 	
 	private Beer mapRowToBeer(SqlRowSet row) {
 		Beer newBeer = new Beer();
 		
-		newBeer.setId(row.getLong("beer_id"));
+		newBeer.setBeerId(row.getLong("beer_id"));
 		newBeer.setName(row.getString("name").toUpperCase());
 		newBeer.setAbv(row.getFloat("abv"));
 		newBeer.setIbu(row.getInt("ibu"));
