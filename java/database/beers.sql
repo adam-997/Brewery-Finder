@@ -8,17 +8,37 @@ VALUES ('Guinness Draught',
         20,
         'Stout',
         'Rich and creamy. Distinctively black. Velvety in its finish. This iconic beer is defined by harmony. Sip after sip, sweet counters bitter as the malt arrives on cue to complement a base of roasted barley.',
-        'https://www.guinness.com/en/our-beers/guinness-draught/',
+        'https://www.guinness.com/media/1538/guinness_draught_spritzr06bg1_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Extra Stout',
+        5.6,
+        35,
+        'Stout',
+        'As deep as Guinness Extra Stout’s color is its taste. Crisp barley cuts through hops. A bite draws you in, bold flavors linger. Bitter marries sweet. A rich, refreshing taste. Brewed with skill. Built to last.',
+        'https://www.guinness.com/media/2069/product_image.png?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Foreign Extra Stout',
+        7.5,
+        65,
+        'Stout',
+        'Fruit and caramel flavors begin, smoky notes and a vibrant bitterness follow. Where extra hops and a stronger alcohol percentage were once used to preserve the beer, allowing it to survive and thrive during long sea voyages, now they yield its bold taste and unique flavor profile.',
+        'https://www.guinness.com/media/1534/foreignextrastout_bg4_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
         true,
         1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Guinness Original',
-        5,
+        5.0,
         20,
         'Stout',
         'Distinctively black full bodied liquid with a rich creamy head. A direct descendant of our archival recipes, Guinness Original is based on a beer first brewed in 1821, when Arthur Guinness II set down precise instructions for brewing his Superior Porter.',
-        'https://www.guinness.com/en/our-beers/guinness-original/',
+        'https://www.guinness.com/media/1576/originalbottle_bg1_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
         true,
         1);
 
@@ -28,7 +48,88 @@ VALUES ('Guinness Dublin Porter',
         10,
         'Porter',
         'Sip Dublin Porter and you’re sampling Guinness history. Light but well rounded. Sweet and smooth. Just bitter enough. This is a beer inspired by an archival recipe from our brewers’ diaries, dating back to 1796.',
-        'https://www.guinness.com/en/our-beers/guinness-dublin-porter/',
+        'https://www.guinness.com/media/1573/dublinporter_bg3_resized2_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness West Indies Porter',
+        6.0,
+        45,
+        'Porter',
+        'Guinness West Indies Porter bottles the best of both worlds. The classic bitterness. A caramel-toffee sweetness. Then the touch of sourness. Pour this beer and enjoy a globetrotting Guinness that’s picked up a few distinct tricks along the way. With a higher % ABV and a chocolatey finish, it’s perfectly complex and decidedly unique. A beer well travelled, Guinness West Indies Porter was inspired by a recipe devised by our brewers back in 1801, when we first decided to export our legendary porter across the globe. The mother of what we now know as our Foreign Extra Stout, it was the pioneering brew that began it all, crafted with more hops to preserve the beer during sea voyages of four-to-five weeks in tropical climes.',
+        'https://www.guinness.com/media/1577/westindies_bg3_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Golden Ale',
+        4.5,
+        20,
+        'Ale',
+        'We`ve mastered the art of brewing black beer, but we`ve also got a lighter side. Within the distinctive golden hue of this ale lies some of our liveliest flavours. Delicate hops. Subtle biscuit. Slight sweetness. A refreshing bite yields to a dry finish, making for an enjoyable drink. Guinness Golden Ale: a premium beer worthy of the Guinness name.',
+        'https://www.guinness.com/media/1581/goldenale_bg3_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Hop House 13 Lager',
+        5.0,
+        35,
+        'Lager',
+        'Located at our legendary St. James’s Gate brewery, the Brewers Project allows our best brewers to experiment with recipes old and new. This double-hopped lager is the next chapter in that project. It’s decidedly modern and totally different. With more ingredients comes more character. 100% Irish-grown malted barley. The distinctive Guinness yeast. A mixture of Australian and American hops runs as an undercurrent through this incredibly deep beer, which is fresh at the surface and complex at the bottom. Our brewers set out to create something that would stimulate your palate and senses alike. From first sip to the lingering finish, this beer is surprising.',
+        'https://www.guinness.com/media/1578/hophouse_bg3_resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Blonde American Lager',
+        5.0,
+        30,
+        'Lager',
+        'Irish tradition meets American spirit in Guinness Blonde American lager. Complex and flavourful. Light, floral and alive with citrus. This beer is perfectly balanced with a lingering malt and biscuity finish. It’s the coming together of vibrant flavours, of character drawn from both sides of the pond. And it’s come a long way to get here.',
+        'https://www.guinness.com/media/1552/blonde_bg3__resized_1600-h.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Nitro IPA',
+        5.8,
+        40,
+        'Lager',
+        'Guinness Nitro IPA is everything you’d want from an IPA balanced with everything you’d expect from Guinness. Using our peerless expertise in nitrogenation, we’ve re-imagined the IPA to create a smoother, creamier texure and a whole new way to enjoy the flavours and aromas of the style.',
+        'https://www.guinness.com/media/1821/nipa_mob.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Nitro Cold Brew Coffee',
+        4.0,
+        20,
+        'Stout',
+        'Say hello to Guinness Nitro Cold Brew Coffee Beer. First the aroma of rich coffee hits you. Next, the magical surge of nitro releasing hints of espresso, chocolate and caramel. From the Brewers that invented Nitro beer, it might just become your new favorite part of the day. Please Drink Responsibly.',
+        'https://www.guinness.com/images/cold-brew-product-hero-bg-2.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Baltimore Blonde',
+        5.0,
+        25,
+        'Stout',
+        'Irish tradition meets American spirit in Guinness Baltimore Blonde. Complex and flavorful. Light, floral and alive with citrus. This beer is perfectly balanced with a lingering malt and biscuity finish. It’s the coming together of vibrant flavors, of character drawn from both sides of the pond. And it’s come a long way to get here.',
+        'https://www.guinness.com/media/2071/product_blackbackground-2021-resized.jpg?quality=75&format=webp&width=1920&upscale=false',
+        true,
+        1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Guinness Antwerpen',
+        8.0,
+        35,
+        'Porter',
+        'When the Belgian brewing industry was suffering from the impact of World War II, John Martin created Guinness Antwerpen. It was first imported to Belgium in 1944 and thankfully managed to survive the war. Since then it has become a sought-after specialty beer. The rich, smoky, malty taste is balanced with a sweet, fruity finish. And although light and creamy in texture, it’s still unmistakably part of the Guinness family.',
+--        'https://www.totalwine.com/media/sys_master/twmmedia/h11/h31/9998051213342.png',
+        'https://www.guinness.com/media/1884/full-shot.jpg?anchor=center&mode=crop&quality=75&width=720',
         true,
         1);
 
@@ -72,7 +173,7 @@ VALUES ('Shark Attack',
         30,
         'Irish Red Ale',
         'This Irish red ale pours rich ruby red in color with a thick creamy head. Soft toffee and a moderate level of caramel flavor, with a toast character. A sweet nose & hints of malt. On the palate it is smooth, creamy, and balanced.',
-        'https://jerseygirlbrewing.square.site/product/shark-attack-to-go/367?cs=true&cst=custom',
+        'https://jerseygirlbrewing.square.site/uploads/1/2/6/7/126772199/s965566478293685903_p367_i1_w554.png',
         true,
         3);
 
@@ -82,7 +183,7 @@ VALUES ('Pocket Full of Porter',
         30,
         'Porter',
         'Pocket full of porter is a beer that is exceptionally dark with a rich and creamy deep flavor profile layered with hints of hazelnut, milk chocolate, caramel, and lightly toasted marshmallow. Its aroma and smooth taste embody all that a dark beer should be. Cheers!',
-        'https://jerseygirlbrewing.square.site/product/pocket-full-of-porter-to-go/363?cs=true&cst=custom',
+        'https://jerseygirlbrewing.square.site/uploads/1/2/6/7/126772199/s965566478293685903_p363_i1_w524.png',
         true,
         3);
 
@@ -92,7 +193,7 @@ VALUES ('Bjorn To Be Wild',
         30,
         'India Pale Ale',
         'Bjorn to be Wild is the third iteration of our Bjorn Series of hazy IPAs fermented with Norwegian Farmhouse Yeast. We used big hop additions of Sabro, Equanot, and Ariana hops for a burst of tropical citrus and bold tangerine with undertones of peaches, lime, and herbal vanilla.',
-        'https://jerseygirlbrewing.square.site/product/bjorn-to-be-wild-to-go/352?cs=true&cst=custom',
+        'https://jerseygirlbrewing.square.site/uploads/1/2/6/7/126772199/s965566478293685903_p352_i3_w2220.png?width=640',
         true,
         3);
 
@@ -104,7 +205,8 @@ VALUES ('Roasted Stout',
         29.8,
         'Irish Stout',
         'A dry Irish style stout with mild sweetness and notes of coffee and chocolate imparted by roasted malts and flaked oats. ABV 4.9% IBU 29.8 ',
-        'https://robbedford.files.wordpress.com/2018/11/apb_roastedstout.jpg?w=924',
+--        'https://robbedford.files.wordpress.com/2018/11/apb_roastedstout.jpg?w=924',
+        'https://images.squarespace-cdn.com/content/v1/58648ec4d2b8574e99b3ce34/1533321825145-6SDJV35M63EJIE9KFG8E/stout.jpg?format=1500w',
         false,
         4);
 
@@ -114,7 +216,8 @@ VALUES ('Sea Dragon',
         65,
         'India Pale Ale',
         'An unfiltered, East Coast IPA loaded with hops for a huge nose of citrus and pine and a classic bitter finish. ABV 7% IBU 65',
-        'https://www.passionvines.com/images/sites/passionvines/labels/asbury-park-brewery-sea-dragon_1.jpg',
+--        'https://www.passionvines.com/images/sites/passionvines/labels/asbury-park-brewery-sea-dragon_1.jpg',
+        'https://images.squarespace-cdn.com/content/v1/58648ec4d2b8574e99b3ce34/1533321836979-IGK4DCV4PZTYTUVBBKGB/Seaaa.jpg?format=1500w',
         false,
         4);
 
@@ -124,7 +227,8 @@ VALUES ('Blonde',
         24,
         'Lager',
         'A light bodied, European style lager featuring Czech and German hops and the highest quality, imported malts. ABV 4.9% IBU 24',
-        'https://images.squarespace-cdn.com/content/58648ec4d2b8574e99b3ce34/1483575644018-TJQ23TR27BW4XE50PGEG/?content-type=image%2Fjpeg',
+--        'https://images.squarespace-cdn.com/content/58648ec4d2b8574e99b3ce34/1483575644018-TJQ23TR27BW4XE50PGEG/?content-type=image%2Fjpeg',
+        'https://images.squarespace-cdn.com/content/v1/58648ec4d2b8574e99b3ce34/1533321848303-E8ZGXWBR5PS93D61BV1H/Blo.jpg?format=1500w',
         false,
         4);
 
@@ -136,17 +240,19 @@ VALUES ('Whose Berliner Is It Anyway',
         9,
         'Berliner Weisser',
         'A little sweet and a little sour best describes this classic style made in a non-traditional method. Most sours of this style are lactose fermented instead we used a new wild yeast strain developed by the USciences Philly which generates lactic acid before generating alcohol...we then racked it over 80# of fresh tangerine puree...giving it a tart and sweet orangey flavor...4% ABV extremely crushable.',
-        'https://untappd.com/b/7-mile-brewery-whose-berliner-is-it-anyway/4149230',
+--        'https://untappd.akamaized.net/photos/2021_08_19/4ee0722e941b5caab2156a344cd4af95_1280x1280.jpeg',
+        'https://7milebrew.com/wp-content/uploads/2021/06/whoseline.png',
         true,
         5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Tsar Bomber',
+VALUES ('TSARBOMBA',
         9.5,
         28,
         'Russian Imperial Stout',
         'Rich, Dark, Roasted...with a milk chocolate flair. Big on flavor...A bomb of a beer...',
-        'https://untappd.com/b/7-mile-brewery-tsarbomba/3483595/photos',
+--        'https://untappd.akamaized.net/photos/2021_07_31/7e30f7b9546231708bdd10b7616cc8cc_1280x1280.jpg',
+        'https://7milebrew.com/wp-content/uploads/2021/06/tsarbomba.png',
         true,
         5);
 
@@ -156,7 +262,8 @@ VALUES ('Cashmere Hoodie',
         18,
         'Golden Ale',
         'Much Like the former Cashmere Sweater Light Lager, This variant is fermented quickly using an ale strain, a little more estery typical of the style this golden ale will finish a littler sweeter. Now available in cans! ',
-        'https://untappd.com/b/7-mile-brewery-cashmere-hoodie/4176426',
+--        'https://untappd.akamaized.net/photos/2021_05_27/ca06b343ed8a2553fcfda77ae3a5f149_1280x1280.jpg',
+        'https://7milebrew.com/wp-content/uploads/2021/06/cashmere.png',
         true,
         5);
 
@@ -168,7 +275,7 @@ VALUES ('Cap May IPA',
         63,
         'India Pale Ale',
         'The American IPA named for America’s Oldest Seaside Resort, Cape May IPA is loaded with floral and citrus notes, well-balanced with a zesty finish. A West Coast-style IPA brewed in the heart of the East Coast, it’s the beer that’s Crafted on the Cape.',
-        'https://www.capemaybrewery.com/beers/cape-may-ipa/',
+        'https://www.capemaybrewery.com/wp-content/uploads/2012/04/cape-may-brewing-ipa.jpg',
         true,
         6);
 
@@ -178,7 +285,7 @@ VALUES ('Cape May White',
         11,
         'Wheat Ale',
         'Cape May White is brewed with orange and lemon peels, coriander, grains of paradise, and our favorite Belgian Witbier yeast. Fruity esters up-front with an easy-drinking finish yields a traditional Belgian-Style Wheat Ale brewed in the heart of the East Coast.',
-        'https://www.capemaybrewery.com/beers/cape-may-white/',
+        'https://www.capemaybrewery.com/wp-content/uploads/2020/02/Cape-May-White.png',
         true,
         6);
 
@@ -188,7 +295,7 @@ VALUES ('Devil`s Reach',
         25,
         'Belgian Ale',
         'A Belgian beast, fruity and light, the complexity and character of Devil’s Reach come from a robust Belgian yeast. Deceptively simple, caution is demanded because, before you know it, Devil’s Reach has swallowed you whole.',
-        'https://www.capemaybrewery.com/beers/devils-reach/',
+        'https://www.capemaybrewery.com/wp-content/uploads/2013/05/cape-may-brewing-devils-reach-belgian-1.jpg',
         true,
         6);
 
@@ -200,7 +307,7 @@ VALUES ('Irish Red Ale',
         40,
         'Irish Red Ale',
         'The most noticed flavor will be a moderate caramel maltiness, sometimes running into a buttered toast or toffee character, especially if diacetyl is present. The swallow will highlight light roasted grain qualities helping to dry out the finish.',
-        'https://images.app.goo.gl/G94XpZkryXS9cPAT6',
+        'https://untappd.akamaized.net/photos/2021_07_26/58f2be35fbe6220de06c0291b6cf4673_640x640.jpg',
         true,
         7);
 
@@ -220,7 +327,7 @@ VALUES ('American Blonde Ale',
         23,
         'Light Ale',
         'Light in color, hopped with Cascade and Centennial; lightly dry hopped with Centennial',
-        'https://images.app.goo.gl/DkkGS8XEzYsMCAPu7',
+        'https://static.wixstatic.com/media/7093b7_c93130d99bdc48429df5aed82fe68fbf~mv2.jpg/v1/fill/w_1000,h_863,al_c,q_85,enc_auto/7093b7_c93130d99bdc48429df5aed82fe68fbf~mv2.jpg',
         true,
         7);
 
@@ -232,7 +339,8 @@ VALUES ('Brix City Porter Authority',
         50,
         'American Porter',
         'Our year-round Porter brewed with a choice selection of dark malts and named for a frequented NY landmark. Loaded with notes of roasted coffee beans, dark chocolate & cacao nibs.',
-        'https://untappd.akamaized.net/photos/2021_06_20/41d583c8a1d11e0253852229dd5a2901_640x640.jpg',
+        'https://untappd.akamaized.net/photos/2022_02_20/3ebd543b7566ac4b7ba5b55a4dffbc76_640x640.jpg',
+--        'https://cdn.beeradvocate.com/im/beers/170859.jpg',
         true,
         8);
 
@@ -242,7 +350,8 @@ VALUES ('Brix City Triple Whirlpool',
         60,
         'Double IPA',
         'NE style DIPA Double Dry Hopped with Simcoe+Citra+Sultana for a blast of juicy hop flavor. No lactose in this one! Notes of Dole pineapple juicy, ripe papaya, and freshly juiced citrus balanced by a hint of earthy spice.',
-        'https://i.pinimg.com/originals/fe/d5/1c/fed51ce04caf88e1b0aae3652cd411b1.jpg',
+        'https://untappd.akamaized.net/photo/2022_02_26/e3fb5ce0151eabd39b2a64a182bbe623_c_1132886149_640x640.jpg',
+--        'https://i.pinimg.com/originals/fe/d5/1c/fed51ce04caf88e1b0aae3652cd411b1.jpg',
         true,
        8);
 
@@ -291,22 +400,32 @@ VALUES ('O’Hara’s Irish Pale Ale',
 
 -- 10. 9 White Deer Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Stag Bán',
-        4.5,
-        40,
-        'India Pale Ale',
-        'Stag Bán is  an easy going beer brewed at lower temperatures to create a cleaner profile, the malt profile is an uncomplicated design to give somebody to the beer without being heavy or cloying.',
-        'https://www.9whitedeer.ie/product/stag-ban-case-12-x-500ml/#iLightbox[product-gallery]/0',
+VALUES ('Stag Kolsch',
+        4.2,
+        20,
+        'Lager',
+        'Stag Kolsch is a light, crisp, refreshing lager with a gentle hops and malt character, to be enjoyed by everyone. 4.2% ABV and only 36 kcal per 100ml (GF).',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-8.jpg',
         true,
         10);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Stag Rua',
-        4.2,
-        35,
-        'Irish Red Ale',
-        'Stag Rua is a beer with big malt flavours and it’s our impression of a perfect Irish Red Ale.  The body is moderate meaning it’s not a heavy beer with an ABV of 4.2%. The flavour profile of Stag Rua is full of irresistible chocolate, caramel and toffee characteristics.',
-        'https://www.9whitedeer.ie/product/stag-rua-case-12-x-500ml/#iLightbox[product-gallery]/0',
+VALUES ('Stag Bán',
+        4.5,
+        40,
+        'Pale Ale',
+        'Stag Bán is  an easy going beer brewed at lower temperatures to create a cleaner profile, the malt profile is an uncomplicated design to give somebody to the beer without being heavy or cloying.',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-9.jpg',
+        true,
+        10);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Stag IPA',
+        5.0,
+        30,
+        'India Pale Ale',
+        'A Classic IPA, using vast quantities of new age hops this IPA is full of flavour. Hop usage is late in the boil which gives big flavours and aroma without big bitterness. IPAs never serviced the gluten free market but that is now changed, and what a beer to change it with. 5% ABV',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-10.jpg',
         true,
         10);
 
@@ -316,7 +435,27 @@ VALUES ('Stag Stout',
         35,
         'Irish Stout',
         'This is a double chocolate and Madagascan vanilla stout,  Stag stout is Ireland’s first gluten free stout, based on the same recipe as our draft stout but with heaps of cacao nibs and vanilla but this version is bursting with chocolate. This is a rich and luxurious beer with incredible smoothness.',
-        'https://www.9whitedeer.ie/product/stag-stout-case-12-x-500ml-copy/#iLightbox[product-gallery]/0',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-11.jpg',
+        true,
+        10);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Stag Rua',
+        4.2,
+        35,
+        'Irish Red Ale',
+        'Stag Rua is a beer with big malt flavours and it’s our impression of a perfect Irish Red Ale.  The body is moderate meaning it’s not a heavy beer with an ABV of 4.2%. The flavour profile of Stag Rua is full of irresistible chocolate, caramel and toffee characteristics.',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-12.jpg',
+        true,
+        10);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Black Lightning',
+        6.5,
+        35,
+        'Irish Red Ale',
+        'This Black IPA is triple hopped with huge hop volumes of all the American hops expected of the style. The malt is in the back seat for this one, as there is enough dark malt to give colour and a limited roasty flavour with no malt astringency. Black Lightning is hopped from the mash to the fermentor. We use Willamette, Chinook, Cascade, Summit and Centennial hops in very large volumes, about 100% more than a regular beer, but we don’t make it too bitter. Black Lightning is 56 IBU and the water profile is adjusted to make the hops seem more rounded rather than sharp and harsh which can easily happen when using so much hops. 6.5% ABV',
+        'https://www.9whitedeer.ie/wp-content/uploads/2020/03/9-white-deer-product-img-13.jpg',
         true,
         10);
 
@@ -367,7 +506,7 @@ VALUES ('Highlander Traditional Scottish Amber',
 
 -- 13. The Jolly Scholar Brewing Company
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Jolly Cream Ale ',
+VALUES ('Jolly Cream Ale',
         6.1,
         14,
         'Cream Ale',
@@ -399,22 +538,42 @@ VALUES ('Insincere Hopology IPA',
 
 -- 14. Happy Hippie Brewing Company
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Smoke On The Water',
-        6.3,
-        28,
-        'Smoked Porter',
-        'This smoked porter is infused with cayenne pepper. It has a smooth smokey flavor  with a slight cayenne finish. Perfect for keeping you warm by the fire on a cold winter day',
-        'https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/555624922.happyhippiebrewingcompany.jpg',
+VALUES ('Captain Tripels',
+        9.7,
+        27,
+        'Belgian Tripel',
+        'Named as a nod to our patron saint, Jerry Garcia of the Grateful Dead (AKA Captain Trips), this is a strong golden ale with malty aroma and flavor that has a warming quality.',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/captain%20tripels.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
         true,
         14);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Happy Holidaze Spiced Ale',
-        7.2,
-        19,
-        'Ale',
-        'A traditional spiced ale for the Holiday season.  It is brewed with ginger, cloves, nutmeg, vanilla and red hots candies for cinnamon.  It tastes like a gingerbread cookie just in time for the Holidaze!',
-        'https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/555624922.happyhippiebrewingcompany.jpg',
+VALUES ('Honey Magnolia Witbier',
+        5.0,
+        14,
+        'Wheat Beer',
+        'This honey wheat is light and effervescent great for warm afternoons by the pool or on the patio.  Made with local Texas honey, it is smooth, silky and extremely drinkable with a subtle honey note.',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/Honey2.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
+        true,
+        14);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Captain Tripels Meets His Maker',
+        10.5,
+        27,
+        'Belgian Tripel',
+        'This is a bourbon barrel aged version of the original Captain Tripels.  Aged in authentic, single use Makers Mark barrels.  The mellow sweetness of the bourbon pairs well with the malty silkiness of the beer.  It has a bourbon note that is well balanced and not overwhelming on the palate.',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/blob-0002.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
+        true,
+        14);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Friend Of The Devil',
+        7.4,
+        53,
+        'Milk Stout',
+        'This milk stout is smooth and creamy with hints of salted caramel.  Great for cool evenings on the porch or by the fire.',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/devil_2.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
         true,
         14);
 
@@ -424,7 +583,37 @@ VALUES ('Party At The Moon Tower',
         69,
         'Session IPA',
         'The initial IPA release as part of our Hazed & Hopfused series, this IPA is made with a single El Dorado hop. It has a subtle haze and is not overwhelmingly bitter. It has a stone fruit finish that will leave you wanting more.',
-        'https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/555624922.happyhippiebrewingcompany.jpg',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/Moon%20Tower%20Label_can.png/:/rs=w:776,h:583,cg:true,m/cr=w:776,h:583',
+        true,
+        14);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Lemon Drop',
+        5.5,
+        40,
+        'Pale Ale',
+        'This is a standard pale ale that gets its name from the use of Lemon Drop hops and the old fashioned Lemon Drop candy used in the brewing process.  It is light, crisp and clean on the palate.  It is a perfect beer for those hot summer days on the patio, by the pool, or on a lake or river.',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/blob.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
+        true,
+        14);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Smoke On The Water',
+        6.3,
+        28,
+        'Smoked Porter',
+        'This smoked porter is infused with cayenne pepper. It has a smooth smokey flavor  with a slight cayenne finish. Perfect for keeping you warm by the fire on a cold winter day',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/blob-0003.png/:/cr=t:10.51%25,l:0%25,w:100%25,h:78.98%25/rs=w:776,h:583,cg:true',
+        true,
+        14);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Happy Holidaze Spiced Ale',
+        7.2,
+        19,
+        'Ale',
+        'A traditional spiced ale for the Holiday season.  It is brewed with ginger, cloves, nutmeg, vanilla and red hots candies for cinnamon.  It tastes like a gingerbread cookie just in time for the Holidaze!',
+        'https://img1.wsimg.com/isteam/ip/43413258-3bc3-46c1-8668-e4976403d07a/Happy_Holidaze_can.png/:/rs=w:776,h:583,cg:true,m/cr=w:776,h:583',
         true,
         14);
 
@@ -491,6 +680,26 @@ VALUES ('Hopnesia IPA',
         'IPA',
         'A bitter, floral and citrusy ale brewed with pale ale, light crystal and munich malts mashed a low temperature for good attenuation and a dry, crisp finish. Malts take a backseat in this style while hops are the star. This beer is brewed with Pale and Victory malts and hopped with Citra and Equinox hops. ',
         'https://www.maizevalley.com/wp-content/uploads/2019/01/Hopnesia-e1547862547510.jpg',
+        true,
+        16);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Amber Ale',
+        5.2,
+        25,
+        'Ale',
+        'A relatively light and easy drinking ale with a bit more color and character than the blonde ale.  Brewed with darker crystal malts for a slight caramel sweetness then hopped with cascade at both the beginning and end of the boil for a balancing hop bitterness with some slight piny and grapefruit hop aroma. Served in a pint glass.',
+        'https://www.maizevalley.com/wp-content/uploads/2017/06/IMG_20170606_142214.jpg',
+        true,
+        16);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Café Cubano Stout',
+        6.8,
+        35,
+        'Stout',
+        'Milk stout brewed with Cuban espresso beans and lactose. Notes of roast and chocolate with a strong coffee presence and a hint of sweetness reminiscent of those little cups of coffee served up all over Miami.',
+        'https://www.maizevalley.com/wp-content/uploads/2019/01/Cafe-Cubano-e1547862366122.jpg',
         true,
         16);
 
@@ -655,12 +864,22 @@ VALUES ('Roadrunner IPA',
 
 -- 21. Goose Island Brewing Company
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
-VALUES ('Sofie',
-        6.5,
-        20,
-        'Belgian Ale',
-        'Our sparkling Belgian Style Farmhouse Ale is wine barrel-aged with an abundance of hand-zested orange peel. Spicy white pepper notes contrast the citrus tartness. The light, refreshing, creamy vanilla finish will excite those fond of Champagne. Originally brewed by Belgian farmers to attract the best farm hands, we were inspired to brew an exceptional ale as inviting as the original Belgian Farmhouse ales. Light and effervescent, we named it for our founder’s granddaughter Sofie.',
-        'https://www.gooseisland.com/Sofie_rendering_2020.png',
+VALUES ('312 Urban Wheat Ale',
+        4.2,
+        18,
+        'Wheat Ale',
+        'Inspired by the city of Chicago and densely populated with flavor, 312`s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that`s immensely refreshing.',
+        'https://www.gooseisland.com/assets/images/beers/312/312-can1.png',
+        true,
+        21);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('SOX Golden Ale',
+        5.0,
+        25,
+        'Ale',
+        'An easy-drinking, American Golden Ale. Perfectly balanced, refreshing golden ale, with notes of honeysuckle and citrus. This beer knocks it out of the park.',
+        'https://www.gooseisland.com/SGA_FrontRender.png',
         true,
         21);
 
@@ -671,6 +890,46 @@ VALUES ('Oktoberfest',
         'German Marzen',
         'Goose Oktoberfest is brimming with notes of toasted malt and freshly baked rye bread. This light-bodied German lager is clean and crisp with a fine noble hop character and mild earthy bitterness that is the hallmark of Hallertau hops. Raise a few steins of Goose Oktoberfest this fall and celebrate this time-honored tradition. Prost!',
         'https://www.gooseisland.com/GI_Oktoberfest_12ozCan_New-2021.png',
+        true,
+        21);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Green Line Pale Ale',
+        5.4,
+        30,
+        'Ale',
+        'Named for our train line that runs outside of our brewery, Goose Island brings you Green Line Pale Ale. This honey-colored American Pale Ale has a crisp hop aroma, citrus flavor, and notes of biscuit and lightly toasted malt.',
+        'https://www.gooseisland.com/assets/images/beers/green-line/green-line-can1.png',
+        true,
+        21);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Lost Palate Hazy IPA',
+        6.3,
+        14,
+        'India Pale Ale',
+        'This release is dedicated to Jonny, a long time Goose Island employee. Jonny, and Brewer Quinn, came up with this recipe after Jonny’s recent victorious battle with cancer. Jonny lost the ability to taste many flavors, an unfortunate consequence of battling cancer. He almost completely lost his palate and mangos and cinnamon were two of the few things he was still able to taste. We’re happy to say that Jonny is now a cancer survivor! This beer pays tribute to the flavors that were never lost.',
+        'https://www.gooseisland.com/Lost_palate_rendering.png',
+        true,
+        21);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Sofie',
+        6.5,
+        20,
+        'Belgian Ale',
+        'Our sparkling Belgian Style Farmhouse Ale is wine barrel-aged with an abundance of hand-zested orange peel. Spicy white pepper notes contrast the citrus tartness. The light, refreshing, creamy vanilla finish will excite those fond of Champagne. Originally brewed by Belgian farmers to attract the best farm hands, we were inspired to brew an exceptional ale as inviting as the original Belgian Farmhouse ales. Light and effervescent, we named it for our founder’s granddaughter Sofie.',
+        'https://www.gooseisland.com/Sofie_rendering_2020.png',
+        true,
+        21);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Matilda',
+        7.0,
+        26,
+        'Belgian Ale',
+        'Wild in character, a complex ale with dried fruit and clove aromas, and a satisfying dry finish. Inspired by great Trappist ales, our complex Belgian Style Pale Ale is fermented with the wild yeast Brettanomyces. Matilda pours a golden sunrise color with dried fruit and clove aromas, a spicy yeast flavor, and a satisfying dry finish.',
+        'https://www.gooseisland.com/MatildaBottleFront.png',
         true,
         21);
 
