@@ -4,6 +4,8 @@ import com.techelevator.dao.ReviewDao;
 import com.techelevator.dao.BeerDao;
 import com.techelevator.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -53,13 +55,23 @@ public class ReviewController {
 	}
 
 	// **************************** POST ****************************
+//	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
+//	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {
+//		reviewDAO.addReview(aReview);
+//	}
+
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
-	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {
+//	@PostMapping(path = "/reviews")
+	public ResponseEntity<Review> addReviews(@RequestBody Review aReview) throws NotAllowedException {
 		reviewDAO.addReview(aReview);
+		return new ResponseEntity<>(aReview, HttpStatus.CREATED);
 	}
-	
+
+
+
 	@RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.POST)
-	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review, BindingResult result, RedirectAttributes flash) throws NotFoundException {
+	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review,
+								   BindingResult result, RedirectAttributes flash) throws NotFoundException {
 		flash.addFlashAttribute("newReview", review);
 		
 		if (beerDAO.getBeerByID(beerId) == null) {
@@ -75,6 +87,8 @@ public class ReviewController {
 		
 		reviewDAO.saveReview(review);
 		
-		return "redirect:/beerDetails/"+ beerId;
+		return "redirect:/beerDetails/" + beerId;
 	}
+
+
 }

@@ -1,7 +1,6 @@
 package com.techelevator.model;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 public class Review {
 	private Long reviewsId;
