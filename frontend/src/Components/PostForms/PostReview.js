@@ -41,10 +41,8 @@ class PostReviews extends Component {
 
     this.state = {
       name: "",
-      reviewsId: "",
-      beerId: "",
+      beerId: this.props.beerId.beerId,
       rating: "",
-      createDate: "",
       description: "",
     };
   }
@@ -67,7 +65,7 @@ class PostReviews extends Component {
   };
 
   render() {
-    const { name, beerId, rating, createDate, description } = this.state;
+    const { name, rating, description } = this.state;
     return (
       <div>
         <form onSubmit={this.submitHandler}>
@@ -81,29 +79,11 @@ class PostReviews extends Component {
             />
           </div>
           <div>
-            <label>beerId: </label>
-            <input
-              type="text"
-              name="beerId"
-              value={beerId}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
             <label>rating: </label>
             <input
               type="text"
               name="rating"
               value={rating}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>createDate: </label>
-            <input
-              type="text"
-              name="createDate"
-              value={createDate}
               onChange={this.changeHandler}
             />
           </div>

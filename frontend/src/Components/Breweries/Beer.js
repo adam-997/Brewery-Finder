@@ -5,23 +5,18 @@ import { baseUrl } from "../../Shared/baseUrl";
 import {
   Breadcrumb,
   Comment,
-  Tooltip,
   Layout,
   Typography,
-  Row,
-  Col,
   Avatar,
-  Card,
   Modal,
   Button,
 } from "antd";
 import PostReviews from "../PostForms/PostReview";
-import PostBreweries from "../PostForms/PostBreweries";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
-function ModalForm() {
+function ModalForm(beerId) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -47,7 +42,7 @@ function ModalForm() {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <PostReviews />
+        <PostReviews beerId={beerId} />
       </Modal>
     </>
   );
@@ -176,7 +171,7 @@ class Beer extends Component {
           <div>
             {" "}
             {reviewsMap}
-            <ModalForm />
+            <ModalForm beerId={beer.beerId} />
           </div>
         </div>
       </>
