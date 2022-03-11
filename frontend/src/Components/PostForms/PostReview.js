@@ -15,25 +15,50 @@ class PostReviews extends Component {
     };
   }
 
+  postNewComment() {
+    const reviewObject = {
+      description: this.state.description,
+      userId: 1,
+      beerId: this.state.beerId,
+      rating: Number(this.state.rating),
+      createDate: null,
+      name: this.state.name,
+    };
+    fetch(baseUrl + "/reviews", {
+      method: "POST",
+      body: JSON.stringify(reviewObject),
+      headers: {
+        "Content-type": "application/json",
+      },
+      credentials: "same-origin",
+    });
+    this.props.updateReviews(reviewObject);
+    this.setState({
+      visible: false,
+    });
+  }
+
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   submitHandler = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-    axios
-      .post(baseUrl + "/reviews", this.state)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // e.preventDefault();
+    // console.log(this.state);
+    // axios
+    //   .post(baseUrl + "/reviews", this.state)
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
     this.setState({
       visible: false,
     });
+    this.postNewComment();
   };
+
   showModal = () => {
     this.setState({
       visible: true,
@@ -48,7 +73,6 @@ class PostReviews extends Component {
   };
 
   render() {
-    console.log(this.state.beerId);
     const { name, rating, description } = this.state;
 
     return (
@@ -66,33 +90,29 @@ class PostReviews extends Component {
         >
           <div>
             <form>
-              <div>
-                <label>title: </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={this.changeHandler}
-                />
-              </div>
-              <div>
-                <label>rating: </label>
-                <input
-                  type="text"
-                  name="rating"
-                  value={rating}
-                  onChange={this.changeHandler}
-                />
-              </div>
-              <div>
-                <label>description: </label>
-                <input
-                  type="text"
-                  name="description"
-                  value={description}
-                  onChange={this.changeHandler}
-                />
-              </div>
+              <label>Title</label> <br />{" "}
+              <input
+                type="text"
+                id="title"
+                name="title"
+                onChange={(e) => this.setState({ name: e.target.value })}
+                required
+              />{" "}
+              <br /> <label>Description</label> <br />{" "}
+              <textarea
+                name="description"
+                id="description"
+                cols="50"
+                rows="6"
+                onChange={(e) => this.setState({ description: e.target.value })}
+              ></textarea>{" "}
+              <br /> <label>Rating</label> <br />{" "}
+              <input
+                type="number"
+                id="rating"
+                name="rating"
+                onChange={(e) => this.setState({ rating: e.target.value })}
+              />
             </form>
           </div>
         </Modal>

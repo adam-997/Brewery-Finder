@@ -57,6 +57,8 @@ public class BeerController {
 	@RequestMapping(path="/addBeer", method=RequestMethod.POST)
 	public void addNewBeer(@RequestBody Beer newBeer) throws NotAllowedException {
 		beerDAO.addNewBeer(newBeer);
+
+
 	}
 
 	// **************************** PUT ****************************

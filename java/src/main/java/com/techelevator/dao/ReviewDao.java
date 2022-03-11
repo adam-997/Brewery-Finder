@@ -14,6 +14,6 @@ public interface ReviewDao {
 
 	void saveReview(@Valid Review review);
 
-	void addReview(Review aReview);
+	Review addReview(Review aReview);
 
 }

@@ -3,6 +3,9 @@ package com.techelevator.jdbcdao;
 import com.techelevator.dao.ReviewDao;
 import com.techelevator.model.Review;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +19,12 @@ import java.util.List;
 public class JdbcReviewDao implements ReviewDao {
 
 	private final JdbcTemplate jdbcTemplate;
-	
+	private SimpleJdbcInsert simpleJdbcInsert;
+
 	public JdbcReviewDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate).withTableName("reviews").usingGeneratedKeyColumns("reviews_id");
+
 	}
 
 	@Override
@@ -67,10 +73,29 @@ public class JdbcReviewDao implements ReviewDao {
 	}
 
 	@Override
-	public void addReview(Review aReview) {
-		String sqlAddReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name) VALUES (?,?,?,?,?)";
-		jdbcTemplate.update(sqlAddReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
+	public Review addReview(Review aReview) {
+//		String sqlAddReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name) VALUES (?,?,?,?,?)";
+		SqlParameterSource parameterSource = new MapSqlParameterSource()
+				.addValue("name", aReview.getName())
+				.addValue("description", aReview.getDescription())
+				.addValue("user_id", aReview.getUserId())
+				.addValue("beer_id", aReview.getBeerId())
+				.addValue("rating", aReview.getRating())
+				.addValue("create_date", aReview.getCreateDate());
+
+		int id = (int) simpleJdbcInsert.executeAndReturnKey(parameterSource);
+
+		Review review = null;
+		String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE reviews_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId, id);
+
+		while (results.next()) {
+			review = mapRowToReview(results);
+		}
+		return review;
 	}
+
+//		jdbcTemplate.update(sqlAddReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
 	
 	private Review mapRowToReview(SqlRowSet row) {
 		Review review = new Review();

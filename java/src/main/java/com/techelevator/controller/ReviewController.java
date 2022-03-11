@@ -62,9 +62,9 @@ public class ReviewController {
 
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
 //	@PostMapping(path = "/reviews")
-	public ResponseEntity<Review> addReviews(@RequestBody Review aReview) throws NotAllowedException {
-		reviewDAO.addReview(aReview);
-		return new ResponseEntity<>(aReview, HttpStatus.CREATED);
+	public Review addReviews(@RequestBody Review aReview) throws NotAllowedException {
+
+		return reviewDAO.addReview(aReview);
 	}
 
 
@@ -73,20 +73,20 @@ public class ReviewController {
 	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review,
 								   BindingResult result, RedirectAttributes flash) throws NotFoundException {
 		flash.addFlashAttribute("newReview", review);
-		
+
 		if (beerDAO.getBeerByID(beerId) == null) {
 			throw new NotFoundException();
 		}
-		
+
 		if(result.hasErrors()) {
 			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "newReview", result);
 			return "redirect://beerDetails/{id}/review";
 		}
 
 		review.setCreateDate(currentTimestamp);
-		
+
 		reviewDAO.saveReview(review);
-		
+
 		return "redirect:/beerDetails/" + beerId;
 	}
 

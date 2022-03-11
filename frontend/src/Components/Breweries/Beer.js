@@ -16,38 +16,6 @@ import PostReviews from "../PostForms/PostReview";
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
-// function ModalForm(beerId) {
-//   const [isModalVisible, setIsModalVisible] = useState(false);
-
-//   const showModal = () => {
-//     setIsModalVisible(true);
-//   };
-
-//   const handleOk = () => {
-//     setIsModalVisible(false);
-//   };
-
-//   const handleCancel = () => {
-//     setIsModalVisible(false);
-//   };
-
-//   return (
-//     <>
-//       <Button type="primary" onClick={showModal}>
-//         Add Review
-//       </Button>
-//       <Modal
-//         title="Basic Modal"
-//         visible={isModalVisible}
-//         onOk={handleOk}
-//         onCancel={handleCancel}
-//       >
-//         <PostReviews beerId={beerId} />
-//       </Modal>
-//     </>
-//   );
-// }
-
 function RenderReviewCard({
   review,
   reviewTitle,
@@ -86,6 +54,12 @@ class Beer extends Component {
       reviews: [],
     };
   }
+
+  updateReviews = (review) => {
+    this.setState({
+      reviews: [...this.state.reviews, review],
+    });
+  };
 
   componentDidMount() {
     const id = this.state.beer.beer.beerId;
@@ -171,7 +145,10 @@ class Beer extends Component {
           <div>
             {" "}
             {reviewsMap}
-            <PostReviews beerId={beer.beerId} />
+            <PostReviews
+              beerId={beer.beerId}
+              updateReviews={this.updateReviews}
+            />
           </div>
         </div>
       </>

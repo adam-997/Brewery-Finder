@@ -3,6 +3,7 @@ package com.techelevator.jdbcdao;
 import com.techelevator.dao.BreweryDao;
 import com.techelevator.model.Brewery;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +13,15 @@ import java.util.List;
 
 @Component
 public class JdbcBreweryDao implements BreweryDao {
-	
+
+	private SimpleJdbcInsert simpleJdbcInsert;
+
 	private final JdbcTemplate jdbcTemplate;
-	
+
 	public JdbcBreweryDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate).withTableName("breweries").usingGeneratedKeyColumns("brewery_id");
+
 	}
 	
 	@Override
