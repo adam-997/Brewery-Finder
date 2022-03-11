@@ -25,6 +25,7 @@ public class BreweryController {
 		this.breweryDao = breweryDao;
 	}
 
+	// **************************** GET ****************************
 	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/breweries", method = RequestMethod.GET)
 	public List<Brewery> getAllBreweries(){
@@ -33,31 +34,35 @@ public class BreweryController {
 
 	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.GET)
-	public Brewery getBrewerybyBreweryID(@PathVariable Long breweryId) throws NotFoundException {
+	public Brewery getBreweryByBreweryID(@PathVariable Long breweryId) throws NotFoundException {
 		return breweryDao.getBreweryById(breweryId);
 	}
 
+	@PreAuthorize("permitAll")
+	@RequestMapping(path = "/users/{userId}/breweries", method = RequestMethod.GET)
+	public List<Brewery> getBreweriesByUserId(@PathVariable Long userId) throws NotFoundException{
+		return breweryDao.getBreweryByUserID(userId);
+	}
+
+	// **************************** POST ****************************
 	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
 	public void addNewBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
 		breweryDao.addNewBrewery(aBrewery);
 	}
 
+	// **************************** PUT ****************************
 	//@PreAuthorize("hasRole('ROLE_BREWER')")
 	@RequestMapping(path = "/breweries", method = RequestMethod.PUT)
 	public void updateBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
 		breweryDao.updateBrewery(aBrewery);
 	}
 
+	// **************************** DELETE ****************************
 	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.DELETE)
 	public void deleteBrewery(@PathVariable Long breweryId) throws NotAllowedException {
 		breweryDao.deleteBrewery(breweryId);
-	}
-
-	@RequestMapping(path = "/users/{userId}/breweries", method = RequestMethod.GET)
-	public List<Brewery> getBreweriesByUserId(@PathVariable Long userId) throws NotFoundException{
-		return breweryDao.getBreweryByUserID(userId);
 	}
 
 }

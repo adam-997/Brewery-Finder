@@ -29,8 +29,8 @@ VALUES ('Great-tasting beer!',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough Black',
-        'I didnt get my Black for this, but it is still a good beer. 7/10 would reccomend',
+VALUES ('Not enough stout! Give me more!',
+        'I didnt get my stout for this, but it is still a good beer. 7/10 would reccomend',
         7,
         now(),
         2,
@@ -56,18 +56,18 @@ VALUES ('Not enough down under',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Fills me with Determi-wait, no, Fortitude',
-        'Seeing an outdated Undertale reference fills me with Fortitude',
-        4,
+VALUES ('I love Guinness! Fills me with Fortitude and Boldness!',
+        'Seeing 10 ratings for some of these outdated and overrated beers fills me with Fortitude because anything by Guinness far outshines them. As for Boldness, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        10,
         now(),
         4,
         4);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough Fortitude',
-        'I didnt get my fortitude for this. 4/10 would not reccomend',
-        4,
+VALUES ('Yeah! Give me da love, Guinness!',
+        'Love! Love! Love! But knock a few heads together! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo ab sequitur.',
+        10,
         now(),
         3,
         4);
@@ -290,36 +290,36 @@ VALUES ('Not enough 10',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('This stusff id amzzing!',
-        'Iv hwd 3 ifthes an i so drnk nw!',
-        4,
+VALUES ('Guinness loves philosophers...',
+        'Or is it the other way around? Or is it that anything by Guinness turns the drinker into a philosopher of sorts? In any case, this robust Extra Stout is nothing to take for granted. Despite living in a bottle for some undefined period of time, this stout endures in quality and preserves its taste. My caveat to those who believe that a good stout should be warm, I can`t avoid laughing at your foolishness. Stouts were made to be drunk at an ambient temperature at a low of 45 degrees and not to exceed 72 degrees. So all you self-proclaimed purists out there not full of quality but you are full of pure...something. Drink responsibly!',
+        10,
         now(),
         1,
-        17);
+        3);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough bollard',
-        'I didnt get my vollard for this. 4/10 would not reccomend',
-        4,
+VALUES ('Not bad! Taste is everything in a good quality beer.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        8,
         now(),
         2,
         17);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Greatest Beer Ever',
-        'This is the best beer in the world!',
-        5,
+VALUES ('Greatest Beer Ever!',
+        'This is the best beer in the world! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        10,
         now(),
         2,
         18);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Not enough betsy',
-        'I didnt get my betsy for this. 4/10 would not reccomend',
-        4,
+VALUES ('Not enough Rani!',
+        'I didnt get my Rani from this beer, but at a 7/10 I will still reccommend the suds. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        7,
         now(),
         2,
         18);
@@ -1190,18 +1190,18 @@ VALUES ('HOLY GOODNESS',
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
-VALUES ('Next',
-        'Great can, but clowns are terrible, not as terrible as this beer though',
-        1,
+VALUES ('Wonderful!',
+        'Overall: Excellent. Guinness never disappoints. This is what a stout should aspire to be. Hits on all the right notes. My new favorite stout, unless I want an oatmeal stout the Founders. Pair with steak, roasted and grilled meats and veg, cheddar and chocolate.',
+        10,
         now(),
         5,
-        17);
+        3);
 
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Very interesting',
         'This is one of the most unique beers I have had, it tastes great too',
-        4,
+        8,
         now(),
         5,
         17);
@@ -1210,7 +1210,7 @@ VALUES ('Very interesting',
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Buy This!',
         'Excellent Brew',
-        4,
+        10,
         now(),
         5,
         28);
@@ -1255,7 +1255,7 @@ VALUES ('Disgusting',
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Very interesting',
         'This is one of the most unique beers I have had, it tastes great too',
-        4,
+        9,
         now(),
         7,
         48);
