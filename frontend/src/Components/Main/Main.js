@@ -90,14 +90,7 @@ class Main extends Component {
           <Route path="/beers/:id" component={Beer} />
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
-          <Route
-            path="/breweries"
-            component={
-              this.props.token.token !== undefined
-                ? () => <BreweryCard />
-                : null
-            }
-          />
+          <Route path="/breweries" component={() => <BreweryCard />} />
 
           <Route
             path="/home"

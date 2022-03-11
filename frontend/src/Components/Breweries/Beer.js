@@ -1,6 +1,6 @@
-import React, { Component, createElement, useState } from "react";
+import React, { Component, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import moment from "moment";
+import axios from "axios";
 import { baseUrl } from "../../Shared/baseUrl";
 import {
   Breadcrumb,
@@ -12,23 +12,51 @@ import {
   Col,
   Avatar,
   Card,
+  Modal,
+  Button,
 } from "antd";
-import {
-  DislikeOutlined,
-  LikeOutlined,
-  DislikeFilled,
-  LikeFilled,
-} from "@ant-design/icons";
+import PostReviews from "../PostForms/PostReview";
+import PostBreweries from "../PostForms/PostBreweries";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
+
+function ModalForm() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  return (
+    <>
+      <Button type="primary" onClick={showModal}>
+        Add Review
+      </Button>
+      <Modal
+        title="Basic Modal"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <PostReviews />
+      </Modal>
+    </>
+  );
+}
 
 function RenderReviewCard({
   review,
   reviewTitle,
   reviewId,
-  imgUrl,
-  name,
   description,
   rating,
 }) {
@@ -40,11 +68,16 @@ function RenderReviewCard({
           src={
             "https://cdn.icon-icons.com/icons2/2510/PNG/512/party_happy_alcohol_cheers_beer_drink_celebration_icon_150768.png"
           }
-          alt="Beer Lover"
+          alt={"Review id: " + reviewId}
         />
       }
       content={<p>{description}</p>}
-      datetime={<Text style={{ fontWeight: "bold" }}> {rating + " / 10"}</Text>}
+      datetime={
+        <Text style={{ fontWeight: "bold" }}>
+          {" "}
+          {reviewTitle + " Rating: " + rating + " / 10"}
+        </Text>
+      }
     />
   );
 }
@@ -116,9 +149,10 @@ class Beer extends Component {
           }}
         >
           {" "}
+          <h1> {beer.name}</h1> <br></br>
+          <img src={beer.imgUrl} height="200" />
           beer Id is: {beer.beerId}
           <br />
-          beer name is: {beer.name} <br />
           beer info is: {beer.info} <br />
           beer type is: {beer.type}{" "}
         </div>
@@ -139,7 +173,11 @@ class Beer extends Component {
             alignItems: "center",
           }}
         >
-          <div> {reviewsMap} </div>
+          <div>
+            {" "}
+            {reviewsMap}
+            <ModalForm />
+          </div>
         </div>
       </>
     );
