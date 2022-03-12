@@ -114,10 +114,9 @@ class Beer extends Component {
           {" "}
           <h1> {beer.name}</h1> <br></br>
           <img src={beer.imgUrl} height="200" />
-          beer Id is: {beer.beerId}
-          <br />
-          beer info is: {beer.info} <br />
-          beer type is: {beer.type}{" "}
+          beer type is: {beer.type} <br />
+          beer abv is: {beer.abv} <br />
+          beer info is: {beer.info}
         </div>
         <div
           style={{
