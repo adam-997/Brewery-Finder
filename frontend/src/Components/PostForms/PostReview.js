@@ -1,7 +1,19 @@
 import React, { Component, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../Shared/baseUrl";
-import { Modal, Button } from "antd";
+import {
+  Modal,
+  Form,
+  Input,
+  Button,
+  Radio,
+  Select,
+  Cascader,
+  DatePicker,
+  InputNumber,
+  TreeSelect,
+  Switch,
+} from "antd";
 
 class PostReviews extends Component {
   constructor(props) {
@@ -69,7 +81,7 @@ class PostReviews extends Component {
           Add your own review
         </Button>
         <Modal
-          title="Basic Modal"
+          title="Add Review"
           visible={this.state.visible}
           onOk={this.submitHandler}
           onCancel={this.handleCancel}
@@ -77,31 +89,44 @@ class PostReviews extends Component {
           cancelText="Cancel"
         >
           <div>
-            <form>
-              <label>Title</label> <br />{" "}
-              <input
-                type="text"
-                id="title"
-                name="title"
-                onChange={(e) => this.setState({ name: e.target.value })}
-                required
-              />{" "}
-              <br /> <label>Description</label> <br />{" "}
-              <textarea
-                name="description"
-                id="description"
-                cols="50"
-                rows="6"
-                onChange={(e) => this.setState({ description: e.target.value })}
-              ></textarea>{" "}
-              <br /> <label>Rating</label> <br />{" "}
-              <input
-                type="number"
-                id="rating"
-                name="rating"
-                onChange={(e) => this.setState({ rating: e.target.value })}
-              />
-            </form>
+            <Form>
+              <Form.Item label="Title">
+                <Input
+                  type="text"
+                  id="title"
+                  name="title"
+                  onChange={(e) => this.setState({ name: e.target.value })}
+                  required
+                  placeholder="Title"
+                />
+              </Form.Item>
+              <br />
+              <Form.Item label="Body">
+                <Input.TextArea
+                  name="description"
+                  id="description"
+                  cols="50"
+                  rows="6"
+                  placeholder="Review"
+                  onChange={(e) =>
+                    this.setState({ description: e.target.value })
+                  }
+                />
+              </Form.Item>
+              <Form.Item label="Rating">
+                <Radio.Group
+                  name="rating"
+                  id="rating"
+                  onChange={(e) => this.setState({ rating: e.target.value })}
+                >
+                  <Radio value={1}>1</Radio>
+                  <Radio value={2}>2</Radio>
+                  <Radio value={3}>3</Radio>
+                  <Radio value={4}>4</Radio>
+                  <Radio value={5}>5</Radio>
+                </Radio.Group>
+              </Form.Item>
+            </Form>
           </div>
         </Modal>
       </>
