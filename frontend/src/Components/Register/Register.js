@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button, Checkbox, Modal } from "antd";
 
 const Register = (props) => {
   const [username, setUsername] = useState("");
@@ -21,6 +21,9 @@ const Register = (props) => {
 
       if (password === confirmPassword) {
         axios.post(baseUrl + "/register", data);
+        Modal.success({
+          content: "Successfully registered as a Beer Lover!",
+        });
       }
     }
     if (isBrewer === true) {
@@ -33,6 +36,9 @@ const Register = (props) => {
 
       if (password === confirmPassword) {
         axios.post(baseUrl + "/register", data);
+        Modal.success({
+          content: "Successfully registered as a Brewer!",
+        });
       }
     }
   };
