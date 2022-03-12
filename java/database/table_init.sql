@@ -17,7 +17,7 @@ CREATE TABLE breweries (
     brewery_logo_url varchar(255),
     website_url varchar(255),
     user_id bigint,
-    hours  varchar(255),
+    hours text NOT NULL,
     lat varchar(20),
     lng varchar(20),
     CONSTRAINT pk_breweries_brewery_id PRIMARY KEY (brewery_id),
