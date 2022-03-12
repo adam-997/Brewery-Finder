@@ -12,6 +12,7 @@ import {
   Button,
 } from "antd";
 import PostReviews from "../PostForms/PostReview";
+import avatar from "../../image/avatar.png";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
@@ -26,14 +27,7 @@ function RenderReviewCard({
   return (
     <Comment
       author={<a>Beer Lover</a>}
-      avatar={
-        <Avatar
-          src={
-            "https://cdn.icon-icons.com/icons2/2510/PNG/512/party_happy_alcohol_cheers_beer_drink_celebration_icon_150768.png"
-          }
-          alt={"Review id: " + reviewId}
-        />
-      }
+      avatar={<Avatar src={avatar} alt={"Review id: " + reviewId} />}
       content={<p>{description}</p>}
       datetime={
         <Text style={{ fontWeight: "bold" }}>

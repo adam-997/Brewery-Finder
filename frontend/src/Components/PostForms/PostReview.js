@@ -43,16 +43,6 @@ class PostReviews extends Component {
   };
 
   submitHandler = (e) => {
-    // e.preventDefault();
-    // console.log(this.state);
-    // axios
-    //   .post(baseUrl + "/reviews", this.state)
-    //   .then((response) => {
-    //     console.log(response);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
     this.setState({
       visible: false,
     });
@@ -73,8 +63,6 @@ class PostReviews extends Component {
   };
 
   render() {
-    const { name, rating, description } = this.state;
-
     return (
       <>
         <Button type="primary" onClick={this.showModal}>
