@@ -16,6 +16,16 @@ public class User {
    private boolean activated;
    private Set<Authority> authorities = new HashSet<>();
 
+   public String getRole() {
+      return role;
+   }
+
+   public void setRole(String role) {
+      this.role = role;
+   }
+
+   private String role;
+
    public User() { }
 
    public User(Long userId, String username, String password, String authorities) {

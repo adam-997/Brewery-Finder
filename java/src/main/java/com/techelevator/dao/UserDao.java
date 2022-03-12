@@ -15,4 +15,5 @@ public interface UserDao {
 
     int findIdByUsername(String username);
 
+//    List<User> getUsers(Long userId);
 }

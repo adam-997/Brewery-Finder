@@ -43,7 +43,7 @@ public class JdbcUserDao implements UserDao {
 		if(results.next()) {
 			return mapRowToUser(results);
 		} else {
-			throw new RuntimeException("userId "+userId+" was not found.");
+			throw new RuntimeException("userId "+ userId+" was not found.");
 		}
 	}
 
@@ -61,6 +61,19 @@ public class JdbcUserDao implements UserDao {
     public int findIdByUsername(String username) {
         return jdbcTemplate.queryForObject("select user_id from users where username = ?", int.class, username);
     }
+
+//    @Override
+//    public List<User> getUsers(Long userId) {
+//        List<User> users = new ArrayList<>();
+//        String sqlGetUserByUserId = "SELECT * FROM users WHERE user_id = ?";
+//        SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetUserByUserId, userId);
+//
+//        while(results.next()) {
+//            User aUser = mapRowToUser(results);
+//            users.add(aUser);
+//        }
+//        return users;
+//    }
 
     @Override
     public boolean create(String username, String password, String role) {
@@ -92,6 +105,7 @@ public class JdbcUserDao implements UserDao {
         user.setUsername(rs.getString("username"));
         user.setPassword(rs.getString("password_hash"));
         user.setAuthorities(rs.getString("role"));
+        user.setRole(rs.getString("role"));
         user.setActivated(true);
         return user;
     }
