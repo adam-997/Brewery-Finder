@@ -22,8 +22,10 @@ const MyBrewery = (props) => {
   return (
     <div>
       <h1>Hello World</h1>
+      <p>{props.user.userId}</p>
       <p>{props.user.username}</p>
       <p>{roleMap}</p>
+
       {console.log(props.user)}
     </div>
   );
