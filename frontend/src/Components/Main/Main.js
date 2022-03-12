@@ -11,6 +11,7 @@ import icon from "../../image/Logo3.png";
 import BreweryCard from "../Breweries/Breweries";
 import Brewer from "../Breweries/Brewer";
 import Beer from "../Breweries/Beer";
+import MyBrewery from "../Breweries/MyBrewery";
 
 const { Header, Content, Footer } = Layout;
 
@@ -60,6 +61,9 @@ class Main extends Component {
                 <Menu.Item key="3">
                   <NavLink to="/breweries">Breweries </NavLink>
                 </Menu.Item>
+                <Menu.Item key="4">
+                  <NavLink to="/mybrewery">My Brewery</NavLink>
+                </Menu.Item>
               </Menu>
               <Redirect to="/home" />
             </Header>
@@ -88,6 +92,7 @@ class Main extends Component {
         <Switch>
           <Route exact path="/breweries/:id" component={Brewer} />
           <Route path="/beers/:id" component={Beer} />
+          <Route path="/mybrewery" component={() => <MyBrewery />} />
           <Route path="/login" component={() => <Login />} />
           <Route path="/register" component={() => <Register />} />
           <Route path="/breweries" component={() => <BreweryCard />} />
