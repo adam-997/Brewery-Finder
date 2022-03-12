@@ -32,7 +32,7 @@ function RenderReviewCard({
       datetime={
         <Text style={{ fontWeight: "bold" }}>
           {" "}
-          {reviewTitle + " Rating: " + rating + " / 10"}
+          {reviewTitle + " Rating: " + rating + " / 5"}
         </Text>
       }
     />
