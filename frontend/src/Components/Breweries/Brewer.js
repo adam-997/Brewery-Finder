@@ -102,7 +102,7 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <Title level={2}>Brewery Details </Title>
+          <Title level={2}>{brewery.name}</Title>
         </div>
         <div
           style={{
@@ -116,18 +116,25 @@ class Brewer extends Component {
             src={brewery.breweryLogoUrl}
             alt={"brewery: " + brewery.breweryId}
             height="200"
+            padding = "200"
+            style ={{justifyContent: "left"}}
           />
+         </div>
+          <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center"
+          }}
+        >
+        {brewery.description}
           <br />
-          Brewery name is: {brewery.name}
+        {brewery.address},  {brewery.city}
           <br />
-          Brewery city is: {brewery.city}
-          <br />
-          Brewery address is: {brewery.address}
-          <br />
-          Brewery phoneNumber is: {brewery.phoneNumber}
+          {brewery.phoneNumber}
           <br />
         </div>
-
         <div
           style={{
             display: "flex",

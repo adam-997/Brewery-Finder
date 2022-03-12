@@ -102,7 +102,7 @@ class Beer extends Component {
             alignItems: "center",
           }}
         >
-          <Title level={2}>Beer Details </Title>
+          <Title level={2}>{beer.name} </Title>
         </div>
         <div
           style={{
@@ -112,11 +112,11 @@ class Beer extends Component {
           }}
         >
           {" "}
-          <h1> {beer.name}</h1> <br></br>
           <img src={beer.imgUrl} height="200" />
-          beer type is: {beer.type} <br />
-          beer abv is: {beer.abv} <br />
-          beer info is: {beer.info}
+          {beer.type} <br />
+          {beer.info}<br />
+          {beer.abv}% ABV <br />
+          
         </div>
         <div
           style={{
