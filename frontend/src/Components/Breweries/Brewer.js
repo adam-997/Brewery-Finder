@@ -112,14 +112,22 @@ class Brewer extends Component {
           }}
         >
           {" "}
-          Brewery Id is: {brewery.breweryId}
+          <img
+            src={brewery.breweryLogoUrl}
+            alt={"brewery: " + brewery.breweryId}
+            height="200"
+          />
           <br />
           Brewery name is: {brewery.name}
           <br />
           Brewery city is: {brewery.city}
           <br />
           Brewery address is: {brewery.address}
+          <br />
+          Brewery phoneNumber is: {brewery.phoneNumber}
+          <br />
         </div>
+
         <div
           style={{
             display: "flex",
