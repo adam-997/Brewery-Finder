@@ -30,7 +30,7 @@ VALUES ('Great-tasting beer!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough stout! Give me more!',
-        'I didnt get my stout for this, but it is still a good beer. 7/10 would reccomend',
+        'I didnt get my stout for this, but it is still a good beer. 4/5 would reccomend',
         4,
         now(),
         2,
@@ -48,7 +48,7 @@ VALUES ('Whoops! All Down Under!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough down under',
-        'I didnt get my down for this. 6/10 would not reccomend',
+        'I didnt get my down for this. 4/5 would not reccomend',
         4,
         now(),
         4,
@@ -84,7 +84,7 @@ VALUES ('Brown for sure',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough dog',
-        'I didnt get my dog for this. 4/10 would not reccomend',
+        'I didnt get my dog for this. 4/5 would not reccomend',
         4,
         now(),
         3,
@@ -102,7 +102,7 @@ VALUES ('What is Jobu?',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough jobu',
-        'I didnt get my jobu for this. 4/10 would not reccomend',
+        'I didnt get my jobu for this. 4/5 would not reccomend',
         4,
         now(),
         5,
@@ -120,7 +120,7 @@ VALUES ('Holy Toledo Batman!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough holy',
-        'I didnt get my holy for this. 2/10 would not reccomend',
+        'I didnt get my holy for this. 2/5 would not reccomend',
         1,
         now(),
         2,
@@ -138,7 +138,7 @@ VALUES ('Put-in-Beautiful!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough berry',
-        'I didnt get my berry for this. 4/10 would not reccomend',
+        'I didnt get my berry for this. 4/5 would not reccomend',
         4,
         now(),
         6,
@@ -156,7 +156,7 @@ VALUES ('A very tasty beer!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough hipster',
-        'I didnt get my hipster for this, but I still recommend it 8/10.',
+        'I didnt get my hipster for this, but I still recommend it 4/5.',
         4,
         now(),
         5,
@@ -174,7 +174,7 @@ VALUES ('Bitter = Good',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough chief',
-        'I didnt get my chief on with this brewski. The main reason has to do with the taste disappearing almost immediately. I guess the beer is kinda light. 5/10 would maybe recommend it, if you`re not much of a beer connosseur.',
+        'I didnt get my chief on with this brewski. The main reason has to do with the taste disappearing almost immediately. I guess the beer is kinda light. 5/5 would maybe recommend it, if you`re not much of a beer connosseur.',
         5,
         now(),
         7,
@@ -192,7 +192,7 @@ VALUES ('Big Chief (not keef)',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough big',
-        'I didnt get my big for this. 2/10 would not reccomend',
+        'I didnt get my big for this. 2/5 would not reccomend',
         1,
         now(),
         8,
@@ -210,7 +210,7 @@ VALUES ('Rally Possum is a great name',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough possum',
-        'I didnt get my possum for this. 4/10 would not reccomend',
+        'I didnt get my possum for this. 4/5 would not reccomend',
         4,
         now(),
         8,
@@ -228,7 +228,7 @@ VALUES ('Beer! Holy sobriety challenge!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough pinot',
-        'I didnt get my pinot for this. 4/10 would not reccomend',
+        'I didnt get my pinot for this. 4/5 would not reccomend',
         4,
         now(),
         9,
@@ -246,7 +246,7 @@ VALUES ('C-town sucks but this beer doesnt',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough c',
-        'I didnt get my c for this. 4/10 would not reccomend',
+        'I didnt get my c for this. 4/5 would not reccomend',
         4,
         now(),
         10,
@@ -264,7 +264,7 @@ VALUES ('Hope this beer is always around',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough flows',
-        'I didnt get my flows for this. 4/10 would not reccomend',
+        'I didnt get my flows for this. 4/5 would not reccomend',
         4,
         now(),
         10,
@@ -282,7 +282,7 @@ VALUES ('Before 10? Yeah right!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough 10',
-        'I didnt get my 10 for this. 4/10 would not reccomend',
+        'I didnt get my 10 for this. 4/5 would not reccomend',
         4,
         now(),
         1,
@@ -318,7 +318,7 @@ VALUES ('Greatest Beer Ever!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough Rani!',
-        'I didnt get my Rani from this beer, but at a 7/10 I will still reccommend the suds. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
+        'I didnt get my Rani from this beer, but at a 4/5 I will still reccommend the suds. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare massa eget egestas purus viverra. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.',
         4,
         now(),
         2,
@@ -336,7 +336,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough berg-a-horn',
-        'I didnt get my berg-a-horn for this. 4/10 would not reccomend',
+        'I didnt get my berg-a-horn for this. 4/5 would not reccomend',
         4,
         now(),
         3,
@@ -354,7 +354,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough duck',
-        'I didnt get my duck for this. 4/10 would not reccomend',
+        'I didnt get my duck for this. 4/5 would not reccomend',
         4,
         now(),
         4,
@@ -372,7 +372,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough rish',
-        'I didnt get my rish for this. 4/10 would not reccomend',
+        'I didnt get my rish for this. 4/5 would not reccomend',
         4,
         now(),
         4,
@@ -390,7 +390,7 @@ VALUES ('Can you get my favorite beer for me?',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough meseeks',
-        'I didnt get my meseeks for this. 4/10 would not reccomend',
+        'I didnt get my meseeks for this. 4/5 would not reccomend',
         4,
         now(),
         5,
@@ -408,7 +408,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough felicia',
-        'I didnt get my felicia for this. 4/10 would not reccomend',
+        'I didnt get my felicia for this. 4/5 would not reccomend',
         4,
         now(),
         6,
@@ -426,7 +426,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough flag',
-        'I didnt get my flag for this. 4/10 would not reccomend',
+        'I didnt get my flag for this. 4/5 would not reccomend',
         4,
         now(),
         6,
@@ -444,7 +444,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough sipa',
-        'I didnt get my sipa for this. 4/10 would not reccomend',
+        'I didnt get my sipa for this. 4/5 would not reccomend',
         4,
         now(),
         7,
@@ -462,7 +462,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough nano',
-        'I didnt get my nano for this. 4/10 would not reccomend',
+        'I didnt get my nano for this. 4/5 would not reccomend',
         4,
         now(),
         8,
@@ -480,7 +480,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough progress',
-        'I didnt get my progress for this. 4/10 would not reccomend',
+        'I didnt get my progress for this. 4/5 would not reccomend',
         4,
         now(),
         8,
@@ -498,7 +498,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough haze',
-        'I didnt get my haze for this. 4/10 would not reccomend',
+        'I didnt get my haze for this. 4/5 would not reccomend',
         4,
         now(),
         9,
@@ -516,7 +516,7 @@ VALUES ('Greatest Beer Ever',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough frosty',
-        'I didnt get my frosty for this. 4/10 would not reccomend',
+        'I didnt get my frosty for this. 4/5 would not reccomend',
         4,
         now(),
         10,
@@ -534,7 +534,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough falling',
-        'I didnt get my falling for this. 4/10 would not reccomend',
+        'I didnt get my falling for this. 4/5 would not reccomend',
         4,
         now(),
         10,
@@ -552,7 +552,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough robot santa',
-        'I didnt get my robot santa for this. 4/10 would not reccomend',
+        'I didnt get my robot santa for this. 4/5 would not reccomend',
         4,
         now(),
         1,
@@ -570,7 +570,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough saturday',
-        'I didnt get my saturday for this. 4/10 would not reccomend',
+        'I didnt get my saturday for this. 4/5 would not reccomend',
         4,
         now(),
         2,
@@ -588,7 +588,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough big hairy american',
-        'I didnt get my big hairy american for this. 4/10 would not reccomend',
+        'I didnt get my big hairy american for this. 4/5 would not reccomend',
         4,
         now(),
         2,
@@ -606,7 +606,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough life',
-        'I didnt get my life for this. 4/10 would not reccomend',
+        'I didnt get my life for this. 4/5 would not reccomend',
         4,
         now(),
         3,
@@ -624,7 +624,7 @@ VALUES ('This stusff id amzzing!',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('Not enough hola',
-        'I didnt get my hola for this. 4/10 would not reccomend',
+        'I didnt get my hola for this. 4/5 would not reccomend',
         4,
         now(),
         4,
