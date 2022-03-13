@@ -11,7 +11,7 @@ public interface BreweryDao {
 	Brewery getBreweryById(Long breweryId);
 	List<Brewery> getBreweryByUserID(Long userId);
 
-	void updateBrewery(Brewery aBrewery);
+	Brewery updateBrewery(Brewery aBrewery);
 
 	void deleteBrewery(Long breweryId);
 
