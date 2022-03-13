@@ -65,7 +65,15 @@ a:hover {
   background-color: var(--bgSecondary) !important;
   border: none !important;
 }
-
+.hidden {
+  display: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .loader {
   height: 81vh;
   display: flex;

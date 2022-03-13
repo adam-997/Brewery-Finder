@@ -62,6 +62,10 @@ class PostBreweries extends Component {
     console.log(breweryObject);
   }
 
+  getRole = (authority) => {
+    return { authority };
+  };
+
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -86,11 +90,23 @@ class PostBreweries extends Component {
   };
 
   render() {
+    const roleMap = this.props.user.authorities.map((role) => {
+      const authority = role.name;
+      return this.getRole(authority);
+    });
+
+    console.log(roleMap);
     return (
       <>
-        <Button type="primary" onClick={this.showModal}>
-          Add Brewery
-        </Button>
+        <div
+          className={
+            this.props.user.username !== "admin" ? "hidden" : "center "
+          }
+        >
+          <Button type="primary" onClick={this.showModal}>
+            Add Brewery
+          </Button>
+        </div>
         <Modal
           title="Add Brewery"
           visible={this.state.visible}

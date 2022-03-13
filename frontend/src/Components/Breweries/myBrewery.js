@@ -27,7 +27,7 @@ class MyBrewery extends Component {
   }
 
   render() {
-    console.log(this.state.breweries);
+    console.log(this.props.user);
 
     const brewerMap = this.state.breweries.map((brewer) => {
       return (
