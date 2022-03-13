@@ -68,6 +68,12 @@ public class ReviewController {
 	}
 
 
+	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.DELETE)
+	public void deleteReviewsByBeerId(@PathVariable Long beerId) throws NotAllowedException{
+		reviewDAO.deleteAllReviewsByBeerId(beerId);
+	}
+
+
 
 	@RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.POST)
 	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review,

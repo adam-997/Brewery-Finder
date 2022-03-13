@@ -95,6 +95,12 @@ public class JdbcReviewDao implements ReviewDao {
 		return review;
 	}
 
+	@Override
+	public void deleteAllReviewsByBeerId(Long beer_id) {
+		String sql = "DELETE FROM reviews WHERE beer_id = ?";
+		jdbcTemplate.update(sql, beer_id);
+	}
+
 //		jdbcTemplate.update(sqlAddReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
 	
 	private Review mapRowToReview(SqlRowSet row) {

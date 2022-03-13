@@ -16,4 +16,6 @@ public interface ReviewDao {
 
 	Review addReview(Review aReview);
 
+	void deleteAllReviewsByBeerId(Long beer_id);
+
 }
