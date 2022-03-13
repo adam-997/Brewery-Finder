@@ -6,6 +6,7 @@ import { Breadcrumb } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import PostBeer from "../PostForms/PostBeer";
+import UpdateBrewery from "../PostForms/UpdateBrewery";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
@@ -95,6 +96,13 @@ class Brewer extends Component {
     });
   };
 
+  updateBrewery = (brewery) => {
+    this.setState({
+      brewery: this.state.brewery,
+      brewery,
+    });
+  };
+
   componentDidMount() {
     const id = this.state.brewery.brewery.breweryId;
     fetch(baseUrl + `/breweries/${id}` + "/beers")
@@ -107,7 +115,7 @@ class Brewer extends Component {
       return (
         <Col xs={24} sm={12} lg={8} className="crypto-card" key={beer.id}>
           <RenderBeerCard
-            breweryUserId={brewery.userId}
+            // breweryUserId={brewery.userId}
             userId={this.props.user.userId}
             beer={beer}
             breweryName={brewery.name}
@@ -187,6 +195,11 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
+          <UpdateBrewery
+            breweryId={brewery.breweryId}
+            updateBrewery={this.updateBrewery}
+            breweryOwnerId={brewery.userId}
+          />{" "}
           <Title level={2}>Selection of Beers </Title>
         </div>
         <div
