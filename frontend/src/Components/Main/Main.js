@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+import { Switch, Route, Redirect, NavLink, Link } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Home from "../Home/Home";
@@ -11,7 +11,7 @@ import icon from "../../image/Logo3.png";
 import BreweryCard from "../Breweries/Breweries";
 import Brewer from "../Breweries/Brewer";
 import Beer from "../Breweries/Beer";
-import MyBrewery from "../Breweries/MyBrewery";
+import MyBrewery from "../Breweries/myBrewery";
 
 const { Header, Content, Footer } = Layout;
 
@@ -63,7 +63,16 @@ class Main extends Component {
                   <NavLink to="/breweries">Breweries </NavLink>
                 </Menu.Item>
                 <Menu.Item key="4">
-                  <NavLink to="/mybrewery">My Brewery</NavLink>
+                  <Link
+                    to={{
+                      pathname: `/mybrewery/`,
+                      state: {
+                        user: this.props.user.user,
+                      },
+                    }}
+                  >
+                    My Breweries
+                  </Link>
                 </Menu.Item>
               </Menu>
               <Redirect to="/home" />
