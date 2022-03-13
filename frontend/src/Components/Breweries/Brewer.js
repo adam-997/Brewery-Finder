@@ -17,6 +17,8 @@ const mapStateToProps = (state) => {
   };
 };
 
+const isDeleted = false;
+
 const deleteHandler = (beerId) => {
   fetch(baseUrl + `/reviews/${beerId}`, { method: "DELETE" }).then((res) => {
     console.log(res);
@@ -89,7 +91,7 @@ class Brewer extends Component {
 
   updateBeer = (beer) => {
     this.setState({
-      reviews: [...this.state.beers, beer],
+      beers: [...this.state.beers, beer],
     });
   };
 
@@ -100,7 +102,6 @@ class Brewer extends Component {
       .then((res) => this.setState({ beers: res }));
   }
   render() {
-    console.log(this.state.beers);
     const { brewery } = this.state.brewery;
     const beerMap = this.state.beers.map((beer) => {
       return (

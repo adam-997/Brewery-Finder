@@ -63,7 +63,7 @@ class BreweryCard extends Component {
 
   updateBreweries = (brewery) => {
     this.setState({
-      reviews: [...this.state.breweries, brewery],
+      breweries: [...this.state.breweries, brewery],
     });
   };
 
