@@ -1,7 +1,5 @@
 import React from "react";
 import { Breadcrumb, Layout } from "antd";
-
-import PostBreweries from "../PostForms/PostBreweries";
 const { Content } = Layout;
 
 const Home = (props) => {
@@ -17,7 +15,6 @@ const Home = (props) => {
           </Breadcrumb>
         </Content>
       </Layout>
-      <PostBreweries />
     </div>
   );
 };
