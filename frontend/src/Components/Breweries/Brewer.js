@@ -6,6 +6,7 @@ import { Breadcrumb } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { axios } from "axios";
+import PostBeer from "../PostForms/PostBeer";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
@@ -35,7 +36,6 @@ function RenderBeerCard({
   type,
   userId,
 }) {
-  //this.props.user.userId
   return (
     <Card hoverable className="news-card">
       <div className={userId !== breweryUserId ? "hidden" : ""}>
@@ -79,6 +79,12 @@ class Brewer extends Component {
   state = {
     brewery: this.props.location.state,
     beers: [],
+  };
+
+  updateBeer = (beer) => {
+    this.setState({
+      reviews: [...this.state.beers, beer],
+    });
   };
 
   componentDidMount() {
@@ -183,10 +189,17 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <Row gutter={[32, 32]} className="crypto-card-container">
-            {" "}
-            {beerMap}
-          </Row>
+          <div className="crypto-card">
+            <PostBeer
+              breweryId={brewery.breweryId}
+              updateBeer={this.updateBeer}
+              breweryOwnerId={brewery.userId}
+            />
+            <Row gutter={[32, 32]} className="crypto-card-container">
+              {" "}
+              {beerMap}
+            </Row>
+          </div>
         </div>
       </>
     );

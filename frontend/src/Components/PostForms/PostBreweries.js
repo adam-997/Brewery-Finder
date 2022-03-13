@@ -19,15 +19,15 @@ class PostBreweries extends Component {
       name: "",
       address: "",
       city: "",
-      zipcode: "",
+      zipcode: 0,
       phoneNumber: "",
       description: "",
       breweryLogoUrl: "",
       websiteUrl: "",
       userId: 1,
       hours: "",
-      lat: "",
-      lng: "",
+      lat: 0,
+      lng: 0,
     };
   }
 
@@ -147,16 +147,6 @@ class PostBreweries extends Component {
                   placeholder="City"
                 />
               </Form.Item>
-              <Form.Item label="Zipcode">
-                <Input
-                  type="text"
-                  id="zipcode"
-                  name="zipcode"
-                  onChange={(e) => this.setState({ zipcode: e.target.value })}
-                  required
-                  placeholder="Zipcode"
-                />
-              </Form.Item>
               <Form.Item label="Phone Number">
                 <Input
                   type="text"
@@ -221,26 +211,6 @@ class PostBreweries extends Component {
                   onChange={(e) => this.setState({ hours: e.target.value })}
                   required
                   placeholder="hours"
-                />
-              </Form.Item>
-              <Form.Item label="lat">
-                <Input
-                  type="text"
-                  id="lat"
-                  name="lat"
-                  onChange={(e) => this.setState({ lat: e.target.value })}
-                  required
-                  placeholder="lat"
-                />
-              </Form.Item>
-              <Form.Item label="lng">
-                <Input
-                  type="text"
-                  id="lng"
-                  name="lng"
-                  onChange={(e) => this.setState({ lng: e.target.value })}
-                  required
-                  placeholder="lng"
                 />
               </Form.Item>
             </Form>
