@@ -3,12 +3,29 @@ import { Link, NavLink } from "react-router-dom";
 import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Breadcrumb } from "antd";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { axios } from "axios";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
+const mapStateToProps = (state) => {
+  return {
+    token: state.token,
+    user: state.user,
+  };
+};
+
+const deleteHandler = (beerId) => {
+  fetch(baseUrl + `/beers/${beerId}`, { method: "DELETE" }).then((res) => {
+    console.log(res);
+  });
+};
+
 function RenderBeerCard({
   beer,
+  breweryUserId,
   beerId,
   imgUrl,
   name,
@@ -16,9 +33,21 @@ function RenderBeerCard({
   breweryImgUrl,
   breweryName,
   type,
+  userId,
 }) {
+  //this.props.user.userId
   return (
     <Card hoverable className="news-card">
+      <div className={userId !== breweryUserId ? "hidden" : ""}>
+        <span
+          className="delete-btn"
+          onClick={(e) => {
+            deleteHandler(beerId);
+          }}
+        >
+          &times;
+        </span>
+      </div>
       <Link
         to={{
           pathname: `/beers/${beerId}`,
@@ -65,6 +94,8 @@ class Brewer extends Component {
       return (
         <Col xs={24} sm={12} lg={8} className="crypto-card" key={beer.id}>
           <RenderBeerCard
+            breweryUserId={brewery.userId}
+            userId={this.props.user.userId}
             beer={beer}
             breweryName={brewery.name}
             beerId={beer.beerId}
@@ -162,4 +193,4 @@ class Brewer extends Component {
   }
 }
 
-export default Brewer;
+export default withRouter(connect(mapStateToProps)(Brewer));

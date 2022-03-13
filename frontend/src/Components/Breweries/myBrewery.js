@@ -2,8 +2,11 @@ import React, { Component, useState } from "react";
 import { connect } from "react-redux";
 import { withRouter, Link, NavLink } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
-import { Row, Col } from "antd";
+import { Row, Col, Typography, Layout, Breadcrumb } from "antd";
 import { RenderBreweryCard } from "./Breweries";
+
+const { Title } = Typography;
+const { Content } = Layout;
 
 const mapStateToProps = (state) => {
   return {
@@ -53,7 +56,30 @@ class MyBrewery extends Component {
     });
     return (
       <div>
-        <h1>My Breweries</h1>
+        <Layout>
+          <Content
+            className="site-layout"
+            style={{ padding: "0 50px", marginTop: 30 }}
+          >
+            <Breadcrumb style={{ margin: "16px 0" }}>
+              <Breadcrumb.Item>
+                <NavLink to="/home">Home</NavLink>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>My Breweries</Breadcrumb.Item>
+            </Breadcrumb>
+          </Content>{" "}
+        </Layout>
+        <Title
+          level={2}
+          className="heading"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          My Breweries
+        </Title>{" "}
         <div className="crypto-card">
           <Row gutter={[32, 32]} className="crypto-card-container">
             {" "}

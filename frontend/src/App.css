@@ -68,6 +68,15 @@ a:hover {
 .hidden {
   display: none;
 }
+.delete-btn {
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.6em;
+  position: absolute;
+  right: 7px;
+  top: 2px;
+}
+
 .center {
   display: flex;
   justify-content: center;
