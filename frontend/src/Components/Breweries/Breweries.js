@@ -3,11 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Breadcrumb } from "antd";
+import PostBreweries from "../PostForms/PostBreweries";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
-function RenderBreweryCard({
+export function RenderBreweryCard({
   brewery,
   breweryId,
   name,
@@ -59,6 +60,13 @@ class BreweryCard extends Component {
       breweries: [],
     };
   }
+
+  updateBreweries = (brewery) => {
+    this.setState({
+      reviews: [...this.state.breweries, brewery],
+    });
+  };
+
   componentDidMount() {
     fetch(baseUrl + "/breweries")
       .then((res) => res.json())
@@ -115,6 +123,7 @@ class BreweryCard extends Component {
           All Breweries
         </Title>{" "}
         <div className="crypto-card">
+          <PostBreweries updateBreweries={this.updateBreweries} />
           <Row gutter={[32, 32]} className="crypto-card-container">
             {" "}
             {brewerMap}{" "}

@@ -2,54 +2,8 @@ import React, { Component, useState } from "react";
 import { connect } from "react-redux";
 import { withRouter, Link, NavLink } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
-import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
-
-const { Text, Title } = Typography;
-const { Content } = Layout;
-
-function RenderBreweryCard({
-  brewery,
-  breweryId,
-  name,
-  address,
-  description,
-  breweryLogoUrl,
-  website,
-}) {
-  return (
-    <Card hoverable className="news-card">
-      <Link
-        to={{
-          pathname: `/breweries/${breweryId}`,
-          state: {
-            brewery: brewery,
-          },
-        }}
-      >
-        <div className="news-image-container">
-          <Title className="news-title" level={4}>
-            {name}
-          </Title>
-          <img
-            width={200}
-            src={breweryLogoUrl}
-            alt={"brewerId: " + breweryId}
-          />
-        </div>
-        <p>{description}</p>
-      </Link>
-      <a href={website} target="_blank" rel="noreferrer">
-        <div className="provider-container">
-          <div>
-            <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
-            <Text className="provider-name">{name}</Text>
-          </div>
-          <Text>{address}</Text>
-        </div>
-      </a>
-    </Card>
-  );
-}
+import { Row, Col } from "antd";
+import { RenderBreweryCard } from "./Breweries";
 
 const mapStateToProps = (state) => {
   return {

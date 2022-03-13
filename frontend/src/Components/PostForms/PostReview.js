@@ -1,19 +1,6 @@
 import React, { Component, useState } from "react";
-import axios from "axios";
 import { baseUrl } from "../../Shared/baseUrl";
-import {
-  Modal,
-  Form,
-  Input,
-  Button,
-  Radio,
-  Select,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
-} from "antd";
+import { Modal, Form, Input, Button, Radio } from "antd";
 
 class PostReviews extends Component {
   constructor(props) {

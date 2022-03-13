@@ -1,6 +1,16 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component, useState } from "react";
+import { connect } from "react-redux";
+import { withRouter, Link, NavLink } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
+import { Modal, Form, Input, Button } from "antd";
+
+const mapStateToProps = (state) => {
+  return {
+    token: state.token,
+    user: state.user,
+  };
+};
+
 class PostBreweries extends Component {
   constructor(props) {
     super(props);
@@ -14,161 +24,215 @@ class PostBreweries extends Component {
       description: "",
       breweryLogoUrl: "",
       websiteUrl: "",
-      userId: "",
+      userId: 1,
       hours: "",
       lat: "",
       lng: "",
     };
   }
 
+  postNewBrewery() {
+    const breweryObject = {
+      name: this.state.name,
+      address: this.state.address,
+      city: this.state.city,
+      zipcode: Number(this.state.zipcode),
+      phoneNumber: Number(this.state.phoneNumber),
+      description: this.state.description,
+      breweryLogoUrl: this.state.breweryLogoUrl,
+      websiteUrl: this.state.websiteUrl,
+      userId: this.state.userId,
+      hours: this.state.hours,
+      lat: this.state.lat,
+      lng: this.state.lng,
+    };
+
+    fetch(baseUrl + "/breweries", {
+      method: "POST",
+      body: JSON.stringify(breweryObject),
+      headers: {
+        "Content-type": "application/json",
+      },
+      credentials: "same-origin",
+    });
+    this.props.updateBreweries(breweryObject);
+    this.setState({
+      visible: false,
+    });
+    console.log(breweryObject);
+  }
+
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
   submitHandler = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-    axios
-      .post(baseUrl + "/breweries", this.state)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.setState({
+      visible: false,
+    });
+    this.postNewBrewery();
+  };
+
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  handleCancel = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
   };
 
   render() {
-    const {
-      name,
-      address,
-      city,
-      zipcode,
-      phoneNumber,
-      description,
-      breweryLogoUrl,
-      websiteUrl,
-      userId,
-      hours,
-      lat,
-      lng,
-    } = this.state;
     return (
-      <div>
-        <form onSubmit={this.submitHandler}>
+      <>
+        <Button type="primary" onClick={this.showModal}>
+          Add Brewery
+        </Button>
+        <Modal
+          title="Add Brewery"
+          visible={this.state.visible}
+          onOk={this.submitHandler}
+          onCancel={this.handleCancel}
+          okText="Submit"
+          cancelText="Cancel"
+        >
           <div>
-            <label>name: </label>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.changeHandler}
-            />
+            <Form>
+              <Form.Item label="Brewery Name">
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={(e) => this.setState({ name: e.target.value })}
+                  required
+                  placeholder="Brewery Name"
+                />
+              </Form.Item>
+              <Form.Item label="Address">
+                <Input
+                  type="text"
+                  id="address"
+                  name="address"
+                  onChange={(e) => this.setState({ address: e.target.value })}
+                  required
+                  placeholder="Address"
+                />
+              </Form.Item>
+              <Form.Item label="City">
+                <Input
+                  type="text"
+                  id="city"
+                  name="city"
+                  onChange={(e) => this.setState({ city: e.target.value })}
+                  required
+                  placeholder="City"
+                />
+              </Form.Item>
+              <Form.Item label="Zipcode">
+                <Input
+                  type="text"
+                  id="zipcode"
+                  name="zipcode"
+                  onChange={(e) => this.setState({ zipcode: e.target.value })}
+                  required
+                  placeholder="Zipcode"
+                />
+              </Form.Item>
+              <Form.Item label="Phone Number">
+                <Input
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  onChange={(e) =>
+                    this.setState({ phoneNumber: e.target.value })
+                  }
+                  required
+                  placeholder="Phone Number"
+                />
+              </Form.Item>
+              <Form.Item label="Description">
+                <Input.TextArea
+                  type="text"
+                  id="description"
+                  name="description"
+                  onChange={(e) =>
+                    this.setState({ description: e.target.value })
+                  }
+                  required
+                  placeholder="Description"
+                />
+              </Form.Item>
+              <Form.Item label="Logo Url">
+                <Input
+                  type="text"
+                  id="breweryLogoUrl"
+                  name="breweryLogoUrl"
+                  onChange={(e) =>
+                    this.setState({ breweryLogoUrl: e.target.value })
+                  }
+                  required
+                  placeholder="Url"
+                />
+              </Form.Item>
+              <Form.Item label="Website">
+                <Input
+                  type="text"
+                  id="website"
+                  name="website"
+                  onChange={(e) => this.setState({ website: e.target.value })}
+                  required
+                  placeholder="Website"
+                />
+              </Form.Item>
+              <Form.Item label="Brewer Id">
+                <Input
+                  type="text"
+                  id="userId"
+                  name="userId"
+                  onChange={(e) => this.setState({ userId: e.target.value })}
+                  required
+                  placeholder="Assign a Brewer to this Brewery"
+                />
+              </Form.Item>
+              <Form.Item label="Hours">
+                <Input
+                  type="text"
+                  id="hours"
+                  name="hours"
+                  onChange={(e) => this.setState({ hours: e.target.value })}
+                  required
+                  placeholder="hours"
+                />
+              </Form.Item>
+              <Form.Item label="lat">
+                <Input
+                  type="text"
+                  id="lat"
+                  name="lat"
+                  onChange={(e) => this.setState({ lat: e.target.value })}
+                  required
+                  placeholder="lat"
+                />
+              </Form.Item>
+              <Form.Item label="lng">
+                <Input
+                  type="text"
+                  id="lng"
+                  name="lng"
+                  onChange={(e) => this.setState({ lng: e.target.value })}
+                  required
+                  placeholder="lng"
+                />
+              </Form.Item>
+            </Form>
           </div>
-          <div>
-            <label>address: </label>
-            <input
-              type="text"
-              name="address"
-              value={address}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>city: </label>
-            <input
-              type="text"
-              name="city"
-              value={city}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>zipcode: </label>
-            <input
-              type="text"
-              name="zipcode"
-              value={zipcode}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>phoneNumber: </label>
-            <input
-              type="text"
-              name="phoneNumber"
-              value={phoneNumber}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>description: </label>
-            <input
-              type="text"
-              name="description"
-              value={description}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>breweryLogoUrl: </label>
-            <input
-              type="text"
-              name="breweryLogoUrl"
-              value={breweryLogoUrl}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>websiteUrl: </label>
-            <input
-              type="text"
-              name="websiteUrl"
-              value={websiteUrl}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>userId: </label>
-            <input
-              type="text"
-              name="userId"
-              value={userId}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>hours: </label>
-            <input
-              type="text"
-              name="hours"
-              value={hours}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>lat: </label>
-            <input
-              type="text"
-              name="lat"
-              value={lat}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>lng: </label>
-            <input
-              type="text"
-              name="lng"
-              value={lng}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+        </Modal>
+      </>
     );
   }
 }
 
-export default PostBreweries;
+export default withRouter(connect(mapStateToProps)(PostBreweries));

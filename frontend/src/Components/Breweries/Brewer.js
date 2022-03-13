@@ -51,6 +51,7 @@ class Brewer extends Component {
     brewery: this.props.location.state,
     beers: [],
   };
+
   componentDidMount() {
     const id = this.state.brewery.brewery.breweryId;
     fetch(baseUrl + `/breweries/${id}` + "/beers")
@@ -116,21 +117,21 @@ class Brewer extends Component {
             src={brewery.breweryLogoUrl}
             alt={"brewery: " + brewery.breweryId}
             height="200"
-            padding = "200"
-            style ={{justifyContent: "left"}}
+            padding="200"
+            style={{ justifyContent: "left" }}
           />
-         </div>
-          <div
+        </div>
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
-        {brewery.description}
+          {brewery.description}
           <br />
-        {brewery.address},  {brewery.city}
+          {brewery.address}, {brewery.city}
           <br />
           {brewery.phoneNumber}
           <br />
