@@ -5,7 +5,6 @@ import { baseUrl } from "../../Shared/baseUrl";
 import { Breadcrumb } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { axios } from "axios";
 import PostBeer from "../PostForms/PostBeer";
 
 const { Text, Title } = Typography;
@@ -19,6 +18,13 @@ const mapStateToProps = (state) => {
 };
 
 const deleteHandler = (beerId) => {
+  fetch(baseUrl + `/reviews/${beerId}`, { method: "DELETE" }).then((res) => {
+    console.log(res);
+    secondDelete(beerId);
+  });
+};
+
+const secondDelete = (beerId) => {
   fetch(baseUrl + `/beers/${beerId}`, { method: "DELETE" }).then((res) => {
     console.log(res);
   });
