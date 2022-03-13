@@ -28,6 +28,13 @@ public class BeerController {
 		this.beerDAO = beerDAO;
 	}
 
+	// **************************** POST ****************************
+	//@PreAuthorize("hasRole('ROLE_BREWER')")
+	@RequestMapping(path="/addBeer", method=RequestMethod.POST)
+	public Beer addNewBeer(@RequestBody Beer newBeer) throws NotAllowedException {
+		return beerDAO.addNewBeer(newBeer);
+	}
+
 	// **************************** GET ****************************
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers", method=RequestMethod.GET)
@@ -50,15 +57,6 @@ public class BeerController {
 	@RequestMapping(path="/breweries/{breweryId}/beers", method = RequestMethod.GET)
 	public List<Beer> getBeerByBreweryID(@PathVariable Long breweryId) throws NotFoundException {
 		return beerDAO.getBeerByBreweryID(breweryId);
-	}
-
-	// **************************** POST ****************************
-	//@PreAuthorize("hasRole('ROLE_BREWER')")
-	@RequestMapping(path="/addBeer", method=RequestMethod.POST)
-	public void addNewBeer(@RequestBody Beer newBeer) throws NotAllowedException {
-		beerDAO.addNewBeer(newBeer);
-
-
 	}
 
 	// **************************** PUT ****************************

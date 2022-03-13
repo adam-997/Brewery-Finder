@@ -19,10 +19,17 @@ import com.techelevator.model.Brewery;
 public class BreweryController {
 
 	@Autowired
-	private final BreweryDao breweryDao;
+	BreweryDao breweryDao;
 
 	public BreweryController(BreweryDao breweryDao) {
 		this.breweryDao = breweryDao;
+	}
+
+	// **************************** POST ****************************
+	//@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
+	public Brewery addNewBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
+		return breweryDao.addNewBrewery(aBrewery);
 	}
 
 	// **************************** GET ****************************
@@ -42,13 +49,6 @@ public class BreweryController {
 	@RequestMapping(path = "/users/{userId}/breweries", method = RequestMethod.GET)
 	public List<Brewery> getBreweriesByUserId(@PathVariable Long userId) throws NotFoundException{
 		return breweryDao.getBreweryByUserID(userId);
-	}
-
-	// **************************** POST ****************************
-	//@PreAuthorize("hasRole('ROLE_ADMIN')")
-	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
-	public void addNewBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
-		breweryDao.addNewBrewery(aBrewery);
 	}
 
 	// **************************** PUT ****************************

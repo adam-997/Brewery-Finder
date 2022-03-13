@@ -2,10 +2,9 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.ReviewDao;
 import com.techelevator.dao.BeerDao;
+import com.techelevator.model.Brewery;
 import com.techelevator.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -55,25 +54,11 @@ public class ReviewController {
 	}
 
 	// **************************** POST ****************************
-//	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
-//	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {
-//		reviewDAO.addReview(aReview);
-//	}
-
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
 //	@PostMapping(path = "/reviews")
 	public Review addReviews(@RequestBody Review aReview) throws NotAllowedException {
-
 		return reviewDAO.addReview(aReview);
 	}
-
-
-	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.DELETE)
-	public void deleteReviewsByBeerId(@PathVariable Long beerId) throws NotAllowedException{
-		reviewDAO.deleteAllReviewsByBeerId(beerId);
-	}
-
-
 
 	@RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.POST)
 	public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review,
@@ -96,5 +81,17 @@ public class ReviewController {
 		return "redirect:/beerDetails/" + beerId;
 	}
 
+	// **************************** PUT ****************************
+	//@PreAuthorize("hasRole('ROLE_BREWER')")
+	@RequestMapping(path = "/reviews", method = RequestMethod.PUT)
+	public void updateReviews(@RequestBody Review aReview) throws NotAllowedException {
+		reviewDAO.updateReview(aReview);
+	}
+
+	// **************************** DELETE ****************************
+	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.DELETE)
+	public void deleteReviewsByBeerId(@PathVariable Long beerId) throws NotAllowedException{
+		reviewDAO.deleteAllReviewsByBeerId(beerId);
+	}
 
 }

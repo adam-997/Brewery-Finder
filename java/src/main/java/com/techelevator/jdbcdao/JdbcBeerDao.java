@@ -2,12 +2,15 @@ package com.techelevator.jdbcdao;
 
 import com.techelevator.dao.BeerDao;
 import com.techelevator.model.Beer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,13 +18,37 @@ import java.util.List;
 public class JdbcBeerDao implements BeerDao {
 	
 	private final JdbcTemplate jdbcTemplate;
-	
-	@Autowired
+	private SimpleJdbcInsert simpleJdbcInsert;
+
 	public JdbcBeerDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate).withTableName("beers").usingGeneratedKeyColumns("beer_id");
 	}
-	
-	
+
+	@Override
+	public Beer addNewBeer(Beer newBeer) {
+		SqlParameterSource parameterSource = new MapSqlParameterSource()
+				.addValue("name", newBeer.getName())
+				.addValue("abv", newBeer.getAbv())
+				.addValue("ibu", newBeer.getIbu())
+				.addValue("type", newBeer.getType())
+				.addValue("info", newBeer.getInfo())
+				.addValue("img_url", newBeer.getImgUrl())
+				.addValue("brewery_id", newBeer.getBreweryId())
+				.addValue("is_active", newBeer.isActive());
+
+		int id = (int) simpleJdbcInsert.executeAndReturnKey(parameterSource);
+
+		Beer beer = null;
+		String sqlGetBreweryByBeerId = "SELECT * FROM breweries WHERE beer_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetBreweryByBeerId, id);
+
+		while (results.next()) {
+			beer = mapRowToBeer(results);
+		}
+		return beer;
+	}
+
 	@Override
 	public List<Beer> getAllBeer() {
 		List<Beer> allBeers = new ArrayList<>();
@@ -47,25 +74,33 @@ public class JdbcBeerDao implements BeerDao {
 		
 		return aBeer;
 	}
-	
+
 	@Override
-	public void deleteBeer(Long beerId) {
-		String sqlDeleteABeer = "DELETE FROM beers WHERE beer_id = ?";
-		jdbcTemplate.update(sqlDeleteABeer, beerId);
+	public List<Beer> getBeerByBreweryID(Long breweryId) {
+		List<Beer> allBeersByBreweryID = new ArrayList<>();
+		String sqlGetBeerByBreweryId = "SELECT * FROM beers WHERE brewery_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetBeerByBreweryId, breweryId);
+
+		while(results.next()) {
+			Beer aBeer = mapRowToBeer(results);
+			allBeersByBreweryID.add(aBeer);
+		}
+
+		return allBeersByBreweryID;
 	}
-	
-	@Override
-	public void addNewBeer(Beer newBeer) {
-		jdbcTemplate.update("INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
-				newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
-	}
-	
+
 	@Override
 	public void updateBeer(Beer aBeer) {
 		String sqlUpdateBeer = "UPDATE beers SET name = ?, abv = ?, ibu = ?, info = ?, img_url = ?, brewery_id = ?, is_active = ?"
 				+ "WHERE beer_id = ?";
 		jdbcTemplate.update(sqlUpdateBeer, aBeer.getName(), aBeer.getAbv(), aBeer.getIbu(), aBeer.getInfo(), aBeer.getImgUrl(),
 				aBeer.getBreweryId(), aBeer.isActive(), aBeer.getBeerId());
+	}
+
+	@Override
+	public void deleteBeer(Long beerId) {
+		String sqlDeleteABeer = "DELETE FROM beers WHERE beer_id = ?";
+		jdbcTemplate.update(sqlDeleteABeer, beerId);
 	}
 	
 	private Beer mapRowToBeer(SqlRowSet row) {
@@ -82,19 +117,5 @@ public class JdbcBeerDao implements BeerDao {
 		newBeer.setBreweryId(row.getLong("brewery_id"));
 
 		return newBeer;
-	}
-	
-	@Override
-	public List<Beer> getBeerByBreweryID(Long breweryId) {
-		List<Beer> allBeersByBreweryID = new ArrayList<>();
-		String sqlGetBeerByBreweryId = "SELECT * FROM beers WHERE brewery_id = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetBeerByBreweryId, breweryId);
-		
-		while(results.next()) {
-			Beer aBeer = mapRowToBeer(results);
-			allBeersByBreweryID.add(aBeer);
-		}
-		
-		return allBeersByBreweryID;
 	}
 }

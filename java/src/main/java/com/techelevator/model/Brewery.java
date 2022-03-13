@@ -2,7 +2,7 @@ package com.techelevator.model;
 
 public class Brewery {
    private Long breweryId;
-   private int userId;
+   private Long userId;
    private String name;
    private String websiteUrl;
    private String address;
@@ -22,10 +22,10 @@ public class Brewery {
       this.breweryId = breweryId;
    }
 
-   public int getUserId() {
+   public Long getUserId() {
       return userId;
    }
-   public void setUserId(int userId) {
+   public void setUserId(long userId) {
       this.userId = userId;
    }
 

@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Component
 public class JdbcReviewDao implements ReviewDao {
 
@@ -24,7 +23,35 @@ public class JdbcReviewDao implements ReviewDao {
 	public JdbcReviewDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 		this.simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate).withTableName("reviews").usingGeneratedKeyColumns("reviews_id");
+	}
 
+	@Override
+	public Review addReview(Review aReview) {
+		SqlParameterSource parameterSource = new MapSqlParameterSource()
+				.addValue("name", aReview.getName())
+				.addValue("description", aReview.getDescription())
+				.addValue("user_id", aReview.getUserId())
+				.addValue("beer_id", aReview.getBeerId())
+				.addValue("rating", aReview.getRating())
+				.addValue("create_date", aReview.getCreateDate());
+
+		int id = (int) simpleJdbcInsert.executeAndReturnKey(parameterSource);
+
+		Review review = null;
+		String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE reviews_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId, id);
+
+		while (results.next()) {
+			review = mapRowToReview(results);
+		}
+		return review;
+	}
+
+	@Override
+	public void saveReview(@Valid Review review) {
+		String sqlSaveReview = "INSERT INTO reviews(description, rating, create_date, beer_id) VALUES(?,?,?,?)";
+		jdbcTemplate.update(sqlSaveReview, review.getDescription(), review.getRating(),
+				review.getCreateDate(), review.getBeerId());
 	}
 
 	@Override
@@ -66,33 +93,12 @@ public class JdbcReviewDao implements ReviewDao {
 	}
 
 	@Override
-	public void saveReview(@Valid Review review) {
-		String sqlSaveReview = "INSERT INTO reviews(description, rating, create_date, beer_id) VALUES(?,?,?,?)";
-		jdbcTemplate.update(sqlSaveReview, review.getDescription(), review.getRating(),
-				review.getCreateDate(), review.getBeerId());
-	}
-
-	@Override
-	public Review addReview(Review aReview) {
-//		String sqlAddReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name) VALUES (?,?,?,?,?)";
-		SqlParameterSource parameterSource = new MapSqlParameterSource()
-				.addValue("name", aReview.getName())
-				.addValue("description", aReview.getDescription())
-				.addValue("user_id", aReview.getUserId())
-				.addValue("beer_id", aReview.getBeerId())
-				.addValue("rating", aReview.getRating())
-				.addValue("create_date", aReview.getCreateDate());
-
-		int id = (int) simpleJdbcInsert.executeAndReturnKey(parameterSource);
-
-		Review review = null;
-		String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE reviews_id = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId, id);
-
-		while (results.next()) {
-			review = mapRowToReview(results);
-		}
-		return review;
+	public void updateReview(Review aReview) {
+		String sqlUpdateReview = "UPDATE reviews SET name = ?, description = ?, "
+				+ "rating = ? beer_id = ?"
+				+ "WHERE brewery_id = ?";
+		jdbcTemplate.update(sqlUpdateReview, aReview.getName(), aReview.getDescription(),
+				aReview.getRating(), aReview.getBeerId());
 	}
 
 	@Override
@@ -101,8 +107,6 @@ public class JdbcReviewDao implements ReviewDao {
 		jdbcTemplate.update(sql, beer_id);
 	}
 
-//		jdbcTemplate.update(sqlAddReview, aReview.getDescription(), aReview.getRating(), aReview.getBeerId(),aReview.getUserId(), aReview.getName());
-	
 	private Review mapRowToReview(SqlRowSet row) {
 		Review review = new Review();
 		review.setReviewsId(row.getLong("reviews_id"));
