@@ -115,7 +115,7 @@ class Brewer extends Component {
       return (
         <Col xs={24} sm={12} lg={8} className="crypto-card" key={beer.id}>
           <RenderBeerCard
-            // breweryUserId={brewery.userId}
+            breweryUserId={brewery.userId}
             userId={this.props.user.userId}
             beer={beer}
             breweryName={brewery.name}
