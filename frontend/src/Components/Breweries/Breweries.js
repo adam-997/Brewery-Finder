@@ -96,6 +96,7 @@ class BreweryCard extends Component {
         </Col>
       );
     });
+
     return (
       <>
         <Layout>

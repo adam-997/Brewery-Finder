@@ -10,6 +10,8 @@ import {
   Avatar,
   Modal,
   Button,
+  Row,
+  Col,
 } from "antd";
 import PostReviews from "../PostForms/PostReview";
 import avatar from "../../image/avatar.png";
@@ -79,45 +81,65 @@ class Beer extends Component {
 
     return (
       <>
-        <Layout>
-          <Content
-            className="site-layout"
-            style={{ padding: "0 50px", marginTop: 30 }}
+        <>
+          <Layout>
+            <Content
+              className="site-layout"
+              style={{ padding: "0 50px", marginTop: 30 }}
+            >
+              <Breadcrumb style={{ margin: "16px 0" }}>
+                <Breadcrumb.Item>
+                  <NavLink to="/home">Home</NavLink>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>
+                  <NavLink to="/breweries">Breweries</NavLink>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>{beer.name}</Breadcrumb.Item>
+              </Breadcrumb>
+            </Content>{" "}
+          </Layout>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            <Breadcrumb style={{ margin: "16px 0" }}>
-              <Breadcrumb.Item>
-                <NavLink to="/home">Home</NavLink>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <NavLink to="/breweries">Breweries</NavLink>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item>{beer.name}</Breadcrumb.Item>
-            </Breadcrumb>
-          </Content>{" "}
-        </Layout>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Title level={2}>{beer.name} </Title>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {" "}
-          <img src={beer.imgUrl} height="200" />
-          {beer.type} <br />
-          {beer.info}
-          <br />
-          {beer.abv}% ABV <br />
-        </div>
+            <Title level={2}>{beer.name} </Title>
+          </div>{" "}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Row>
+              <Col>
+                <img
+                  src={beer.imgUrl}
+                  height="200"
+                  padding="200"
+                  style={{ justifyContent: "left" }}
+                />{" "}
+              </Col>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Col span={6} pull={3}>
+                  <Text strong>{beer.type}</Text> <br />
+                  {beer.info}
+                  <br />
+                  <Text strong>{beer.abv}% ABV</Text> <br />
+                </Col>
+              </div>
+            </Row>
+          </div>
+        </>
         <div
           style={{
             display: "flex",

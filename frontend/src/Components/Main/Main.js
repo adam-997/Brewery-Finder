@@ -12,6 +12,13 @@ import BreweryCard from "../Breweries/Breweries";
 import Brewer from "../Breweries/Brewer";
 import Beer from "../Breweries/Beer";
 import MyBrewery from "../Breweries/myBrewery";
+import {
+  CoffeeOutlined,
+  HomeFilled,
+  HomeOutlined,
+  LogoutOutlined,
+  ShopOutlined,
+} from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;
 
@@ -42,7 +49,7 @@ class Main extends Component {
   };
 
   render() {
-    console.log(this.props.user);
+    console.log(this.props.user.authorities);
     return (
       <div>
         {this.props.token.token !== undefined ? (
@@ -51,17 +58,18 @@ class Main extends Component {
               <div className="logo" src={icon}></div>
               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
                 <Menu.Item key="2">
-                  <NavLink to="/home">Home </NavLink>
-                </Menu.Item>
-                <Menu.Item key="1">
-                  {" "}
-                  <NavLink to="/login" onClick={this.handleLogout}>
-                    logout
+                  <NavLink to="/home">
+                    {" "}
+                    <HomeFilled style={{ fontSize: "16px" }} /> Home
                   </NavLink>
                 </Menu.Item>
+
                 <Menu.Item key="3">
-                  <NavLink to="/breweries">Breweries </NavLink>
+                  <NavLink to="/breweries">
+                    <CoffeeOutlined style={{ fontSize: "16px" }} /> Breweries
+                  </NavLink>
                 </Menu.Item>
+
                 <Menu.Item key="4">
                   <Link
                     to={{
@@ -71,8 +79,13 @@ class Main extends Component {
                       },
                     }}
                   >
-                    My Breweries
+                    <ShopOutlined style={{ fontSize: "16px" }} /> My Breweries
                   </Link>
+                </Menu.Item>
+                <Menu.Item key="1" style={{ marginLeft: "auto" }}>
+                  <NavLink to="/login" onClick={this.handleLogout}>
+                    <LogoutOutlined style={{ fontSize: "16px" }} /> logout
+                  </NavLink>
                 </Menu.Item>
               </Menu>
               <Redirect to="/home" />
@@ -88,7 +101,7 @@ class Main extends Component {
               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
                 <Menu.Item key="2">
                   <NavLink to="/home" activeClassName="active">
-                    Home{" "}
+                    <HomeFilled style={{ fontSize: "16px" }} /> Home
                   </NavLink>
                 </Menu.Item>
               </Menu>

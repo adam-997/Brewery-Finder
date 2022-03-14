@@ -90,12 +90,6 @@ class PostBreweries extends Component {
   };
 
   render() {
-    const roleMap = this.props.user.authorities.map((role) => {
-      const authority = role.name;
-      return this.getRole(authority);
-    });
-
-    console.log(roleMap);
     return (
       <>
         <div

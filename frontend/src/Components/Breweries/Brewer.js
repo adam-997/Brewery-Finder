@@ -196,11 +196,20 @@ class Brewer extends Component {
             textAlign: "center",
           }}
         >
-          {brewery.description}
-          <br />
-          {brewery.address}, {brewery.city}
-          <br />
-          {brewery.phoneNumber}
+          {" "}
+          <Col span={12}>
+            {brewery.description}
+            <br />
+            <Text strong>
+              {" "}
+              {brewery.address}, {brewery.city}, {brewery.zipcode}
+            </Text>
+
+            <br />
+            <Text strong>{brewery.hours} </Text>
+            <br />
+            <Text strong> {brewery.phoneNumber}</Text>
+          </Col>
           <br />
         </div>
         <div

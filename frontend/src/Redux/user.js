@@ -4,7 +4,7 @@ export const User = (
   state = {
     userId: null,
     username: "",
-    authorities: [],
+    authorities: "",
   },
   action
 ) => {
@@ -18,7 +18,7 @@ export const User = (
       };
 
     case ActionTypes.DELETE_USER:
-      return { ...state, userId: null, username: "", authorities: [] };
+      return { ...state, userId: null, username: "", authorities: "" };
 
     default:
       return state;
