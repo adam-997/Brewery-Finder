@@ -1263,7 +1263,7 @@ VALUES ('Very interesting',
 
 INSERT INTO reviews (name, description, rating, create_date, user_id, beer_id)
 VALUES ('A lusty ale for the right mood!',
-        'Catchy name, but an average beer. Not to say that it`s anything but good. I definitely recommend it for it crisp taste and aromatic essence. There! Do I sound lusty?',
+        'Catchy name, but an average beer. Nevertheless, I definitely recommend it for it crisp taste and aromatic essence. There! Do I sound lusty?',
         4,
         now(),
         11,
