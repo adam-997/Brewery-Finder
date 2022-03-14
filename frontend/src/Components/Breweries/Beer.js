@@ -67,15 +67,17 @@ class Beer extends Component {
     const { beer } = this.state.beer;
     const reviewsMap = this.state.reviews.map((review) => {
       return (
-        <RenderReviewCard
-          review={review}
-          reviewTitle={review.name}
-          reviewId={review.reviewsId}
-          imgUrl={beer.imgUrl}
-          name={beer.name}
-          description={review.description}
-          rating={review.rating}
-        />
+        <Col xs={24} sm={12} lg={8} className="crypto-card" key={review.id}>
+          <RenderReviewCard
+            review={review}
+            reviewTitle={review.name}
+            reviewId={review.reviewsId}
+            imgUrl={beer.imgUrl}
+            name={beer.name}
+            description={review.description}
+            rating={review.rating}
+          />
+        </Col>
       );
     });
 
@@ -130,7 +132,7 @@ class Beer extends Component {
                   alignItems: "center",
                 }}
               >
-                <Col span={6} pull={3}>
+                <Col span={18}>
                   <Text strong>{beer.type}</Text> <br />
                   {beer.info}
                   <br />

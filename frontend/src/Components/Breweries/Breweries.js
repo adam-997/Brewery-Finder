@@ -38,16 +38,14 @@ export function RenderBreweryCard({
           />
         </div>
         <p>{description}</p>
-      </Link>
-      <a href={website} target="_blank" rel="noreferrer">
         <div className="provider-container">
           <div>
             <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
             <Text className="provider-name">{name}</Text>
           </div>
           <Text>{address}</Text>
-        </div>
-      </a>
+        </div>{" "}
+      </Link>
     </Card>
   );
 }

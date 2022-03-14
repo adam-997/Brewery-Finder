@@ -31,7 +31,7 @@ const secondDelete = (beerId) => {
   });
 };
 
-function RenderBeerCard({
+export function RenderBeerCard({
   beer,
   breweryUserId,
   beerId,
@@ -180,13 +180,15 @@ class Brewer extends Component {
           }}
         >
           {" "}
-          <img
-            src={brewery.breweryLogoUrl}
-            alt={"brewery: " + brewery.breweryId}
-            height="200"
-            padding="200"
-            style={{ justifyContent: "left" }}
-          />
+          <a href={brewery.websiteUrl} target="_blank" rel="noreferrer">
+            <img
+              src={brewery.breweryLogoUrl}
+              alt={"brewery: " + brewery.breweryId}
+              height="200"
+              padding="200"
+              style={{ justifyContent: "left" }}
+            />
+          </a>
         </div>
         <div
           style={{
