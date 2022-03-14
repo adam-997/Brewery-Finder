@@ -18,8 +18,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const isDeleted = false;
-
 const deleteHandler = (beerId) => {
   fetch(baseUrl + `/reviews/${beerId}`, { method: "DELETE" }).then((res) => {
     console.log(res);
@@ -157,6 +155,23 @@ class Brewer extends Component {
         >
           <Title level={2}>{brewery.name}</Title>
         </div>
+        <UpdateBrewery
+          breweryId={brewery.breweryId}
+          updateBeer={this.updateBeer}
+          breweryOwnerId={brewery.userId}
+          brewery={brewery}
+          key={brewery.breweryId}
+          breweryLogoUrl={brewery.breweryLogoUrl}
+          name={brewery.name}
+          address={brewery.address}
+          description={brewery.description}
+          websiteUrl={brewery.websiteUrl}
+          zipcode={brewery.zipcode}
+          phoneNumber={brewery.phoneNumber}
+          hours={brewery.hours}
+          city={brewery.city}
+          updateBrewery={this.updateBrewery}
+        />{" "}
         <div
           style={{
             display: "flex",
@@ -195,27 +210,7 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <Title level={2}>
-            {" "}
-            <UpdateBrewery
-              breweryId={brewery.breweryId}
-              updateBeer={this.updateBeer}
-              breweryOwnerId={brewery.userId}
-              brewery={brewery}
-              key={brewery.breweryId}
-              breweryLogoUrl={brewery.breweryLogoUrl}
-              name={brewery.name}
-              address={brewery.address}
-              description={brewery.description}
-              websiteUrl={brewery.websiteUrl}
-              zipcode={brewery.zipcode}
-              phoneNumber={brewery.phoneNumber}
-              hours={brewery.hours}
-              city={brewery.city}
-              updateBrewery={this.updateBrewery}
-            />{" "}
-            Selection of Beers{" "}
-          </Title>
+          <Title level={2}> Selection of Beers </Title>
         </div>
         <div
           style={{
@@ -230,14 +225,6 @@ class Brewer extends Component {
               updateBeer={this.updateBeer}
               breweryOwnerId={brewery.userId}
               brewery={brewery}
-              key={brewery.breweryId}
-              breweryLogoUrl={brewery.breweryLogoUrl}
-              name={brewery.name}
-              address={brewery.address}
-              description={brewery.description}
-              websiteUrl={brewery.websiteUrl}
-              zipcode={brewery.zipcode}
-              phoneNumber={brewery.phoneNumber}
             />
             <Row gutter={[32, 32]} className="crypto-card-container">
               {" "}

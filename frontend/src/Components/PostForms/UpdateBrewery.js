@@ -89,122 +89,121 @@ class UpdateBrewery extends Component {
   };
 
   render() {
-    if (this.state.isUpdated === true) {
-      return <Redirect to="mybrewery" />;
-    } else
-      return (
-        <>
-          <div
-          //   className={
-          //     this.props.user.userId !== this.state.userId ? "hidden" : "center "
-          //   }
-          >
-            <Button type="primary" onClick={this.showModal}>
-              Update Brewery
-            </Button>
+    return (
+      <>
+        <div
+          className={
+            this.props.user.userId !== this.state.breweryOwnerId
+              ? "hidden"
+              : "center "
+          }
+        >
+          <Button type="primary" onClick={this.showModal}>
+            Update Brewery
+          </Button>
+        </div>
+        <Modal
+          title="Update your Brewery's Information"
+          visible={this.state.visible}
+          onOk={this.submitHandler}
+          onCancel={this.handleCancel}
+          okText="Submit"
+          cancelText="Cancel"
+        >
+          <div>
+            <Form>
+              <Form.Item label="Brewery Name">
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={(e) => this.setState({ name: e.target.value })}
+                  placeholder="Brewery Name"
+                />
+              </Form.Item>
+              <Form.Item label="Address">
+                <Input
+                  type="text"
+                  id="address"
+                  name="address"
+                  onChange={(e) => this.setState({ address: e.target.value })}
+                  placeholder="Address"
+                />
+              </Form.Item>
+              <Form.Item label="City">
+                <Input
+                  type="text"
+                  id="city"
+                  name="city"
+                  onChange={(e) => this.setState({ city: e.target.value })}
+                  placeholder="City"
+                />
+              </Form.Item>
+              <Form.Item label="Zip Code">
+                <Input
+                  type="text"
+                  id="zipcode"
+                  name="zipcode"
+                  onChange={(e) => this.setState({ zipcode: e.target.value })}
+                  placeholder="Zip Code"
+                />
+              </Form.Item>
+              <Form.Item label="Phone Number">
+                <Input
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  onChange={(e) =>
+                    this.setState({ phoneNumber: e.target.value })
+                  }
+                  placeholder="Phone Number"
+                />
+              </Form.Item>
+              <Form.Item label="Description">
+                <Input.TextArea
+                  type="text"
+                  id="description"
+                  name="description"
+                  onChange={(e) =>
+                    this.setState({ description: e.target.value })
+                  }
+                  placeholder="Description"
+                />
+              </Form.Item>
+              <Form.Item label="Logo Url">
+                <Input
+                  type="text"
+                  id="breweryLogoUrl"
+                  name="breweryLogoUrl"
+                  onChange={(e) =>
+                    this.setState({ breweryLogoUrl: e.target.value })
+                  }
+                  placeholder="Url"
+                />
+              </Form.Item>
+              <Form.Item label="Website">
+                <Input
+                  type="text"
+                  id="website"
+                  name="website"
+                  onChange={(e) => this.setState({ website: e.target.value })}
+                  placeholder="Website"
+                />
+              </Form.Item>
+              <Form.Item label="Hours">
+                <Input
+                  type="text"
+                  id="hours"
+                  name="hours"
+                  onChange={(e) => this.setState({ hours: e.target.value })}
+                  placeholder="hours"
+                />
+              </Form.Item>
+            </Form>
           </div>
-          <Modal
-            title="Update your Brewery's Information"
-            visible={this.state.visible}
-            onOk={this.submitHandler}
-            onCancel={this.handleCancel}
-            okText="Submit"
-            cancelText="Cancel"
-          >
-            <div>
-              <Form>
-                <Form.Item label="Brewery Name">
-                  <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    onChange={(e) => this.setState({ name: e.target.value })}
-                    placeholder="Brewery Name"
-                  />
-                </Form.Item>
-                <Form.Item label="Address">
-                  <Input
-                    type="text"
-                    id="address"
-                    name="address"
-                    onChange={(e) => this.setState({ address: e.target.value })}
-                    placeholder="Address"
-                  />
-                </Form.Item>
-                <Form.Item label="City">
-                  <Input
-                    type="text"
-                    id="city"
-                    name="city"
-                    onChange={(e) => this.setState({ city: e.target.value })}
-                    placeholder="City"
-                  />
-                </Form.Item>
-                <Form.Item label="Zip Code">
-                  <Input
-                    type="text"
-                    id="zipcode"
-                    name="zipcode"
-                    onChange={(e) => this.setState({ zipcode: e.target.value })}
-                    placeholder="Zip Code"
-                  />
-                </Form.Item>
-                <Form.Item label="Phone Number">
-                  <Input
-                    type="text"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    onChange={(e) =>
-                      this.setState({ phoneNumber: e.target.value })
-                    }
-                    placeholder="Phone Number"
-                  />
-                </Form.Item>
-                <Form.Item label="Description">
-                  <Input.TextArea
-                    type="text"
-                    id="description"
-                    name="description"
-                    onChange={(e) =>
-                      this.setState({ description: e.target.value })
-                    }
-                    placeholder="Description"
-                  />
-                </Form.Item>
-                <Form.Item label="Logo Url">
-                  <Input
-                    type="text"
-                    id="breweryLogoUrl"
-                    name="breweryLogoUrl"
-                    onChange={(e) =>
-                      this.setState({ breweryLogoUrl: e.target.value })
-                    }
-                    placeholder="Url"
-                  />
-                </Form.Item>
-                <Form.Item label="Website">
-                  <Input
-                    type="text"
-                    id="website"
-                    name="website"
-                    onChange={(e) => this.setState({ website: e.target.value })}
-                    placeholder="Website"
-                  />
-                </Form.Item>
-                <Form.Item label="Hours">
-                  <Input
-                    type="text"
-                    id="hours"
-                    name="hours"
-                    onChange={(e) => this.setState({ hours: e.target.value })}
-                    placeholder="hours"
-                  />
-                </Form.Item>
-              </Form>
-            </div>
-          </Modal>
-        </>
-      );
+        </Modal>
+      </>
+    );
   }
 }
 
