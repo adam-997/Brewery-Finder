@@ -317,4 +317,49 @@ VALUES('Goose Island Beer Co.',
        41.586428);
 
 
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('7 Sins Brewery',
+       '10593 W Main Rd',
+       'Ripley, New York',
+       '14775-9746',
+       '7165812090',
+       '7 Sins Brewery Celebrates First Anniversary. To help us celebrate, you are invited to our beer drinking, pig roast blowout. This event will be off the chain! All 7 sins are on tap to go with a savory locally-sourced pig roast dinner (in fact, the hog is squealing in our back yard right now). Live music performances by two amazing local artists, too!',
+       'https://7sinsbrewery.com/wp-content/uploads/2016/01/Seven-Sins-Logo-01.png',
+       'http://www.7sinsbrewery.com',
+       4,
+       'Friday and Saturday 12-7, Sunday 12-5',
+       42.24869073,
+       -79.7497349);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('Bootstrap Brewing Company',
+       '6778 N 79th St',
+       'Niwot, Colorado',
+       '80503',
+       '3036524186',
+       'Bootstrap Brewing is a kick @$$, independent craft brewery in Longmont Colorado. where you’ll find us diligently brewing our award winning, fresh, delicious, craft beer which we supply to the best restaurants and liquor stores in Colorado.',
+       'https://bootstrapbrewingdotcom.files.wordpress.com/2021/03/bootstrap_brewing_red-copy-e1615380583885.png',
+       'http://www.bootstrapbrewing.com',
+       2,
+       'F-Sa 6:00AM-10:00PM',
+       40.09681247,
+       -105.1691581);
+
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
+VALUES('Aztec Brewing Company',
+       '2330 La Mirada Dr Ste 300',
+       'Vista, California',
+       '92081',
+       '7605987720',
+       'We are Aztec Brewing Company. Inspired by those who brewed before us we set out to revive this historic San Diego brewery. From refreshing kick back session beers, to brews that will kick back, we offer a range of styles with seasonal and limited specialties on tap exclusively in our Vista location.',
+       'http://www.aztecbrewery.com/images/AztecBrewingCoOval4.5.png',
+       'http://www.aztecbrewery.com/',
+       6,
+       'F-Sa 6PM-10PM',
+       33.149843946160296,
+       -117.22976064481689);
+
+
 COMMIT;
