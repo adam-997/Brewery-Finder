@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, withRouter } from "react-router-dom";
 import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Breadcrumb } from "antd";
@@ -133,4 +133,4 @@ class BreweryCard extends Component {
     );
   }
 }
-export default BreweryCard;
+export default withRouter(BreweryCard);

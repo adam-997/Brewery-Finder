@@ -195,12 +195,15 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <UpdateBrewery
-            breweryId={brewery.breweryId}
-            updateBrewery={this.updateBrewery}
-            breweryOwnerId={brewery.userId}
-          />{" "}
-          <Title level={2}>Selection of Beers </Title>
+          <Title level={2}>
+            {" "}
+            <UpdateBrewery
+              breweryId={brewery.breweryId}
+              updateBrewery={this.updateBrewery}
+              breweryOwnerId={brewery.userId}
+            />{" "}
+            Selection of Beers{" "}
+          </Title>
         </div>
         <div
           style={{

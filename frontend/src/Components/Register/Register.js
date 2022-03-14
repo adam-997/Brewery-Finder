@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Form, Input, Button, Checkbox, Modal } from "antd";
 
@@ -175,9 +175,12 @@ const Register = (props) => {
             span: 16,
           }}
         >
-          <Button type="primary" onClick={handleSubmit}>
-            Register
-          </Button>
+          <Link to="/login">
+            {" "}
+            <Button type="primary" onClick={handleSubmit}>
+              Register
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link to="/login">Have an account?</Link>
         </Form.Item>
@@ -186,4 +189,4 @@ const Register = (props) => {
   );
 };
 
-export default Register;
+export default withRouter(Register);

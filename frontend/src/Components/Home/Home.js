@@ -1,5 +1,6 @@
 import React from "react";
 import { Breadcrumb, Layout } from "antd";
+import { withRouter } from "react-router-dom";
 const { Content } = Layout;
 
 const Home = (props) => {
@@ -19,4 +20,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default withRouter(Home);

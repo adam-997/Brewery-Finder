@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, withRouter } from "react-router-dom";
 import axios from "axios";
 import { baseUrl } from "../../Shared/baseUrl";
 import {
@@ -114,9 +114,9 @@ class Beer extends Component {
           {" "}
           <img src={beer.imgUrl} height="200" />
           {beer.type} <br />
-          {beer.info}<br />
+          {beer.info}
+          <br />
           {beer.abv}% ABV <br />
-          
         </div>
         <div
           style={{
@@ -149,4 +149,4 @@ class Beer extends Component {
   }
 }
 
-export default Beer;
+export default withRouter(Beer);
