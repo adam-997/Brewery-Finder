@@ -49,7 +49,7 @@ class Main extends Component {
   };
 
   render() {
-    console.log(this.props.user.authorities);
+    console.log(this.props.user.role);
     return (
       <div>
         {this.props.token.token !== undefined ? (
@@ -69,24 +69,29 @@ class Main extends Component {
                     <CoffeeOutlined style={{ fontSize: "16px" }} /> Breweries
                   </NavLink>
                 </Menu.Item>
-
-                <Menu.Item key="4">
-                  <Link
-                    to={{
-                      pathname: `/mybrewery/`,
-                      state: {
-                        user: this.props.user.user,
-                      },
-                    }}
-                  >
-                    <ShopOutlined style={{ fontSize: "16px" }} /> My Breweries
-                  </Link>
-                </Menu.Item>
                 <Menu.Item key="1" style={{ marginLeft: "auto" }}>
                   <NavLink to="/login" onClick={this.handleLogout}>
                     <LogoutOutlined style={{ fontSize: "16px" }} /> logout
                   </NavLink>
                 </Menu.Item>
+                <div
+                  className={
+                    this.props.user.role !== "ROLE_BREWER" ? "hidden" : ""
+                  }
+                >
+                  <Menu.Item key="4">
+                    <Link
+                      to={{
+                        pathname: `/mybrewery/`,
+                        state: {
+                          user: this.props.user.user,
+                        },
+                      }}
+                    >
+                      <ShopOutlined style={{ fontSize: "16px" }} /> My Breweries
+                    </Link>
+                  </Menu.Item>
+                </div>
               </Menu>
               <Redirect to="/home" />
             </Header>
