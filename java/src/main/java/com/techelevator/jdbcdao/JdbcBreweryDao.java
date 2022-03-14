@@ -111,32 +111,6 @@ public class JdbcBreweryDao implements BreweryDao {
 		return brewery;
 	}
 
-//	@Override
-//	public Brewery updateBrewery(Brewery aBrewery) {
-//		SqlParameterSource parameterSource = new MapSqlParameterSource()
-//				.addValue("name", aBrewery.getName())
-//				.addValue("address", aBrewery.getAddress())
-//				.addValue("city", aBrewery.getCity())
-//				.addValue("zipcode", aBrewery.getZipcode())
-//				.addValue("phone_number", aBrewery.getPhoneNumber())
-//				.addValue("description", aBrewery.getDescription())
-//				.addValue("brewery_logo_url", aBrewery.getBreweryLogoUrl())
-//				.addValue("website_url", aBrewery.getWebsiteUrl())
-//				.addValue("user_id", aBrewery.getUserId())
-//				.addValue("hours", aBrewery.getHours());
-//
-//		int id = (int) simpleJdbcInsert.executeAndReturnKey(parameterSource);
-//
-//		Brewery brewery = null;
-//		String sqlGetBreweryById = "SELECT * FROM breweries WHERE brewery_id = ?";
-//		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetBreweryById, id);
-//
-//		while (results.next()) {
-//			brewery = mapRowToBrewery(results);
-//		}
-//		return brewery;
-//	}
-
 	@Override
 	public void deleteBrewery(Long breweryId) {
 		  String sqlDeleteBrewery = "DELETE FROM breweries WHERE brewery_id = ?";

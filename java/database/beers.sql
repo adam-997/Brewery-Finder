@@ -943,5 +943,143 @@ VALUES ('Original Bourbon County Imperial Stout',
         true,
         21);
 
+-- 22. 7 Sins Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Lust Cherry Wheat',
+        4.5,
+        11,
+        'Wheat Ale',
+        'Put your lips on me. 2Row; White Wheat; Crystal 10; Munich; Liberty; Saaz; IBU:11; SRM:9',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Lust.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Envy Amber Ale',
+        6.0,
+        37,
+        'Ale',
+        'What they wish they could drink. 2Row; Carapils; Crystal 40; Victory; Amarillo; Mount Hood; IBU:37 SRM:12',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Envy.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Gluttony Stout',
+        4.5,
+        55,
+        'Stout',
+        'Drink responsibly. Gorge on everything else. 2 Row; Maris Otter; Crystal 120; Chocolate; Extra Dark Crystal; German Pils; Rye; Munich; American Smoked; Carabrown; Centennial; Liberty; Saaz; Amarillo; Cascade; IBU:55; SRM:38',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Gluttony.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Sloth Belgian',
+        6.5,
+        27,
+        'Belgian Lager',
+        'Try it or not, whatever. 2 Row; Belgian Carapils; Belgian Cara 20; Belgian Cara45; Belgian Pils; Belgian Aromatic; Extra Dark Crystal 120; Kent Goldings; Hallertau; Cascade; IBU:27; SRM:20',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Sloth.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Pride Pilsner',
+        5.0,
+        26,
+        'Belgian Lager',
+        'Woo yeah, in your face! No really, that’s where you put it. 2 Row; German Pils; German Carapils; Hallertau Hersbrucker; Tettnanger; Saaz; IBU:26; SRM:4',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Pride.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Wrath I.P.A.',
+        6.0,
+        72,
+        'India Pale Ale',
+        'Oh you’re gonna get it. Keg or growler? 2 Row; Carapils; Carabrown; Crystal 40; Amarillo; Centennial; Northern Brewer; Liberty; IBU:72; SRM:15',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Anger.png',
+        true,
+        22);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Greed Brown',
+        5.0,
+        20,
+        'Ale',
+        'Greed is good. Keep playin’ those scratchers. 2Row; Crystal 40; Vienna; Special Roast; Chocolate; Amarillo; Liberty; IBU:20; SRM:18',
+        'https://7sinsbrewery.com/wp-content/uploads/2016/01/Greed.png',
+        true,
+        22);
+
+-- 23. Bootstrap Brewing Company
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('PICKLE ME UP™',
+        4.5,
+        10,
+        'Ale',
+        'Our delicious, award winning Golden Ale infused with just the right amount of Pickle Juice makes this a great, light, refreshing beverage all year round.  Gluten reduced.',
+        'https://bootstrapbrewingdotcom.files.wordpress.com/2022/02/pickle-me-up-all-tight-crop.jpg?w=1556',
+        true,
+        23);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('LUSH PUPPY® JUICY IPA',
+        6.3,
+        40,
+        'India Pale Ale',
+        'Lush Puppy is made with massive amounts of hops to give this beer a great tropical, citrusy flavor and aroma. Gluten reduced.',
+        'https://bootstrapbrewingdotcom.files.wordpress.com/2020/02/lush-puppy-group-tight-crop.jpg?w=1556',
+        true,
+        23);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('INSANE RUSH® IPA',
+        7.6,
+        51,
+        'India Pale Ale',
+        'A perfect balance of malts and five different hops give this India Pale Ale its edge.  The unique blend of citrus and pine aroma and flavor makes it a very drinkable IPA. Perfect for craft enthusiasts looking for a little more cowbell. Gluten reduced.',
+        'https://bootstrapbrewingdotcom.files.wordpress.com/2020/02/insane-group-tight-crop.jpeg?w=1556',
+        true,
+        23);
+
+
+-- 24. Aztec Brewing Company
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('El Dorado Blonde',
+        4.1,
+        24,
+        'Ale',
+        'A golden ale inspired by the mythical Spanish city of gold. Crisp, clean, easy to drink brew with a touch of wheat malt character and balanced hop bitterness. Very close to a true Kolsch style. Slight grapefruit hop character from Cascade hops. Light and refreshing.',
+        'http://www.aztecbrewery.com/images/main_el_dorado.jpg',
+        true,
+        24);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Aztec Amber',
+        5.7,
+        44,
+        'Ale',
+        'Gold 2014 & 2012 and Silver 2013 at the San Diego International Beer Festival. This traditional Altbier style ale was brewed in Germany before lagers became popular. A big rich character derived from specialty malts imparts toffee, caramel sweetness and toasty biscuit notes. Balanced hop bitterness.',
+        'http://www.aztecbrewery.com/images/amber_btl.jpg',
+        true,
+        24);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
+VALUES ('Noche de los Muertos',
+        10.2,
+        64,
+        'Stout',
+        'Bronze 2013 at the San Diego International Beer Festival. An intense Imperial Stout with a hint of cinnamon spice. Big, rich and black as night. Dark roasted malts add complex character to the flavors, dark roast and nut, slight caramel with a balanced bitterness and mouth feel. Earthiness/spice from the hops and cinnamon.',
+        'http://www.aztecbrewery.com/images/noche_btl.jpg',
+        true,
+        24);
+
+
+
+
+
 
 COMMIT;
