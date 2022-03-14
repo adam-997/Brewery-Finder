@@ -98,8 +98,7 @@ class Brewer extends Component {
 
   updateBrewery = (brewery) => {
     this.setState({
-      brewery: this.state.brewery,
-      brewery,
+      brewery: brewery,
     });
   };
 
@@ -109,6 +108,7 @@ class Brewer extends Component {
       .then((res) => res.json())
       .then((res) => this.setState({ beers: res }));
   }
+
   render() {
     const { brewery } = this.state.brewery;
     const beerMap = this.state.beers.map((beer) => {
@@ -199,8 +199,20 @@ class Brewer extends Component {
             {" "}
             <UpdateBrewery
               breweryId={brewery.breweryId}
-              updateBrewery={this.updateBrewery}
+              updateBeer={this.updateBeer}
               breweryOwnerId={brewery.userId}
+              brewery={brewery}
+              key={brewery.breweryId}
+              breweryLogoUrl={brewery.breweryLogoUrl}
+              name={brewery.name}
+              address={brewery.address}
+              description={brewery.description}
+              websiteUrl={brewery.websiteUrl}
+              zipcode={brewery.zipcode}
+              phoneNumber={brewery.phoneNumber}
+              hours={brewery.hours}
+              city={brewery.city}
+              updateBrewery={this.updateBrewery}
             />{" "}
             Selection of Beers{" "}
           </Title>
@@ -217,6 +229,15 @@ class Brewer extends Component {
               breweryId={brewery.breweryId}
               updateBeer={this.updateBeer}
               breweryOwnerId={brewery.userId}
+              brewery={brewery}
+              key={brewery.breweryId}
+              breweryLogoUrl={brewery.breweryLogoUrl}
+              name={brewery.name}
+              address={brewery.address}
+              description={brewery.description}
+              websiteUrl={brewery.websiteUrl}
+              zipcode={brewery.zipcode}
+              phoneNumber={brewery.phoneNumber}
             />
             <Row gutter={[32, 32]} className="crypto-card-container">
               {" "}

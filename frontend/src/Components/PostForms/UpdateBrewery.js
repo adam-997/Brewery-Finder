@@ -18,16 +18,16 @@ class UpdateBrewery extends Component {
     this.state = {
       breweryOwnerId: this.props.breweryOwnerId,
       breweryId: this.props.breweryId,
-      name: "",
-      address: "",
-      city: "",
-      zipcode: 0,
-      phoneNumber: "",
-      description: "",
-      breweryLogoUrl: "",
-      websiteUrl: "",
-      userId: 1,
-      hours: "",
+      name: this.props.name,
+      address: this.props.address,
+      city: this.props.city,
+      zipcode: this.props.zipcode,
+      phoneNumber: this.props.phoneNumber,
+      description: this.props.description,
+      breweryLogoUrl: this.props.breweryLogoUrl,
+      websiteUrl: this.props.websiteUrl,
+      userId: this.props.user.userId,
+      hours: this.props.hours,
       lat: 0,
       lng: 0,
     };
@@ -59,10 +59,6 @@ class UpdateBrewery extends Component {
       credentials: "same-origin",
     });
     this.props.updateBrewery(breweryObject);
-    this.setState({
-      visible: false,
-    });
-
     this.props.history.push("/mybrewery");
 
     console.log(breweryObject);
@@ -75,6 +71,7 @@ class UpdateBrewery extends Component {
     this.setState({
       visible: false,
     });
+
     this.putNewBrewery();
   };
 
@@ -122,7 +119,6 @@ class UpdateBrewery extends Component {
                     id="name"
                     name="name"
                     onChange={(e) => this.setState({ name: e.target.value })}
-                    required
                     placeholder="Brewery Name"
                   />
                 </Form.Item>
@@ -132,7 +128,6 @@ class UpdateBrewery extends Component {
                     id="address"
                     name="address"
                     onChange={(e) => this.setState({ address: e.target.value })}
-                    required
                     placeholder="Address"
                   />
                 </Form.Item>
@@ -142,8 +137,16 @@ class UpdateBrewery extends Component {
                     id="city"
                     name="city"
                     onChange={(e) => this.setState({ city: e.target.value })}
-                    required
                     placeholder="City"
+                  />
+                </Form.Item>
+                <Form.Item label="Zip Code">
+                  <Input
+                    type="text"
+                    id="zipcode"
+                    name="zipcode"
+                    onChange={(e) => this.setState({ zipcode: e.target.value })}
+                    placeholder="Zip Code"
                   />
                 </Form.Item>
                 <Form.Item label="Phone Number">
@@ -154,7 +157,6 @@ class UpdateBrewery extends Component {
                     onChange={(e) =>
                       this.setState({ phoneNumber: e.target.value })
                     }
-                    required
                     placeholder="Phone Number"
                   />
                 </Form.Item>
@@ -166,7 +168,6 @@ class UpdateBrewery extends Component {
                     onChange={(e) =>
                       this.setState({ description: e.target.value })
                     }
-                    required
                     placeholder="Description"
                   />
                 </Form.Item>
@@ -178,7 +179,6 @@ class UpdateBrewery extends Component {
                     onChange={(e) =>
                       this.setState({ breweryLogoUrl: e.target.value })
                     }
-                    required
                     placeholder="Url"
                   />
                 </Form.Item>
@@ -188,18 +188,7 @@ class UpdateBrewery extends Component {
                     id="website"
                     name="website"
                     onChange={(e) => this.setState({ website: e.target.value })}
-                    required
                     placeholder="Website"
-                  />
-                </Form.Item>
-                <Form.Item label="Brewer Id">
-                  <Input
-                    type="text"
-                    id="userId"
-                    name="userId"
-                    onChange={(e) => this.setState({ userId: e.target.value })}
-                    required
-                    placeholder="Assign a Brewer to this Brewery"
                   />
                 </Form.Item>
                 <Form.Item label="Hours">
@@ -208,7 +197,6 @@ class UpdateBrewery extends Component {
                     id="hours"
                     name="hours"
                     onChange={(e) => this.setState({ hours: e.target.value })}
-                    required
                     placeholder="hours"
                   />
                 </Form.Item>
