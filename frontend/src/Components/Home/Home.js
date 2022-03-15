@@ -131,7 +131,6 @@ class Home extends Component {
           }}
         >
           {" "}
-          <Image src={jumbo} alt="jumbo" preview={false} />
         </div>
         <Title
           level={2}
