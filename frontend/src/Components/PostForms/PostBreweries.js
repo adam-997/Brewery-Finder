@@ -177,12 +177,14 @@ class PostBreweries extends Component {
                   placeholder="Url"
                 />
               </Form.Item>
-              <Form.Item label="Website">
+              <Form.Item label="Website Url">
                 <Input
                   type="text"
                   id="website"
                   name="website"
-                  onChange={(e) => this.setState({ website: e.target.value })}
+                  onChange={(e) =>
+                    this.setState({ websiteUrl: e.target.value })
+                  }
                   required
                   placeholder="Website"
                 />
