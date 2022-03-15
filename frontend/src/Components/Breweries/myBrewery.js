@@ -38,7 +38,7 @@ class MyBrewery extends Component {
           xs={24}
           sm={12}
           lg={8}
-          className="crypto-card"
+          className="beer-card"
           key={brewer.breweryId}
         >
           <RenderBreweryCard
@@ -80,8 +80,8 @@ class MyBrewery extends Component {
         >
           My Breweries
         </Title>{" "}
-        <div className="crypto-card">
-          <Row gutter={[32, 32]} className="crypto-card-container">
+        <div className="beer-card">
+          <Row gutter={[32, 32]} className="beer-card-container">
             {" "}
             {brewerMap}{" "}
           </Row>

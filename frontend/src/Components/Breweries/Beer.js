@@ -67,7 +67,7 @@ class Beer extends Component {
     const { beer } = this.state.beer;
     const reviewsMap = this.state.reviews.map((review) => {
       return (
-        <Col xs={24} sm={12} lg={8} className="crypto-card" key={review.id}>
+        <Col xs={24} sm={12} lg={8} className="beer-card" key={review.id}>
           <RenderReviewCard
             review={review}
             reviewTitle={review.name}
@@ -116,30 +116,29 @@ class Beer extends Component {
               alignItems: "center",
             }}
           >
-            <Row>
-              <Col>
-                <img
-                  src={beer.imgUrl}
-                  height="200"
-                  padding="200"
-                  style={{ justifyContent: "left" }}
-                />{" "}
-              </Col>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Col span={18}>
-                  <Text strong>{beer.type}</Text> <br />
-                  {beer.info}
-                  <br />
-                  <Text strong>{beer.abv}% ABV</Text> <br />
-                </Col>
-              </div>
-            </Row>
+            <img
+              src={beer.imgUrl}
+              height="200"
+              padding="200"
+              style={{ justifyContent: "left" }}
+            />{" "}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            <Col span={12}>
+              <Text strong>{beer.type}</Text>
+              <br />
+              {beer.info}
+              <br />
+              <Text strong>{beer.abv}% ABV</Text>
+            </Col>
+            <br />
           </div>
         </>
         <div
@@ -152,7 +151,7 @@ class Beer extends Component {
           <Title level={2}>Reviews for {beer.name} </Title>
         </div>
         <div
-          className="crypto-card"
+          className="beer-card"
           style={{
             display: "flex",
             justifyContent: "center",

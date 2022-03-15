@@ -128,7 +128,9 @@ class Main extends Component {
           <Route
             path="/home"
             component={
-              this.props.token.token !== undefined ? () => <Home /> : null
+              // this.props.token.token !== undefined ?
+              () => <Home />
+              //  : null
             }
           />
           <Redirect to="/login" />

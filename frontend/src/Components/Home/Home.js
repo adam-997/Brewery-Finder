@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Breadcrumb } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import { RenderBreweryCard } from "../Breweries/Breweries";
-import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
+import { Layout, Typography, Row, Col, Avatar, Card, Image } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 import avatar from "../../image/avatar.png";
+import jumbo from "../../image/photo-1528823872057-9c018a7a7553.jpg";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
@@ -120,6 +121,17 @@ class Home extends Component {
               </Breadcrumb>
             </Content>
           </Layout>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          {" "}
+          <Image src={jumbo} alt="jumbo" preview={false} />
         </div>
         <Title
           level={2}
