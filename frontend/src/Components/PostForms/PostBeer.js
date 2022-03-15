@@ -39,6 +39,7 @@ class PostBeer extends Component {
       abv: Number(this.state.abv),
       type: this.state.type,
       name: this.state.name,
+      imgUrl: this.state.imgUrl,
       active: this.state.active,
       ibu: this.state.ibu,
     };
