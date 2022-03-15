@@ -67,17 +67,15 @@ class Beer extends Component {
     const { beer } = this.state.beer;
     const reviewsMap = this.state.reviews.map((review) => {
       return (
-        <Col xs={24} sm={12} lg={8} className="beer-card" key={review.id}>
-          <RenderReviewCard
-            review={review}
-            reviewTitle={review.name}
-            reviewId={review.reviewsId}
-            imgUrl={beer.imgUrl}
-            name={beer.name}
-            description={review.description}
-            rating={review.rating}
-          />
-        </Col>
+        <RenderReviewCard
+          review={review}
+          reviewTitle={review.name}
+          reviewId={review.reviewsId}
+          imgUrl={beer.imgUrl}
+          name={beer.name}
+          description={review.description}
+          rating={review.rating}
+        />
       );
     });
 

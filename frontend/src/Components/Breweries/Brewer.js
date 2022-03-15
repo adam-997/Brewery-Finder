@@ -7,6 +7,11 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import PostBeer from "../PostForms/PostBeer";
 import UpdateBrewery from "../PostForms/UpdateBrewery";
+import {
+  PhoneOutlined,
+  ContactsOutlined,
+  ClockCircleOutlined,
+} from "@ant-design/icons";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
@@ -204,13 +209,19 @@ class Brewer extends Component {
             <br />
             <Text strong>
               {" "}
+              <ContactsOutlined style={{ fontSize: "16px" }} />{" "}
               {brewery.address}, {brewery.city}, {brewery.zipcode}
             </Text>
 
             <br />
-            <Text strong>{brewery.hours} </Text>
+            <Text strong>
+              <ClockCircleOutlined /> {brewery.hours}
+            </Text>
             <br />
-            <Text strong> {brewery.phoneNumber}</Text>
+            <Text strong>
+              <PhoneOutlined style={{ fontSize: "16px" }} />{" "}
+              {brewery.phoneNumber}
+            </Text>
           </Col>
           <br />
         </div>
