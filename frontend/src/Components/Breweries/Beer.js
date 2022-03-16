@@ -1,18 +1,7 @@
-import React, { Component, useState } from "react";
-import { Link, NavLink, withRouter } from "react-router-dom";
-import axios from "axios";
+import React, { Component } from "react";
+import { NavLink, withRouter } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
-import {
-  Breadcrumb,
-  Comment,
-  Layout,
-  Typography,
-  Avatar,
-  Modal,
-  Button,
-  Row,
-  Col,
-} from "antd";
+import { Breadcrumb, Comment, Layout, Typography, Avatar, Col } from "antd";
 import PostReviews from "../PostForms/PostReview";
 import avatar from "../../image/avatar.png";
 
@@ -28,7 +17,7 @@ function RenderReviewCard({
 }) {
   return (
     <Comment
-      author={<a>Beer Lover</a>}
+      author="Beer Lover"
       avatar={<Avatar src={avatar} alt={"Review id: " + reviewId} />}
       content={<p>{description}</p>}
       datetime={
@@ -116,6 +105,7 @@ class Beer extends Component {
           >
             <img
               src={beer.imgUrl}
+              alt={"beer id: " + beer.beerId}
               height="200"
               padding="200"
               style={{ justifyContent: "left" }}

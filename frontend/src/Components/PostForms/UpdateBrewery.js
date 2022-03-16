@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Modal, Form, Input, Button } from "antd";
 

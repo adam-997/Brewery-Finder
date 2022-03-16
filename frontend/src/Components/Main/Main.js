@@ -15,12 +15,11 @@ import MyBrewery from "../Breweries/myBrewery";
 import {
   CoffeeOutlined,
   HomeFilled,
-  HomeOutlined,
   LogoutOutlined,
   ShopOutlined,
 } from "@ant-design/icons";
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const mapStateToProps = (state) => {
   return {
@@ -39,10 +38,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleLogout = () => {
     this.props.addToken("");
     this.props.deleteUser();

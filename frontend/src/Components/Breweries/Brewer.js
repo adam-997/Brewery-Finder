@@ -49,7 +49,7 @@ export function RenderBeerCard({
   userId,
 }) {
   return (
-    <Card hoverable className="news-card">
+    <Card hoverable className="brewery-card">
       <div className={userId !== breweryUserId ? "hidden" : ""}>
         <span
           className="delete-btn"
@@ -68,17 +68,17 @@ export function RenderBeerCard({
           },
         }}
       >
-        <div className="news-image-container">
+        <div className="brewery-image-container">
           <Title className="news-title" level={4}>
             {name}
           </Title>
           <img width={200} src={imgUrl} alt={"beerId: " + beerId} />
         </div>
         <p>{description}</p>
-        <div className="provider-container">
+        <div className="footer-container">
           <div>
             <Avatar src={breweryImgUrl} alt={"brewerName: " + breweryName} />
-            <Text className="provider-name">{breweryName}</Text>
+            <Text className="footer-name">{breweryName}</Text>
           </div>
           <Text>{type}</Text>
         </div>
@@ -107,7 +107,7 @@ class Brewer extends Component {
 
   componentDidMount() {
     const id = this.state.brewery.brewery.breweryId;
-    fetch(baseUrl + `/breweries/${id}` + "/beers")
+    fetch(baseUrl + `/breweries/${id}/beers`)
       .then((res) => res.json())
       .then((res) => this.setState({ beers: res }));
   }
@@ -116,7 +116,7 @@ class Brewer extends Component {
     const { brewery } = this.state.brewery;
     const beerMap = this.state.beers.map((beer) => {
       return (
-        <Col xs={24} sm={12} lg={8} className="crypto-card" key={beer.id}>
+        <Col xs={24} sm={12} lg={8} className="brewery-card" key={beer.id}>
           <RenderBeerCard
             breweryUserId={brewery.userId}
             userId={this.props.user.userId}
@@ -185,7 +185,11 @@ class Brewer extends Component {
           }}
         >
           {" "}
-          <a href={brewery.websiteUrl} target="_blank" rel="noreferrer">
+          <a
+            href={brewery.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={brewery.breweryLogoUrl}
               alt={"brewery: " + brewery.breweryId}
@@ -241,14 +245,14 @@ class Brewer extends Component {
             alignItems: "center",
           }}
         >
-          <div className="crypto-card">
+          <div className="brewry-card">
             <PostBeer
               breweryId={brewery.breweryId}
               updateBeer={this.updateBeer}
               breweryOwnerId={brewery.userId}
               brewery={brewery}
             />
-            <Row gutter={[32, 32]} className="crypto-card-container">
+            <Row gutter={[32, 32]} className="brewery-card-container">
               {" "}
               {beerMap}
             </Row>

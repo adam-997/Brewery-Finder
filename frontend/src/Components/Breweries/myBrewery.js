@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter, Link, NavLink } from "react-router-dom";
+import { withRouter, NavLink } from "react-router-dom";
 import { baseUrl } from "../../Shared/baseUrl";
 import { Row, Col, Typography, Layout, Breadcrumb } from "antd";
 import { RenderBreweryCard } from "./Breweries";
@@ -24,7 +24,7 @@ class MyBrewery extends Component {
   }
 
   componentDidMount() {
-    fetch(baseUrl + `/users/${this.props.user.userId}` + "/breweries")
+    fetch(baseUrl + `/users/${this.props.user.userId}/breweries`)
       .then((res) => res.json())
       .then((res) => this.setState({ breweries: res }));
   }
@@ -38,7 +38,7 @@ class MyBrewery extends Component {
           xs={24}
           sm={12}
           lg={8}
-          className="beer-card"
+          className="brewery-card"
           key={brewer.breweryId}
         >
           <RenderBreweryCard
@@ -80,8 +80,8 @@ class MyBrewery extends Component {
         >
           My Breweries
         </Title>{" "}
-        <div className="beer-card">
-          <Row gutter={[32, 32]} className="beer-card-container">
+        <div className="brewery-card">
+          <Row gutter={[32, 32]} className="brewery-card-container">
             {" "}
             {brewerMap}{" "}
           </Row>

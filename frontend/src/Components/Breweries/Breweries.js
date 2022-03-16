@@ -18,7 +18,7 @@ export function RenderBreweryCard({
   website,
 }) {
   return (
-    <Card hoverable className="news-card">
+    <Card hoverable className="brewery-card">
       <Link
         to={{
           pathname: `/breweries/${breweryId}`,
@@ -27,8 +27,8 @@ export function RenderBreweryCard({
           },
         }}
       >
-        <div className="news-image-container">
-          <Title className="news-title" level={4}>
+        <div className="brewery-image-container">
+          <Title className="brewery-title" level={4}>
             {name}
           </Title>
           <img
@@ -38,10 +38,10 @@ export function RenderBreweryCard({
           />
         </div>
         <p>{description}</p>
-        <div className="provider-container">
+        <div className="footer-container">
           <div>
             <Avatar src={breweryLogoUrl} alt={"brewerId: " + breweryId} />
-            <Text className="provider-name">{name}</Text>
+            <Text className="footer-name">{name}</Text>
           </div>
           <Text>{address}</Text>
         </div>{" "}
@@ -78,7 +78,7 @@ class BreweryCard extends Component {
           xs={24}
           sm={12}
           lg={8}
-          className="crypto-card"
+          className="brewery-card"
           key={brewer.breweryId}
         >
           <RenderBreweryCard

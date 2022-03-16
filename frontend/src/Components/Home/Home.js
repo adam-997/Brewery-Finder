@@ -2,26 +2,16 @@ import React, { Component } from "react";
 import { Breadcrumb } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import { RenderBreweryCard } from "../Breweries/Breweries";
-import { Layout, Typography, Row, Col, Avatar, Card, Image } from "antd";
+import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 import { baseUrl } from "../../Shared/baseUrl";
 import avatar from "../../image/avatar.png";
-import jumbo from "../../image/photo-1528823872057-9c018a7a7553.jpg";
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
-function RenderNewBeerCard({
-  beer,
-  beerId,
-  imgUrl,
-  name,
-  description,
-  breweryName,
-  type,
-  userId,
-}) {
+function RenderNewBeerCard({ beer, beerId, imgUrl, name, description, type }) {
   return (
-    <Card hoverable className="news-card">
+    <Card hoverable className="brewery-card">
       <Link
         to={{
           pathname: `/beers/${beerId}`,
@@ -30,17 +20,17 @@ function RenderNewBeerCard({
           },
         }}
       >
-        <div className="news-image-container">
-          <Title className="news-title" level={4}>
+        <div className="brewery-image-container">
+          <Title className="brewery-title" level={4}>
             {name}
           </Title>
           <img width={200} src={imgUrl} alt={"beerId: " + beerId} />
         </div>
         <p>{description}</p>
-        <div className="provider-container">
+        <div className="footer-container">
           <div>
             <Avatar src={avatar} alt={"brewerName: " + beerId} />
-            <Text className="provider-name">NEW</Text>
+            <Text className="footer-name">NEW</Text>
           </div>
           <Text>{type}</Text>
         </div>
@@ -77,7 +67,7 @@ class Home extends Component {
           xs={24}
           sm={12}
           lg={8}
-          className="crypto-card"
+          className="brewery-card"
           key={brewery.breweryId}
         >
           <RenderBreweryCard
@@ -95,7 +85,7 @@ class Home extends Component {
     });
     const beerMap = newBeers.map((beer) => {
       return (
-        <Col xs={24} sm={12} lg={8} className="crypto-card" key={beer.id}>
+        <Col xs={24} sm={12} lg={8} className="brewery-card" key={beer.id}>
           <RenderNewBeerCard
             beer={beer}
             beerId={beer.beerId}
@@ -143,8 +133,8 @@ class Home extends Component {
         >
           New Breweries
         </Title>
-        <div className="crypto-card">
-          <Row gutter={[32, 32]} className="crypto-card-container">
+        <div className="brewery-card">
+          <Row gutter={[32, 32]} className="brewery-card-container">
             {" "}
             {breweryMap}{" "}
           </Row>
@@ -160,8 +150,8 @@ class Home extends Component {
         >
           New Beers
         </Title>
-        <div className="crypto-card">
-          <Row gutter={[32, 32]} className="crypto-card-container">
+        <div className="brewery-card">
+          <Row gutter={[32, 32]} className="brewery-card-container">
             {" "}
             {beerMap}{" "}
           </Row>

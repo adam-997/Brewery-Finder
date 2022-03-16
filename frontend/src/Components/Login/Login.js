@@ -1,11 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { addToken, addUser } from "../../Redux/actionCreators";
 import { baseUrl } from "../../Shared/baseUrl";
 import axios from "axios";
-import { Form, Input, Button, Typography } from "antd";
+import { Form, Input, Button } from "antd";
 
 const mapDispatchToProps = (dispatch) => ({
   addToken: () => dispatch(addToken()),
