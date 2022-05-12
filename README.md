@@ -19,6 +19,6 @@ After this the database should be ready. next, navigate to src>main>java>com.tec
 - deployment with AWS
 
 # Contributions
-Adam Aguilar - Lead front-end developer and Scrum master
-Carlos Guevara - Lead Back-end developer
+Adam Aguilar - Lead front-end developer and Scrum master <br />
+Carlos Guevara - Lead Back-end developer <br />
 Tanvi Parmar - UI Designer
