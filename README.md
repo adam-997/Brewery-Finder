@@ -7,7 +7,11 @@ Hello! This is our Full-Stack Brewery Finder web application, users who want to 
 
 
 
-https://user-images.githubusercontent.com/97628889/168201479-46d2f4d7-b396-49d5-bc1b-94f2765d0ac3.mov
+
+
+https://user-images.githubusercontent.com/97628889/168204738-dfd31948-93e6-492f-8fec-a1f1c11c4d88.mp4
+
+
 
 
 
