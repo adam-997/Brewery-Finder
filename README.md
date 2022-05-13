@@ -5,7 +5,11 @@ Hello! This is our Full-Stack Brewery Finder web application, users who want to 
 
 # Video Showcase
 
-https://user-images.githubusercontent.com/97628889/168199706-451f28bb-8165-4741-aa96-3c6601ea4014.mov
+
+
+https://user-images.githubusercontent.com/97628889/168201479-46d2f4d7-b396-49d5-bc1b-94f2765d0ac3.mov
+
+
 
 
 # How to start
