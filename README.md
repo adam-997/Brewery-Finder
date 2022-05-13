@@ -1,9 +1,11 @@
+
 # Brewery Finder
 
 Hello! This is our Full-Stack Brewery Finder web application, users who want to find information on breweries such as location, hours, contact info and the beers that those breweries have to offer. Users are able register an account then log in to view this information as well as leave reviews for the beers that they have tried. You can also register as a brewer which allows you to update information on the brewery you own as well as add new beers and lastly, delete existing beers. Finally, there is an admin account that is able to add new breweries and assign those breweries to brewers so long as they provide the brewers user id.
 
 # Video Showcase
 
+https://user-images.githubusercontent.com/97628889/168199706-451f28bb-8165-4741-aa96-3c6601ea4014.mov
 
 
 # How to start
